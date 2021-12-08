@@ -1,0 +1,2 @@
+.topbar{width:100%;height:70px;background-color:purple;position:fixed;top:0;z-index:2}.intro{background-color:#20b2aa}.portfolio{background-color:#ffb6c1}.work{background-color:#90ee90}.testimonials{background-color:#f08080}.contact{background-color:green}.app{height:100vh}.app .sections{width:100%;height:calc(100vh - 70px);background-color:red;position:relative;top:70px}.app .sections>*{width:100vw;height:calc(100vh - 70px)}
+/*# sourceMappingURL=main.bfd840ba.chunk.css.map */
