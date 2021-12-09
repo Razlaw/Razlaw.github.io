@@ -1,9 +1,11 @@
+@import "./global.scss";
+
 .app {
   height: 100vh;
 
   .sections {
     width: 100%;
-    height: calc(100vh - 70px);
+    height: calc(100vh - #{$topbarHeight});
     background-color: red;
     position: relative;
     top: 70px;
