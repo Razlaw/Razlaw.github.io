@@ -7,18 +7,18 @@ import Contact from "./components/contact/Contact";
 import "./app.scss"
 
 function App() {
-  return (
-    <div className="app">
-      <Topbar/>
-        <div className="sections">
-            <Intro/>
-            <Portfolio/>
-            <Work/>
-            <Testimonials/>
-            <Contact/>
+    return (
+        <div className="app">
+            <Topbar/>
+            <div className="sections">
+                <Intro/>
+                <Portfolio/>
+                <Work/>
+                <Testimonials/>
+                <Contact/>
+            </div>
         </div>
-    </div>
-  );
+    );
 }
 
 export default App;
