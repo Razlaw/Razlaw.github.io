@@ -23,6 +23,7 @@
   }
   .right {
     flex: 0.5;
+    position: relative;
 
     .wrapper {
       width: 100%;
@@ -45,6 +46,15 @@
         span {
           font-size: inherit;
         }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 40%;
+
+      img {
+        width: 30px;
       }
     }
   }

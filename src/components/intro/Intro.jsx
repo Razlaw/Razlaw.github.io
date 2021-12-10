@@ -14,6 +14,9 @@ export default function Intro() {
                     <h1>Name</h1>
                     <h3>Job <span>Title</span></h3>
                 </div>
+                <a href="#portfolio">
+                    <img src="assets/down.png" alt="Arrow pointing down"/>
+                </a>
             </div>
         </div>
     );
