@@ -3,7 +3,8 @@
 .topbar {
   width: 100%;
   height: $topbarHeight;
-  background-color: $mainColor;
+  background-color: white;
+  color: $mainColor;
   position: fixed;
   top: 0;
   z-index: 3;
