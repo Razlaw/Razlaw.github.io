@@ -12,7 +12,7 @@ export default function Contact() {
     return (
         <div className="contact" id="contact">
             <div className="left">
-                <img src="assets/shake.svg" alt="Image of a handshake"/>
+                <img src="assets/shake.svg" alt="Handshake"/>
             </div>
             <div className="right">
                 <h2>Contact.</h2>
