@@ -42,9 +42,9 @@ export default function Testimonials() {
                 {data.map((d) => (
                     <div className={d.featured ? "card featured" : "card"}>
                         <div className="top">
-                            <img src="assets/right-arrow.png" className="left"/>
-                            <img src={d.img} className="user"/>
-                            <img src={d.icon} className="right"/>
+                            <img src="assets/right-arrow.png" className="left" alt=""/>
+                            <img src={d.img} className="user" alt=""/>
+                            <img src={d.icon} className="right" alt=""/>
                         </div>
                         <div className="center">
                             {d.desc}
