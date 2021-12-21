@@ -3,7 +3,6 @@ import Menu from "./components/menu/Menu";
 import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
 import Work from "./components/work/Work";
-import Testimonials from "./components/testimonials/Testimonials";
 import "./app.scss"
 import {useState} from "react";
 
@@ -17,7 +16,6 @@ function App() {
                 <Intro/>
                 <Portfolio/>
                 <Work/>
-                <Testimonials/>
             </div>
         </div>
     );
