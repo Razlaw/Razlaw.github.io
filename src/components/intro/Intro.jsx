@@ -13,7 +13,7 @@ export default function Intro() {
                     <h2>Hi There, I'm</h2>
                     <h1>Name</h1>
                 </div>
-                <a href="#portfolio">
+                <a href="#work">
                     <img src="assets/down.png" alt="Arrow pointing down"/>
                 </a>
             </div>
