@@ -1,5 +1,4 @@
 import Sidebar from "./components/sidebar/Sidebar";
-import Menu from "./components/menu/Menu";
 import Intro from "./components/intro/Intro";
 import Work from "./components/work/Work";
 import "./app.scss"
@@ -10,7 +9,6 @@ function App() {
     return (
         <div className="app">
             <Sidebar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-            <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
             <div className="sections">
                 <Intro/>
                 <Work/>
