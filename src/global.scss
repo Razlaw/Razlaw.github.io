@@ -1,3 +1,12 @@
 $mainColor: purple;
 
 $topbarHeight: 70px;
+
+$width: 1128px;
+$height: 526px;
+
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content
+  }
+}
