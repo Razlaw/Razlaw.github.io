@@ -1,4 +1,4 @@
-import Topbar from "./components/topbar/Topbar";
+import Sidebar from "./components/sidebar/Sidebar";
 import Menu from "./components/menu/Menu";
 import Intro from "./components/intro/Intro";
 import Work from "./components/work/Work";
@@ -9,7 +9,7 @@ function App() {
     const [menuOpen, setMenuOpen] = useState(false)
     return (
         <div className="app">
-            <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+            <Sidebar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
             <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
             <div className="sections">
                 <Intro/>
