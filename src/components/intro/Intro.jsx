@@ -3,6 +3,15 @@ import "./intro.scss";
 export default function Intro() {
     return (
         <div className="intro" id="intro">
+            <div className="introAnimation">
+                <div className="left">
+                    <h1>R</h1>
+                </div>
+                <div className="right">
+                    <h1>R</h1>
+                </div>
+            </div>
+
             <div className="left">
                 <div className="imgContainer">
                     <img src="assets/man.png" alt="Portrait of Man"/>
