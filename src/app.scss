@@ -1,5 +1,59 @@
 @import "./global.scss";
 
+@font-face {
+  font-family: 'Emberly';
+  font-weight: 100;
+  src: local('Emberly'), url(./fonts/Emberly-Thin.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Emberly';
+  font-weight: 200;
+  src: local('Emberly'), url(./fonts/Emberly-ExtraLight.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Emberly';
+  font-weight: 300;
+  src: local('Emberly'), url(./fonts/Emberly-Light.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Emberly';
+  font-weight: 400;
+  src: local('Emberly'), url(./fonts/Emberly-Regular.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Emberly';
+  font-weight: 500;
+  src: local('Emberly'), url(./fonts/Emberly-Medium.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Emberly';
+  font-weight: 600;
+  src: local('Emberly'), url(./fonts/Emberly-SemiBold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Emberly';
+  font-weight: 700;
+  src: local('Emberly'), url(./fonts/Emberly-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Emberly';
+  font-weight: 800;
+  src: local('Emberly'), url(./fonts/Emberly-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Emberly';
+  font-weight: 900;
+  src: local('Emberly'), url(./fonts/Emberly-Black.woff) format('woff');
+}
+
 .app {
   height: 100vh;
 
