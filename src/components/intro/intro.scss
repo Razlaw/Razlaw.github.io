@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .intro {
-  height: 100vh;
+  height: calc(100vh + 50px);
   background-color: white;
   scroll-snap-align: start;
 
@@ -9,7 +9,7 @@
 
   .contentContainer {
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 50px);
     background: linear-gradient(white, #e1e1e1);
 
     display: flex;
@@ -88,6 +88,19 @@
           padding-left: 20px;
         }
       }
+    }
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      bottom: -50px;
+      background-color: #e1e1e1;
+      -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+      z-index: 99;
     }
   }
 }
