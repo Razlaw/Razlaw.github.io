@@ -1,5 +1,4 @@
 import Intro from "./components/intro/Intro";
-import Work from "./components/work/Work";
 import "./app.scss"
 
 function App() {
@@ -7,7 +6,6 @@ function App() {
         <div className="app">
             <div className="sections">
                 <Intro/>
-                <Work/>
             </div>
         </div>
     );
