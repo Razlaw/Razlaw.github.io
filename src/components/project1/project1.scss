@@ -1,0 +1,80 @@
+@import "../../global.scss";
+
+.project1 {
+  height: 100vh;
+  background: linear-gradient(white, #e1e1e1);
+  scroll-snap-align: end;
+
+  display: flex;
+
+  .leftContainer {
+    flex: 1;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .imgContainer {
+      width: 700px;
+      height: 670px;
+      position: relative;
+      margin-bottom: 10%;
+      border-radius: 50%;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  .rightContainer {
+    flex: 1;
+    position: relative;
+
+    .textContainer {
+      width: 80%;
+      height: 100%;
+      padding-left: 50px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .headlineBig {
+        font-family: var(--font-family-big-heading);
+        font-size: var(--font-size-big-heading);
+        font-weight: var(--font-weight-big-heading);
+        background: var(--background-big-heading);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .text {
+        font-family: var(--font-family-paragraph);
+        font-size: var(--font-size-paragraph);
+        font-weight: var(--font-weight-paragraph);
+        background: var(--background-paragraph);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      #projectDescription {
+        width: 50%;
+        padding-left: 20px;
+      }
+
+      a {
+        font-family: var(--font-family-paragraph);
+        font-size: var(--font-size-paragraph);
+        font-weight: var(--font-weight-paragraph);
+      }
+    }
+  }
+}
