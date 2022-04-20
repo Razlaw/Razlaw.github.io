@@ -6,8 +6,6 @@
   --font-size-big-heading: 6rem;
   --font-weight-big-heading: 800;
   --background-big-heading: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 6.7rem);
-$width: 1128px;
-$height: 526px;
 
   --font-family-medium-heading: 'Playfair Display', sans-serif;
   --font-size-medium-heading: 3rem;
@@ -18,8 +16,4 @@ $height: 526px;
   --font-size-paragraph: 1.8rem;
   --font-weight-paragraph: 700;
   --background-paragraph: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 2.4rem);
-@mixin mobile {
-  @media (max-width: #{$width}) {
-    @content
-  }
 }
