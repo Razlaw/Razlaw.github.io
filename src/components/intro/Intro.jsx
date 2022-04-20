@@ -2,20 +2,22 @@ import "./intro.scss";
 
 export default function Intro() {
     return (
-        <div className="intro" id="intro">
-            <div className="left">
-                <div className="imgContainer">
-                    <img src="assets/man.png" alt="Portrait of Man"/>
+        <div className="intro">
+            <div className="contentContainer">
+                <div className="leftContainer">
+                    <div className="imgContainer">
+                        Image Placeholder
+                    </div>
                 </div>
-            </div>
-            <div className="right">
-                <div className="wrapper">
-                    <h2>Hi There, I'm</h2>
-                    <h1>Name</h1>
+                <div className="rightContainer">
+                    <div className="textContainer">
+                        <h2 className="headlineMedium" id="myName">Jan Razlaw</h2>
+                        <h1 className="headlineBig" id="jobDescription">Computer Scientist</h1>
+                        <p className="text" id="myDescription">
+                            Text Placeholder
+                        </p>
+                    </div>
                 </div>
-                <a href="#work">
-                    <img src="assets/down.png" alt="Arrow pointing down"/>
-                </a>
             </div>
         </div>
     );

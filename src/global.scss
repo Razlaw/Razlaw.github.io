@@ -1,11 +1,23 @@
-$backgroundColor: #505160;
-$textColor: #efefef; // #68829e;
-$alternativeColor: #598234;
-$highlightColor: #aebd38;
+:root {
+  --text-color-top: #36716b;
+  --text-color-bottom: #213f44;
 
+  --font-family-big-heading: 'Roboto', sans-serif;
+  --font-size-big-heading: 6rem;
+  --font-weight-big-heading: 800;
+  --background-big-heading: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 6.7rem);
 $width: 1128px;
 $height: 526px;
 
+  --font-family-medium-heading: 'Roboto', sans-serif;
+  --font-size-medium-heading: 3rem;
+  --font-weight-medium-heading: 700;
+  --background-medium-heading: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 4rem);
+
+  --font-family-paragraph: 'Roboto', sans-serif;
+  --font-size-paragraph: 1.4rem;
+  --font-weight-paragraph: 700;
+  --background-paragraph: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 1.9rem);
 @mixin mobile {
   @media (max-width: #{$width}) {
     @content

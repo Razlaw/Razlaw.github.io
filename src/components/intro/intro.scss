@@ -1,85 +1,91 @@
 @import "../../global.scss";
 
 .intro {
-  background-color: $backgroundColor;
+  height: 100vh;
+  background-color: white;
+  scroll-snap-align: start;
+
   display: flex;
 
-  @include mobile {
-    flex-direction: column;
-    align-items: center;
-  }
+  .contentContainer {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(white, #e1e1e1);
 
-  .left {
-    flex: 0.5;
-    overflow: hidden;
+    display: flex;
 
-    .imgContainer {
-      width: 700px;
-      height: 700px;
-      background-color: $alternativeColor;
-      border-radius: 50%;
+    .leftContainer {
+      flex: 1;
+
       display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      float: right;
+      align-items: center;
+      justify-content: flex-end;
+      overflow: hidden;
 
-      @include mobile {
-        align-items: flex-start;
-      }
+      .imgContainer {
+        width: 700px;
+        height: 670px;
+        position: relative;
+        margin-bottom: 10%;
+        background-color: #6c6c6c;
+        border-radius: 50%;
 
-      img {
-        height: 90%;
-
-        @include mobile {
-          height: 50%;
-        }
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
       }
     }
-  }
-  .right {
-    flex: 0.5;
-    position: relative;
 
-    .wrapper {
-      width: 100%;
-      height: 100%;
-      padding-left: 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .rightContainer {
+      flex: 1;
+      position: relative;
 
-      @include mobile{
-        padding-left: 0;
-        align-items: center;
-      }
+      .textContainer {
+        width: 80%;
+        height: 100%;
+        padding-left: 50px;
 
-      h2 {
-        color: $textColor;
-        font-size: 35px;
-      }
-      h1 {
-        color: $textColor;
-        font-size: 60px;
-        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-        @include mobile {
-          font-size: 40px;
+        .headlineMedium {
+          font-family: var(--font-family-medium-heading);
+          font-size: var(--font-size-medium-heading);
+          font-weight: var(--font-weight-medium-heading);
+          background: var(--background-medium-heading);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
         }
-      }
-    }
-    a {
-      position: absolute;
-      bottom: 10px;
-      left: 40%;
 
-      img {
-        width: 30px;
-        animation: arrowBlink 2s infinite;
-      }
+        #myName {
+          padding-left: 20px;
+        }
 
-      @keyframes arrowBlink {
-        100% {
-          opacity: 0;
+        .headlineBig {
+          font-family: var(--font-family-big-heading);
+          font-size: var(--font-size-big-heading);
+          font-weight: var(--font-weight-big-heading);
+          background: var(--background-big-heading);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+
+        .text {
+          font-family: var(--font-family-paragraph);
+          font-size: var(--font-size-paragraph);
+          font-weight: var(--font-weight-paragraph);
+          background: var(--background-paragraph);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+
+        #myDescription {
+          width: 50%;
+          padding-left: 20px;
         }
       }
     }
