@@ -1,0 +1,44 @@
+@import "./../../global.scss";
+
+body ::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.privacyStatementContainer {
+  width: 100%;
+  background: linear-gradient(white, #e1e1e1);
+  color: var(--text-color-bottom);
+  scrollbar-width: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  p {
+     padding-left: 5px;
+  }
+
+  .contentContainer {
+    max-width: 900px;
+    padding: 5% 5% 0 5%;
+    text-align: left;
+    scrollbar-width: none;
+
+    ul {
+      display: list-item;
+      list-style: disc;
+      margin-bottom: 1rem;
+
+      li {
+        overflow: initial;
+      }
+    }
+
+    .linkToSiteNotice {
+      cursor: pointer;
+      color: #4183c4;
+    }
+  }
+}
