@@ -56,17 +56,35 @@
 
 .app {
   height: 100vh;
+  scrollbar-width: none;
 
-  .sections {
-    width: 100%;
-    height: 100vh;
-    background-color: red;
-    position: relative;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none;
-    &::-webkit-scrollbar{
-      display: none;
+  .linksToPrivacy {
+    position: fixed;
+    bottom: 150px;
+    right: -75px;
+    transform: rotateZ(-90deg);
+    z-index: 100;
+
+    display: flex;
+    flex-direction: row;
+
+    .linkToPrivacyStatement {
+      color: #8c9293;
+      cursor: pointer;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    .linkToSiteNotice {
+      color: #8c9293;
+      padding-left: 20px;
+      cursor: pointer;
+
+      &:hover {
+        color: black;
+      }
     }
   }
 }

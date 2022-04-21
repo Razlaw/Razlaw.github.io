@@ -1,0 +1,14 @@
+@import "./../../global.scss";
+
+.sections {
+  width: 100%;
+  height: 100vh;
+  background-color: red;
+  position: relative;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
