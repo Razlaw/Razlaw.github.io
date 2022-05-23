@@ -1,6 +1,6 @@
 :root {
-  --text-color-top: #36716b;
-  --text-color-bottom: #213f44;
+  --text-color-top: #438a83;
+  --text-color-bottom: #2b5359;
 
   --font-family-big-heading: Emberly, sans-serif;
   --font-size-big-heading: 6rem;
@@ -16,6 +16,27 @@
   --font-size-paragraph: 1.8rem;
   --font-weight-paragraph: 700;
   --background-paragraph: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 2.4rem);
+
+  --background-color-lightmode-light: white;
+  --background-color-lightmode-dark: #e1e1e1;
+
+  --background-color-darkmode-light: #11191a;
+  --background-color-darkmode-dark: #0b0b0b;
+
+  --background-color-light: var(--background-color-darkmode-light);
+  --background-color-dark: var(--background-color-darkmode-dark);
+
+  --text-color: var(--text-color-top);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color-light: var(--background-color-lightmode-light);
+    --background-color-dark: var(--background-color-lightmode-dark);
+
+    --text-color: var(--text-color-bottom);
+  }
+}
 
 h1 {
   font-family: var(--font-family-big-heading);

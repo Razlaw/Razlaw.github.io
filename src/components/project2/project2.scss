@@ -2,7 +2,7 @@
 
 .project2 {
   height: calc(100vh - 50px);
-  background: linear-gradient(#e1e1e1, white);
+  background: linear-gradient(var(--background-color-dark), var(--background-color-light));
   scroll-snap-align: start;
   position: relative;
   top: 0;

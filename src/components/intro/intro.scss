@@ -2,7 +2,7 @@
 
 .intro {
   height: calc(100vh + 50px);
-  background-color: white;
+  background-color: var(--background-color-light);
   scroll-snap-align: start;
 
   display: flex;
@@ -10,7 +10,7 @@
   .contentContainer {
     width: 100%;
     height: calc(100vh - 50px);
-    background: linear-gradient(white, #e1e1e1);
+    background: linear-gradient(var(--background-color-light), var(--background-color-dark));
 
     display: flex;
 
@@ -27,7 +27,6 @@
         height: 670px;
         position: relative;
         margin-bottom: 10%;
-        background-color: #6c6c6c;
         border-radius: 50%;
 
         display: flex;
@@ -97,7 +96,7 @@
       position: absolute;
       left: 0;
       bottom: -50px;
-      background-color: #e1e1e1;
+      background-color: var(--background-color-dark);
       -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
       clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
       z-index: 99;

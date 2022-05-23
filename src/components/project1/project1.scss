@@ -2,7 +2,7 @@
 
 .project1 {
   height: 100vh;
-  background: linear-gradient(white, #e1e1e1);
+  background: linear-gradient(var(--background-color-light), var(--background-color-dark));
   scroll-snap-align: end;
 
   display: flex;
