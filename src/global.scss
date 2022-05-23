@@ -16,4 +16,24 @@
   --font-size-paragraph: 1.8rem;
   --font-weight-paragraph: 700;
   --background-paragraph: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 2.4rem);
+
+h1 {
+  font-family: var(--font-family-big-heading);
+  font-size: var(--font-size-big-heading);
+  font-weight: var(--font-weight-big-heading);
+  background: var(--background-big-heading);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-family: var(--font-family-medium-heading);
+  font-size: var(--font-size-medium-heading);
+  font-weight: var(--font-weight-medium-heading);
+  background: var(--background-medium-heading);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  overflow: hidden;
 }
