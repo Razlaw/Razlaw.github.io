@@ -1,11 +1,11 @@
-import "./project2.scss";
+import "./poseGraphPrediction.scss";
 
 import React from "react";
 
 import dancersImage from "../../assets/dancers_downscaled.jpg";
 import linesForDancersImage from "../../assets/lines_for_dancers.png";
 
-export default function Project2() {
+export default function PoseGraphPrediction() {
     return (
         <div className="poseGraphPredictionContainer">
             <h1 className="projectsHeadline">Meine Projekte</h1>
