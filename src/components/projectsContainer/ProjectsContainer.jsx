@@ -1,11 +1,11 @@
 import "./projectsContainer.scss";
-import Project1 from "../project1/Project1";
+import RvizCinematographer from "../../pages/rvizCinematographer/RvizCinematographer";
 import Project2 from "../project2/Project2";
 
 export default function ProjectsContainer() {
     return (
         <div className="projectsContainer">
-            <Project1/>
+            <RvizCinematographer/>
             <Project2/>
         </div>
     );

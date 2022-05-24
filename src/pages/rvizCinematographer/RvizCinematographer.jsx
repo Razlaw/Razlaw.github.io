@@ -1,11 +1,11 @@
-import "./project1.scss";
+import "./rvizCinematographer.scss";
 
 import React from "react";
 
 import cameramanImage from "../../assets/cameraman_downscaled.jpg";
 import lineForCameramanImage from "../../assets/line_for_cameraman.png";
 
-export default function Project1() {
+export default function RvizCinematographer() {
     return (
         <div className="cinematographerContainer">
             <h1 className="projectsHeadline">Meine Projekte</h1>
