@@ -2,7 +2,7 @@ import "./home.scss";
 
 import React from "react";
 
-import Intro from "../../components/intro/Intro";
+import Intro from "../../pages/intro/Intro";
 import ProjectsContainer from "../../components/projectsContainer/ProjectsContainer";
 
 export default function Home() {
