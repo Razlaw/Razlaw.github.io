@@ -14,6 +14,13 @@
 
     display: flex;
 
+    @include for-mobile {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      overflow: visible;
+    }
+
     .leftContainer {
       flex: 1;
 
@@ -22,12 +29,27 @@
       justify-content: flex-end;
       overflow: hidden;
 
+      @include for-mobile {
+        flex: none;
+        display: initial;
+        align-items: initial;
+        justify-content: initial;
+        overflow: visible;
+        position: relative;
+        top: 0;
+        padding: 2% 2% 0 2%;
+      }
+
       .imgContainer {
         position: relative;
 
         display: flex;
         justify-content: center;
         padding: 0 10% 10% 0;
+
+        @include for-mobile {
+          padding: 0;
+        }
 
         img {
           max-width: 100%;
@@ -40,6 +62,14 @@
       flex: 1;
       position: relative;
 
+      @include for-mobile {
+        flex: initial;
+        bottom: 0.5%;
+        width: 100%;
+        z-index: 100;
+        overflow: visible;
+      }
+
       .textContainer {
         width: 80%;
         height: 100%;
@@ -48,6 +78,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include for-mobile {
+          width: 100%;
+          height: unset;
+          align-items: center;
+
+          padding-left: 0;
+        }
 
         .headlineMedium {
           font-family: var(--font-family-medium-heading);
@@ -61,6 +99,10 @@
 
         #myName {
           padding-left: 20px;
+
+          @include for-mobile {
+            margin-bottom: 0;
+          }
         }
 
         .headlineBig {
@@ -71,6 +113,15 @@
           background-clip: text;
           -webkit-background-clip: text;
           color: transparent;
+        }
+
+        #jobDescription {
+          @include for-mobile {
+            font-size: 4em;
+            margin-top: 0;
+            margin-bottom: 0;
+            z-index: 100;
+          }
         }
 
         .text {
@@ -86,6 +137,10 @@
         #myDescription {
           width: 80%;
           padding-left: 20px;
+
+          @include for-mobile {
+            display: none;
+          }
         }
       }
     }

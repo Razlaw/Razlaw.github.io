@@ -38,6 +38,18 @@
   }
 }
 
+@mixin for-mobile {
+  @media (max-width: 899px) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
 h1 {
   font-family: var(--font-family-big-heading);
   font-size: var(--font-size-big-heading);
