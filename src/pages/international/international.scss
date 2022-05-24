@@ -1,0 +1,73 @@
+@import "../../global.scss";
+
+.internationalContainer {
+  height: 100vh;
+  background: linear-gradient(var(--background-color-dark), var(--background-color-light));
+  scroll-snap-align: end;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  .internationalTitle {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+
+    font-size: 2.5em;
+    z-index: 100;
+  }
+
+  .mapContainer {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .imgContainer {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+      margin: 0 3%;
+
+      .northAmerica {
+        width: 100%;
+        position: relative;
+        top: 0;
+
+        path {
+          stroke: var(--text-color-top);
+          fill: none;
+          stroke-linecap: butt;
+          stroke-linejoin: round;
+          stroke-width: 2.3;
+        }
+      }
+
+      .eurasia {
+        width: 100%;
+        position: relative;
+        top: 0;
+
+        path {
+          stroke: var(--text-color-top);
+          fill: none;
+          stroke-linecap: butt;
+          stroke-linejoin: round;
+          stroke-width: 2.3;
+        }
+      }
+    }
+  }
+
+  .textContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
