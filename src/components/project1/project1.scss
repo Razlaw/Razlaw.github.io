@@ -1,80 +1,128 @@
 @import "../../global.scss";
 
-.project1 {
+.cinematographerContainer {
   height: 100vh;
   background: linear-gradient(var(--background-color-light), var(--background-color-dark));
   scroll-snap-align: end;
 
   display: flex;
 
-  .leftContainer {
-    flex: 1;
+  width: 100%;
+  color: var(--text-color-bottom);
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  position: relative;
+
+  .projectsHeadline {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+
+    font-size: 2.5em;
+    z-index: 100;
+  }
+
+  .imageContainer {
+    width: 50%;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @include for-mobile {
+      width: 150%;
+    }
 
-    .imgContainer {
-      width: 700px;
-      height: 670px;
+    .cameramanImage {
+      max-width: 100%;
       position: relative;
-      margin-bottom: 10%;
-      border-radius: 50%;
+      top: 0;
+      left: 0;
+    }
 
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-
-      img {
-        height: 100%;
-      }
+    .lineForCameramanImage {
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
-  .rightContainer {
-    flex: 1;
+  .textContainer {
     position: relative;
+    transform: translateY(-450px);
+    padding-bottom: 50px;
 
-    .textContainer {
-      width: 80%;
-      height: 100%;
-      padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    animation: slideInText 2s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 5s;
+    z-index: 0;
 
-      .headlineBig {
-        font-family: var(--font-family-big-heading);
-        font-size: var(--font-size-big-heading);
-        font-weight: var(--font-weight-big-heading);
-        background: var(--background-big-heading);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+    @include for-mobile {
+      width: 90%;
+      padding-bottom: 0;
+    }
+
+    @keyframes slideInText {
+      from {
+        opacity: 0;
+        transform: translateY(-450px);
       }
-
-      .text {
-        font-family: var(--font-family-paragraph);
-        font-size: var(--font-size-paragraph);
-        font-weight: var(--font-weight-paragraph);
-        background: var(--background-paragraph);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+      to {
+        opacity: 1;
+        transform: translateY(0px);
       }
+    }
 
-      #projectDescription {
-        width: 50%;
-        padding-left: 20px;
-      }
+    .headlineBig {
+      font-family: var(--font-family-big-heading);
+      font-size: var(--font-size-big-heading);
+      font-weight: var(--font-weight-big-heading);
+      background: var(--background-big-heading);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-      a {
-        font-family: var(--font-family-paragraph);
-        font-size: var(--font-size-paragraph);
-        font-weight: var(--font-weight-paragraph);
+    #projectName {
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+
+      @include for-mobile {
+        font-size: 3.5em;
       }
+    }
+
+    .text {
+      font-family: var(--font-family-paragraph);
+      font-size: var(--font-size-paragraph);
+      font-weight: var(--font-weight-paragraph);
+      background: var(--background-paragraph);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    #projectDescription {
+      @include for-mobile {
+        font-size: 1.5em;
+      }
+    }
+
+    a {
+      height: 25px;
+      font-family: var(--font-family-paragraph);
+      font-size: var(--font-size-paragraph);
+      font-weight: var(--font-weight-paragraph);
     }
   }
 }

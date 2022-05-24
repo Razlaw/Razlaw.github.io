@@ -1,6 +1,6 @@
 @import "../../global.scss";
 
-.project2 {
+.poseGraphPredictionContainer {
   height: calc(100vh - 50px);
   background: linear-gradient(var(--background-color-dark), var(--background-color-light));
   scroll-snap-align: start;
@@ -9,71 +9,203 @@
 
   display: flex;
 
-  .leftContainer {
-    flex: 1;
+  width: 100%;
+  color: var(--text-color-bottom);
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+
+  .projectsHeadline {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+
+    font-size: 2.5em;
+    z-index: 100;
+  }
+
+  .imageContainer {
+    width: 50%;
     overflow: hidden;
+    position: relative;
+    z-index: 1;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @include for-mobile {
+      width: 150%;
+    }
 
-    .imgContainer {
+    .dancersImage {
+      max-width: 100%;
       position: relative;
-      margin-bottom: 10%;
+      top: 0;
+      left: 0;
+    }
 
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
+    .upperLineCue {
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 22.2%;
+      left: 25.4%;
+      border-radius: 50%;
+      background-color: #8f1552;
+      animation: cueAnimation ease-in-out;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      animation-delay: 500ms;
+    }
 
-      img {
-        height: 100%;
+    #cueTwo {
+      top: 14.2%;
+      left: 36.4%;
+      animation-delay: 2200ms;
+      animation-duration: 1s;
+    }
+
+    #cueThree {
+      top: 10.8%;
+      left: 46.4%;
+      animation-delay: 2500ms;
+      animation-duration: 1s;
+    }
+
+    #cueFour {
+      top: 10.8%;
+      left: 46.4%;
+      animation-delay: 2500ms;
+      animation-duration: 1s;
+    }
+
+    .lowerLineCue {
+      display: none;
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      top: 44.6%;
+      left: 29.3%;
+      border-radius: 50%;
+      background-color: #8f1552;
+      //animation: cueAnimation 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes cueAnimation {
+      0% {
+        opacity: 1;
+        transform: scale(0);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(0.6);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.2);
+      }
+    }
+
+    .linesForDancersImage {
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
+
+      animation: revealLines 9s ease-in-out;
+      animation-iteration-count: 1;
+      animation-fill-mode: both;
+      animation-delay: 500ms;
+      @keyframes revealLines {
+        0% {
+          clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
+        }
+        50% {
+          clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 10% 45%, 10% 100%, 0% 100%);
+        }
+
+        100% {
+          clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 100% 45%, 100% 100%, 0% 100%);
+        }
       }
     }
   }
 
-  .rightContainer {
-    flex: 1;
+  .textContainer {
     position: relative;
+    transform: translateY(-450px);
+    padding-bottom: 50px;
 
-    .textContainer {
-      width: 80%;
-      height: 100%;
-      padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    animation: slideInText 2s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: 5s;
+    z-index: 0;
 
-      .headlineBig {
-        font-family: var(--font-family-big-heading);
-        font-size: var(--font-size-big-heading);
-        font-weight: var(--font-weight-big-heading);
-        background: var(--background-big-heading);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+    @include for-mobile {
+      width: 90%;
+      padding-bottom: 0;
+    }
+
+    @keyframes slideInText {
+      from {
+        opacity: 0;
+        transform: translateY(-450px);
       }
-
-      .text {
-        font-family: var(--font-family-paragraph);
-        font-size: var(--font-size-paragraph);
-        font-weight: var(--font-weight-paragraph);
-        background: var(--background-paragraph);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+      to {
+        opacity: 1;
+        transform: translateY(0px);
       }
+    }
 
-      #projectDescription {
-        width: 50%;
-        padding-left: 20px;
-      }
+    .headlineBig {
+      font-family: var(--font-family-big-heading);
+      font-size: var(--font-size-big-heading);
+      font-weight: var(--font-weight-big-heading);
+      background: var(--background-big-heading);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
 
-      a {
-        font-family: var(--font-family-paragraph);
-        font-size: var(--font-size-paragraph);
-        font-weight: var(--font-weight-paragraph);
+    #projectName {
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+
+      @include for-mobile {
+        font-size: 3.5em;
       }
+    }
+
+    .text {
+      font-family: var(--font-family-paragraph);
+      font-size: var(--font-size-paragraph);
+      font-weight: var(--font-weight-paragraph);
+      background: var(--background-paragraph);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    #projectDescription {
+      @include for-mobile {
+        font-size: 1.5em;
+      }
+    }
+
+    a {
+      height: 25px;
+      font-family: var(--font-family-paragraph);
+      font-size: var(--font-size-paragraph);
+      font-weight: var(--font-weight-paragraph);
     }
   }
 }
