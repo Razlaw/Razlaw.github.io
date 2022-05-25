@@ -76,3 +76,13 @@ h2 {
   color: transparent;
   overflow: hidden;
 }
+
+.text {
+  font-family: var(--font-family-paragraph);
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-paragraph);
+  background: var(--background-paragraph);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
