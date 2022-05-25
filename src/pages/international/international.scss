@@ -1,74 +1,103 @@
 @import "../../global.scss";
 
-.internationalContainer {
+.international {
   height: 100%;
-  background: linear-gradient(var(--background-color-dark), var(--background-color-light));
+  background-color: var(--background-color-light);
   scroll-snap-align: start;
-  margin-top: 50px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin-top: 50px;
 
   position: relative;
 
-  .internationalTitle {
-    position: absolute;
-    top: 3px;
-    left: 10px;
+  overflow: unset;
 
-    font-size: 2.5em;
-    z-index: 100;
-  }
+  .contentContainer {
+    width: 100%;
+    height: calc(100% - var(--height-transition-triangle) * 0.5);
+    background: linear-gradient(var(--background-color-dark), var(--background-color-light));
 
-  .mapContainer {
-    overflow: hidden;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 
-    .imgContainer {
+    position: relative;
+
+    overflow: hidden;
+
+    .internationalTitle {
+      position: absolute;
+      top: 3px;
+      left: 10px;
+
+      font-size: 2.5em;
+      z-index: 100;
+    }
+
+    .mapContainer {
+      overflow: hidden;
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      position: relative;
-      margin: 0 3%;
+      justify-content: flex-end;
+      align-items: center;
 
-      .northAmerica {
-        width: 100%;
+      .imgContainer {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
         position: relative;
-        top: 0;
+        margin: 0 3%;
 
-        path {
-          stroke: var(--text-color-top);
-          fill: none;
-          stroke-linecap: butt;
-          stroke-linejoin: round;
-          stroke-width: 2.3;
+        .northAmerica {
+          width: 100%;
+          position: relative;
+          top: 0;
+
+          path {
+            stroke: var(--text-color-top);
+            fill: none;
+            stroke-linecap: butt;
+            stroke-linejoin: round;
+            stroke-width: 2.3;
+          }
         }
-      }
 
-      .eurasia {
-        width: 100%;
-        position: relative;
-        top: 0;
+        .eurasia {
+          width: 100%;
+          position: relative;
+          top: 0;
 
-        path {
-          stroke: var(--text-color-top);
-          fill: none;
-          stroke-linecap: butt;
-          stroke-linejoin: round;
-          stroke-width: 2.3;
+          path {
+            stroke: var(--text-color-top);
+            fill: none;
+            stroke-linecap: butt;
+            stroke-linejoin: round;
+            stroke-width: 2.3;
+          }
         }
       }
     }
+
+    .textContainer {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
   }
 
-  .textContainer {
+  &:after {
+    content: "";
+    width: 100%;
+    height: var(--height-transition-triangle);
+    display: block;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    left: 0;
+    bottom: 0;
+    background-color: var(--background-color-dark);
+    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
+    z-index: 99;
   }
 }
