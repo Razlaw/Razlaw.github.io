@@ -2,7 +2,7 @@
 
 .sections {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: var(--background-color-dark);
   position: relative;
   scroll-behavior: smooth;
@@ -11,4 +11,6 @@
   &::-webkit-scrollbar{
     display: none;
   }
+
+  --height-transition-triangle: 100px;
 }

@@ -1,7 +1,11 @@
 @import "../../global.scss";
 
 .projectsContainer {
+  --number-of-projects: 2;
+
   width: 100%;
+  height: calc(100% * var(--number-of-projects));
+  margin-top: var(--height-transition-triangle);
   overflow: unset;  // snap scrolling on children works properly only if overflow of parent is unset
 
   &:after {
