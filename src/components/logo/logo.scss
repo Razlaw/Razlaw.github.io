@@ -13,6 +13,13 @@
   align-items: center;
   justify-content: center;
 
+  @include for-mobile {
+    left: unset;
+    right: 0px;
+    top: 0px;
+    transform: scale(0.5);
+  }
+
   .logoPart {
     margin: 0;
   }
@@ -26,6 +33,6 @@
   }
 
   &:hover {
-    transform: rotateZ(3deg);
+    transform: scale(1);
   }
 }
