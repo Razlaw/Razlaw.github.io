@@ -10,11 +10,15 @@
   width: 100%;
   color: var(--text-color-bottom);
 
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   overflow: hidden;
   position: relative;
+
+  @include for-mobile {
+    flex-direction: column;
+  }
 
   .projectsHeadline {
     position: absolute;
