@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .international {
-  height: 100%;
+  height: calc(100% + var(--height-transition-triangle) * 0.5);
   background-color: var(--background-color-light);
   scroll-snap-align: start;
 
@@ -94,7 +94,7 @@
     display: block;
     position: relative;
     left: 0;
-    bottom: 0;
+    bottom: calc(var(--height-transition-triangle) * 0.5);
     background-color: var(--background-color-dark);
     -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
