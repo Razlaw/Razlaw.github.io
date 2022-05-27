@@ -33,6 +33,8 @@
   --background-color-dark: var(--background-color-darkmode-dark);
 
   --text-color: var(--text-color-top);
+
+  --shadow-color: black;
 }
 
 @media (prefers-color-scheme: light) {
@@ -41,6 +43,8 @@
     --background-color-dark: var(--background-color-lightmode-dark);
 
     --text-color: var(--text-color-bottom);
+
+    --shadow-color: #666;
   }
 }
 
