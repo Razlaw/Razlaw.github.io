@@ -1,8 +1,8 @@
 @import "../../global.scss";
 
-.poseGraphPredictionContainer {
+.multiObjectTrackingContainer {
   height: calc(100% / var(--number-of-projects));
-  background: linear-gradient(var(--background-color-dark), var(--background-color-light));
+  background: linear-gradient(var(--background-color-light), var(--background-color-dark));
   scroll-snap-align: start;
   position: relative;
   top: 0;
@@ -31,108 +31,34 @@
   }
 
   .imageContainer {
+    max-width: 30%;
     overflow: hidden;
     position: relative;
     z-index: 1;
 
     @include for-mobile {
-      width: 150%;
+      max-width: 85%;
     }
 
-    .dancersImage {
+    .trackingImage {
       max-width: 100%;
       position: relative;
       top: 0;
       left: 0;
     }
 
-    .upperLineCue {
-      width: 35px;
-      height: 35px;
-      position: absolute;
-      top: 22.2%;
-      left: 25.4%;
-      border-radius: 50%;
-      background-color: #8f1552;
-      animation: cueAnimation ease-in-out;
-      animation-duration: 1s;
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
-      animation-delay: 500ms;
-    }
-
-    #cueTwo {
-      top: 14.2%;
-      left: 36.4%;
-      animation-delay: 2200ms;
-      animation-duration: 1s;
-    }
-
-    #cueThree {
-      top: 10.8%;
-      left: 46.4%;
-      animation-delay: 2500ms;
-      animation-duration: 1s;
-    }
-
-    #cueFour {
-      top: 10.8%;
-      left: 46.4%;
-      animation-delay: 2500ms;
-      animation-duration: 1s;
-    }
-
-    .lowerLineCue {
-      display: none;
-      width: 35px;
-      height: 35px;
-      position: absolute;
-      top: 44.6%;
-      left: 29.3%;
-      border-radius: 50%;
-      background-color: #8f1552;
-      //animation: cueAnimation 1s ease-in-out infinite alternate;
-    }
-
-    @keyframes cueAnimation {
-      0% {
-        opacity: 1;
-        transform: scale(0);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(0.6);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(1.2);
-      }
-    }
-
-    .linesForDancersImage {
+    .linesForTrackingImage {
       max-width: 100%;
       position: absolute;
       top: 0;
       left: 0;
+    }
 
-      clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
-
-      animation: revealLines 9s ease-in-out;
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
-      animation-delay: 500ms;
-      @keyframes revealLines {
-        0% {
-          clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
-        }
-        50% {
-          clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 10% 45%, 10% 100%, 0% 100%);
-        }
-
-        100% {
-          clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 100% 45%, 100% 100%, 0% 100%);
-        }
-      }
+    .additionalLineForTrackingImage {
+      max-width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
