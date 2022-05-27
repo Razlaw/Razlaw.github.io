@@ -4,6 +4,7 @@ import React from "react";
 
 import cameramanImage from "../../assets/cameraman_downscaled.jpg";
 import lineForCameramanImage from "../../assets/line_for_cameraman.png";
+import {ReactComponent as ExternalLinkIcon} from '../../assets/icons/external_link.svg';
 
 export default function RvizCinematographer() {
     return (
@@ -16,13 +17,14 @@ export default function RvizCinematographer() {
             <div className="textContainer">
                 <h1 className="headlineBig" id="projectName">RViz Cinematographer</h1>
                 <p className="text" id="projectDescription">
-                    Komplexe Kamerafahrten benutzerfreundlich in RViz erstellen
+                    Komplexe Kamerafahrten<br/> benutzerfreundlich in RViz erstellen
                 </p>
                 <a
                     href="https://github.com/AIS-Bonn/rviz_cinematographer"
                     target="_blank"
                     rel="noreferrer">
-                    Code + icon external link
+                    Code
+                    <ExternalLinkIcon/>
                 </a>
             </div>
         </div>

@@ -4,6 +4,7 @@ import React from "react";
 
 import dancersImage from "../../assets/dancers_downscaled.jpg";
 import linesForDancersImage from "../../assets/lines_for_dancers.png";
+import {ReactComponent as ExternalLinkIcon} from '../../assets/icons/external_link.svg';
 
 export default function PoseGraphPrediction() {
     return (
@@ -27,7 +28,8 @@ export default function PoseGraphPrediction() {
                     href="https://github.com/AIS-Bonn/pose_graph_prediction"
                     target="_blank"
                     rel="noreferrer">
-                    Code + icon external link
+                    Code
+                    <ExternalLinkIcon/>
                 </a>
             </div>
         </div>
