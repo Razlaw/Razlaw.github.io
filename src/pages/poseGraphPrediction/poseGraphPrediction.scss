@@ -54,32 +54,44 @@
       left: 25.4%;
       border-radius: 50%;
       background-color: #8f1552;
-      animation: cueAnimation ease-in-out;
-      animation-duration: 1s;
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
-      animation-delay: 500ms;
+
+      &.inView {
+        animation: cueAnimation ease-in-out;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-delay: 500ms;
+      }
     }
 
     #cueTwo {
       top: 14.2%;
       left: 36.4%;
-      animation-delay: 2200ms;
-      animation-duration: 1s;
+
+      &.inView {
+        animation-delay: 2200ms;
+        animation-duration: 1s;
+      }
     }
 
     #cueThree {
       top: 10.8%;
       left: 46.4%;
-      animation-delay: 2500ms;
-      animation-duration: 1s;
+
+      &.inView {
+        animation-delay: 2500ms;
+        animation-duration: 1s;
+      }
     }
 
     #cueFour {
       top: 10.8%;
       left: 46.4%;
-      animation-delay: 2500ms;
-      animation-duration: 1s;
+
+      &.inView {
+        animation-delay: 2500ms;
+        animation-duration: 1s;
+      }
     }
 
     .lowerLineCue {
@@ -117,10 +129,13 @@
 
       clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
 
-      animation: revealLines 9s ease-in-out;
-      animation-iteration-count: 1;
-      animation-fill-mode: both;
-      animation-delay: 500ms;
+      &.inView {
+        animation: revealLines 9s ease-in-out;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-delay: 500ms;
+      }
+
       @keyframes revealLines {
         0% {
           clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
@@ -138,7 +153,6 @@
 
   .textContainer {
     position: relative;
-    transform: translateY(-450px);
     padding-bottom: 50px;
 
     display: flex;
@@ -147,9 +161,11 @@
     justify-content: center;
     text-align: center;
 
-    animation: slideInText 2s ease-in-out;
-    animation-fill-mode: both;
-    animation-delay: 5s;
+    &.inView {
+      animation: slideInTextPoseGraph 500ms ease-in-out;
+      animation-fill-mode: both;
+    }
+
     z-index: 0;
 
     @include for-mobile {
@@ -157,14 +173,14 @@
       padding-bottom: 0;
     }
 
-    @keyframes slideInText {
+    @keyframes slideInTextPoseGraph {
       from {
         opacity: 0;
-        transform: translateY(-450px);
+        transform: translateX(50px);
       }
       to {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateX(0px);
       }
     }
 

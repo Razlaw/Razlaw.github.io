@@ -1,5 +1,7 @@
 import "./interests.scss";
 
+import {useInView} from "react-intersection-observer";
+
 import {ReactComponent as FoosballIcon} from '../../assets/icons/foosball.svg';
 import {ReactComponent as CameraIcon} from '../../assets/icons/camera.svg';
 import {ReactComponent as MoviesIcon} from '../../assets/icons/movies.svg';
@@ -11,13 +13,17 @@ import {ReactComponent as FoodIcon} from '../../assets/icons/food.svg';
 import {ReactComponent as TravelIcon} from '../../assets/icons/travel.svg';
 
 export default function Interests() {
+    const { ref, inView } = useInView({
+        triggerOnce: true
+    });
+
     return (
         <div className="interests">
             <div className="interestsContainer">
                 <h1 className="interestsTitle">
                     Interessen
                 </h1>
-                <div className="iconsContainer">
+                <div className={"iconsContainer " + (inView && "inView")} ref={ref}>
                     <div className="iconContainer">
                         <FoosballIcon className="icon"/>
                     </div>
