@@ -11,9 +11,6 @@ export default function Skills() {
                     <div className="listContainer" id="listOne">
                         <h1 className="listTitle">Sprachen</h1>
                         <ul>
-                            <li><p className="text skill">Deutsch</p></li>
-                            <li><p className="text skill">Englisch</p></li>
-                            <li><p className="separator"></p></li>
                             <li><p className="text skill">C++</p></li>
                             <li><p className="text skill">Python</p></li>
                             <li><p className="text skill">JavaScript</p></li>
