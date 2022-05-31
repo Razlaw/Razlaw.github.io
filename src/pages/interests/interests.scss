@@ -29,6 +29,17 @@
       z-index: 100;
     }
 
+    .lineCue {
+      width: 220%;
+      height: 8px;
+      position: absolute;
+      transform: rotateZ(-45deg);
+      top: 42%;
+      z-index: 1;
+
+      background-color: #901855;
+    }
+
     .iconsContainer {
       width: 80%;
       padding-right: 0;
@@ -86,6 +97,13 @@
         }
 
         .icon {
+          position: relative;
+
+          &.middle {
+            position: relative;
+            z-index: 2;
+          }
+
           * {
             stroke: var(--icon-stroke-color);
             stroke-width: 2.5;

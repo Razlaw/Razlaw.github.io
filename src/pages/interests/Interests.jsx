@@ -23,6 +23,7 @@ export default function Interests() {
                 <h1 className="interestsTitle">
                     Interessen
                 </h1>
+                <span className="lineCue"/>
                 <div className={"iconsContainer " + (inView && "inView")} ref={ref}>
                     <div className="iconContainer">
                         <FoosballIcon className="icon"/>
@@ -37,7 +38,7 @@ export default function Interests() {
                         <DrawingIcon className="icon"/>
                     </div>
                     <div className="iconContainer">
-                        <PsychologyIcon className="icon"/>
+                        <PsychologyIcon className="icon middle"/>
                     </div>
                     <div className="iconContainer">
                         <JoystickIcon className="icon"/>
