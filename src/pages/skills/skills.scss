@@ -1,11 +1,11 @@
 @import "../../global.scss";
 
 .skills {
-  height: 100%;
+  height: calc(100% + var(--height-transition-triangle) * 0.5);
   background-color: var(--background-color-dark);
   scroll-snap-align: start;
 
-  display: flex;
+  position: relative;
 
   overflow: unset;
 
@@ -88,5 +88,19 @@
         }
       }
     }
+  }
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: var(--height-transition-triangle);
+    display: block;
+    position: relative;
+    left: 0;
+    bottom: calc(var(--height-transition-triangle));
+    background-color: var(--background-color-dark);
+    -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
+    z-index: 99;
   }
 }
