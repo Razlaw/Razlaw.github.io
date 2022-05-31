@@ -6,6 +6,7 @@ import Intro from "../../pages/intro/Intro";
 import ProjectsContainer from "../../components/projectsContainer/ProjectsContainer";
 import International from "../../pages/international/International";
 import Skills from "../skills/Skills";
+import Interests from "../interests/Interests";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <ProjectsContainer/>
             <International/>
             <Skills/>
+            <Interests/>
         </div>
     );
 }

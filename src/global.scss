@@ -35,6 +35,8 @@
   --text-color: var(--text-color-top);
 
   --shadow-color: black;
+
+  --icon-stroke-color: #d7f9f5;
 }
 
 @media (prefers-color-scheme: light) {
@@ -45,6 +47,8 @@
     --text-color: var(--text-color-bottom);
 
     --shadow-color: #666;
+
+    --icon-stroke-color: #10423d;
   }
 }
 
