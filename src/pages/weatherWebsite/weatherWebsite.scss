@@ -12,7 +12,7 @@
   width: 100%;
   color: var(--text-color-bottom);
 
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   overflow: hidden;
@@ -32,20 +32,91 @@
 
   .imageContainer {
     max-width: 42%;
+    max-height: 80%;
     overflow: hidden;
     position: relative;
     z-index: 1;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     @include for-mobile {
       max-width: unset;
-      width: 142%;
+      width: 110%;
     }
 
-    .phoneImage {
-      max-width: 100%;
+    .websiteImageOne {
+      width: 100%;
       position: relative;
-      top: 0;
       left: 0;
+      animation: slideWebsiteOne 500ms cubic-bezier(.86, 0, .07, 1) both 2s;
+    }
+
+    .websiteImageTwo {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      animation: slideWebsiteTwo 500ms cubic-bezier(.86, 0, .07, 1) both 2s;
+    }
+
+    .phoneTemplateImage {
+      width: 100%;
+      position: absolute;
+      left: 0;
+    }
+
+    .swipeCue {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: #8f1552;
+      position: absolute;
+      top: 64%;
+      left: 52%;
+
+      animation: swipeCue 1000ms cubic-bezier(.86, 0, .07, 1) both 1000ms;
+
+      @include for-mobile {
+        top: 57%;
+      }
+    }
+
+    @keyframes slideWebsiteOne {
+      from {
+        transform: translate(0, 0);
+      }
+      to {
+        transform: translate(-150px, -75px);
+      }
+    }
+
+    @keyframes slideWebsiteTwo {
+      from {
+        transform: translate(150px, 77px);
+      }
+      to {
+        transform: translate(0, 1px);
+      }
+    }
+
+    @keyframes swipeCue {
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(0);
+      }
+      10% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1.5);
+      }
+      20% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-150px, -85px) scale(0.2);
+      }
     }
   }
 
