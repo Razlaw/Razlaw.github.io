@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.dd90e453.chunk.css",
-    "main.js": "/static/js/main.72d8ef43.chunk.js",
-    "main.js.map": "/static/js/main.72d8ef43.chunk.js.map",
+    "main.css": "/static/css/main.f324e85c.chunk.css",
+    "main.js": "/static/js/main.7784716a.chunk.js",
+    "main.js.map": "/static/js/main.7784716a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e7c3baa1.js",
     "runtime-main.js.map": "/static/js/runtime-main.e7c3baa1.js.map",
     "static/css/2.d97c81c1.chunk.css": "/static/css/2.d97c81c1.chunk.css",
-    "static/js/2.5c601cf2.chunk.js": "/static/js/2.5c601cf2.chunk.js",
-    "static/js/2.5c601cf2.chunk.js.map": "/static/js/2.5c601cf2.chunk.js.map",
+    "static/js/2.7547dc39.chunk.js": "/static/js/2.7547dc39.chunk.js",
+    "static/js/2.7547dc39.chunk.js.map": "/static/js/2.7547dc39.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d97c81c1.chunk.css.map": "/static/css/2.d97c81c1.chunk.css.map",
-    "static/css/main.dd90e453.chunk.css.map": "/static/css/main.dd90e453.chunk.css.map",
-    "static/js/2.5c601cf2.chunk.js.LICENSE.txt": "/static/js/2.5c601cf2.chunk.js.LICENSE.txt",
+    "static/css/main.f324e85c.chunk.css.map": "/static/css/main.f324e85c.chunk.css.map",
+    "static/js/2.7547dc39.chunk.js.LICENSE.txt": "/static/js/2.7547dc39.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/static/media/Emberly-Thin.ba1faf81.woff",
     "static/media/additional_line_for_tracking.d4b96f27.png": "/static/media/additional_line_for_tracking.d4b96f27.png",
     "static/media/semantic.min.css": "/static/media/outline-icons.ddae9b1b.woff",
@@ -27,6 +27,7 @@
     "static/media/line_for_cameraman.da87547a.png": "/static/media/line_for_cameraman.da87547a.png",
     "static/media/lines_for_dancers.cb2f4e3e.png": "/static/media/lines_for_dancers.cb2f4e3e.png",
     "static/media/lines_for_tracking.79e72bec.png": "/static/media/lines_for_tracking.79e72bec.png",
+    "static/media/logo_scaled.680eecc3.svg": "/static/media/logo_scaled.680eecc3.svg",
     "static/media/movies.83668d7f.svg": "/static/media/movies.83668d7f.svg",
     "static/media/north_america_wo_borders.5a288e51.svg": "/static/media/north_america_wo_borders.5a288e51.svg",
     "static/media/note.687e1b54.svg": "/static/media/note.687e1b54.svg",
@@ -41,8 +42,8 @@
   "entrypoints": [
     "static/js/runtime-main.e7c3baa1.js",
     "static/css/2.d97c81c1.chunk.css",
-    "static/js/2.5c601cf2.chunk.js",
-    "static/css/main.dd90e453.chunk.css",
-    "static/js/main.72d8ef43.chunk.js"
+    "static/js/2.7547dc39.chunk.js",
+    "static/css/main.f324e85c.chunk.css",
+    "static/js/main.7784716a.chunk.js"
   ]
 }
