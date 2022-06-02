@@ -82,9 +82,11 @@
       position: absolute;
       top: 64%;
       left: 52%;
+      transform: scale(0);
 
       &.inView {
-        animation: swipeCue 1000ms cubic-bezier(.86, 0, .07, 1) both 1000ms;
+        animation: fadeInCue 700ms cubic-bezier(.215,.61,.355,1) backwards 1s,
+        swipeCue 1000ms cubic-bezier(.86, 0, .07, 1) forwards 1700ms;
       }
 
       @include for-mobile {
@@ -110,16 +112,23 @@
       }
     }
 
+    @keyframes fadeInCue {
+      0% {
+        opacity: 0;
+        transform: scale(2.3);
+      }
+      40% {
+        opacity: 1;
+        transform: scale(.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
     @keyframes swipeCue {
       0% {
-        opacity: 1;
-        transform: translate(0, 0) scale(0);
-      }
-      10% {
-        opacity: 1;
-        transform: translate(0, 0) scale(1.5);
-      }
-      20% {
         opacity: 1;
         transform: translate(0, 0) scale(1);
       }
