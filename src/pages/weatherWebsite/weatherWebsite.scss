@@ -50,6 +50,7 @@
       width: 100%;
       position: relative;
       left: 0;
+      transform: translate(0, -1px);
 
       &.inView {
         animation: slideWebsiteOne 500ms cubic-bezier(.86, 0, .07, 1) both 2s;
@@ -60,6 +61,7 @@
       width: 100%;
       position: absolute;
       left: 0;
+      transform: translate(1px, 0);
 
       &.inView {
         animation: slideWebsiteTwo 500ms cubic-bezier(.86, 0, .07, 1) both 2s;
@@ -92,19 +94,19 @@
 
     @keyframes slideWebsiteOne {
       from {
-        transform: translate(0, 0);
+        transform: translate(0, -1px);
       }
       to {
-        transform: translate(-150px, -75px);
+        transform: translate(-17.2%, -5.8%);
       }
     }
 
     @keyframes slideWebsiteTwo {
       from {
-        transform: translate(150px, 77px);
+        transform: translate(17.2%, 5.8%);
       }
       to {
-        transform: translate(0, 1px);
+        transform: translate(1px, 0);
       }
     }
 

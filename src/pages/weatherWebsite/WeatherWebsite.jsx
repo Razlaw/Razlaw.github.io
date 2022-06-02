@@ -17,13 +17,13 @@ export default function WeatherWebsite() {
     return (
         <div className="weatherWebsiteContainer">
             <h1 className="projectsHeadline">Meine Projekte</h1>
-            <div className="imageContainer">
-                <img className={"websiteImageOne " + (inView && "inView")} ref={ref} src={websiteImageOne} alt="Smartphone on table"/>
-                <img className={"websiteImageTwo " + (inView && "inView")} ref={ref} src={websiteImageTwo} alt="Smartphone on table"/>
+            <div className="imageContainer" ref={ref}>
+                <img className={"websiteImageOne " + (inView && "inView")} src={websiteImageOne} alt="Smartphone on table"/>
+                <img className={"websiteImageTwo " + (inView && "inView")} src={websiteImageTwo} alt="Smartphone on table"/>
                 <img className="image phoneTemplateImage" src={phoneTemplateImage} alt="Smartphone on table"/>
-                <span className={"swipeCue " + (inView && "inView")} ref={ref}></span>
+                <span className={"swipeCue " + (inView && "inView")}></span>
             </div>
-            <div className={"textContainer " + (inView && "inView")} ref={ref}>
+            <div className={"textContainer " + (inView && "inView")}>
                 <h1 className="headlineBig" id="projectName">Weather Website</h1>
                 <p className="text" id="projectDescription">
                     Testballon Nr.1 in die Cloud.
