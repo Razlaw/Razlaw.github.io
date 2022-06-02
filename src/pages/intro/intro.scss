@@ -21,6 +21,67 @@
       overflow: hidden;
     }
 
+    .logoContainer {
+      height: 100%;
+      width: 100%;
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 111;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      .logoSVG {
+        width: 250%;
+        position: absolute;
+
+        animation:  rotateLogo 1400ms cubic-bezier(0.6, -0.28, 0.74, 0.05) backwards 1s,
+        bounceLogo 700ms cubic-bezier(0.29, 0.85, 0.62, 1.26) 2400ms,
+        growLogo 1400ms cubic-bezier(.87,-0.02,.98,.34) forwards 3100ms;
+      }
+
+      @keyframes rotateLogo {
+        from {
+          background-color: black;
+          transform: rotateZ(0);
+        }
+        to {
+          background-color: transparent;
+          transform: rotateZ(1turn);
+        }
+      }
+
+      @keyframes bounceLogo {
+        0% {
+          transform: rotateZ(0);
+        }
+        50% {
+          transform: rotateZ(-25deg);
+        }
+        100% {
+          transform: rotateZ(0);
+        }
+      }
+
+      @keyframes growLogo {
+        0% {
+          transform: scale(1);
+        }
+        99% {
+          transform: scale(250);
+          visibility: visible;
+        }
+        100% {
+          transform: scale(250);
+          visibility: hidden;
+        }
+      }
+    }
+
     .leftContainer {
       flex: 1;
 
