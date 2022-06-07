@@ -15,7 +15,6 @@ export default function RvizCinematographer() {
 
     return (
         <div className="cinematographerContainer">
-            <h1 className="projectsHeadline">Meine Projekte</h1>
             <div className={"imageContainer " + (inView && "inView")} ref={ref}>
                 <img className="cameramanImage" src={cameramanImage} alt="Cameraman on a hill with mountains in the background"/>
                 <img className="lineForCameramanImage" src={lineForCameramanImage} alt="Lines indicating motion of camera"/>

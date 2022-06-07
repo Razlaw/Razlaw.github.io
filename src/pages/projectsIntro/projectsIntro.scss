@@ -1,0 +1,95 @@
+@import "../../global.scss";
+
+.projectsIntroContainer {
+  width: 100%;
+  height: calc(100% / var(--number-of-projects));
+  background: linear-gradient(var(--background-color-dark), var(--background-color-light));
+  scroll-snap-align: start;
+  position: relative;
+
+  overflow: hidden;
+
+  .projectsIntroImageContainer {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+
+    overflow: hidden;
+
+    .wavesImage {
+      @include for-desktop {
+        width: 100%;
+      }
+
+      @include for-mobile {
+        height: 100%;
+        position: absolute;
+        right: -27px;
+      }
+    }
+  }
+
+  .projectsIntroTextContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &.inView {
+      animation: slideInTextProjectsIntro 500ms ease-in-out;
+      animation-fill-mode: both;
+    }
+
+    z-index: 2;
+
+    background: linear-gradient(180deg, var(--background-color-darkmode-light), var(--background-color-darkmode-dark));
+    box-shadow: 5px 5px 5px black;
+
+    padding: 30px 60px;
+    border-radius: 10px;
+
+    @include for-mobile {
+      top: 78%;
+      padding: 30px 50px;
+    }
+
+    @keyframes slideInTextProjectsIntro {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-30%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+
+    .headlineBig {
+      font-family: var(--font-family-big-heading);
+      font-size: var(--font-size-big-heading);
+      font-weight: var(--font-weight-big-heading);
+      background: var(--background-big-heading);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    #projectName {
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+
+      @include for-mobile {
+        font-size: 3.5em;
+      }
+    }
+  }
+}

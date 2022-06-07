@@ -15,7 +15,6 @@ export default function PoseGraphPrediction() {
 
     return (
         <div className="poseGraphPredictionContainer">
-            <h1 className="projectsHeadline">Meine Projekte</h1>
             <div className="imageContainer">
                 <img className="dancersImage" src={dancersImage} alt="Three dancers in one motion"/>
                 <div className={"upperLineCue " + (inView && "inView")} ref={ref} id="cueOne"/>

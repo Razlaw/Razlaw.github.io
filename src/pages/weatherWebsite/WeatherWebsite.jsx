@@ -16,7 +16,6 @@ export default function WeatherWebsite() {
 
     return (
         <div className="weatherWebsiteContainer">
-            <h1 className="projectsHeadline">Meine Projekte</h1>
             <div className="imageContainer" ref={ref}>
                 <img className={"websiteImageOne " + (inView && "inView")} src={websiteImageOne} alt="First part of weather website fitting into smartphone template"/>
                 <img className={"websiteImageTwo " + (inView && "inView")} src={websiteImageTwo} alt="Second part of weather website fitting into smartphone template sliding in with animation"/>

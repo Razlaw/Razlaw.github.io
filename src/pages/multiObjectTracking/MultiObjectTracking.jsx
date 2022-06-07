@@ -10,7 +10,6 @@ import {ReactComponent as ExternalLinkIcon} from '../../assets/icons/external_li
 export default function MultiObjectTracking() {
     return (
         <div className="multiObjectTrackingContainer">
-            <h1 className="projectsHeadline">Meine Projekte</h1>
             <div className="imageContainer">
                 <img className="trackingImage" src={trackingImage} alt="Foot prints in sand"/>
                 <img className="linesForTrackingImage" src={linesForTrackingImage} alt="Lines indicating paths of objects"/>
