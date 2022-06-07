@@ -16,13 +16,13 @@ export default function WeatherWebsite() {
 
     return (
         <div className="weatherWebsiteContainer">
-            <div className="imageContainer" ref={ref}>
+            <div className="imageContainer">
                 <img className={"websiteImageOne " + (inView && "inView")} src={websiteImageOne} alt="First part of weather website fitting into smartphone template"/>
                 <img className={"websiteImageTwo " + (inView && "inView")} src={websiteImageTwo} alt="Second part of weather website fitting into smartphone template sliding in with animation"/>
                 <img className="phoneTemplateImage" src={phoneTemplateImage} alt="Smartphone with part of weather website in hand"/>
                 <span className={"swipeCue " + (inView && "inView")}/>
             </div>
-            <div className={"textContainer " + (inView && "inView")}>
+            <div className={"textContainer " + (inView && "inView")} ref={ref}>
                 <h1 className="headlineBig" id="projectName">Weather Website</h1>
                 <p className="text" id="projectDescription">
                     Testballon Nr.1 in die Cloud.
