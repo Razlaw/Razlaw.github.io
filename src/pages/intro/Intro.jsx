@@ -1,11 +1,15 @@
 import "./intro.scss";
 
+import {useNavigate} from "react-router-dom";
+
 import { ReactComponent as Logo1000SVG } from "../../assets/icons/logo_scaled_1000.svg";
 import { ReactComponent as Logo4400SVG } from "../../assets/icons/logo_scaled_4400.svg";
 
 import portraitImage from "../../assets/portrait_crop.png";
 
 export default function Intro() {
+    const navigate = useNavigate();
+
     const viewportDiagonal = Math.sqrt(window.innerHeight * window.innerHeight + window.innerWidth * window.innerWidth);
 
     console.log("viewportDiagonal ", viewportDiagonal);
@@ -34,6 +38,15 @@ export default function Intro() {
                         </p>
                     </div>
                 </div>
+            </div>
+
+            <div className="linksToPrivacy">
+                <p className="linkToPrivacyStatement" onClick={() => navigate("/privacy_statement")}>
+                    Datenschutz
+                </p>
+                <p className="linkToSiteNotice" onClick={() => navigate("/site_notice")}>
+                    Impressum
+                </p>
             </div>
         </div>
     );
