@@ -53,7 +53,13 @@
         .iconContainer {
           .icon {
             * {
-              animation: draw 3s ease-in both;
+              @include for-desktop {
+                animation: draw 3s ease-in both;
+              }
+
+              @include for-mobile {
+                animation: drawMobile 3s ease-in-out both;
+              }
             }
 
             @keyframes draw {
@@ -62,6 +68,15 @@
               }
               to {
                 stroke-dashoffset: 0;
+              }
+            }
+
+            @keyframes drawMobile {
+              from {
+                stroke-dasharray: 0 100;
+              }
+              to {
+                stroke-dasharray: 100 0;
               }
             }
           }
