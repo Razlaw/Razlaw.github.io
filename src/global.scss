@@ -37,6 +37,8 @@
   --shadow-color: black;
 
   --icon-stroke-color: #d7f9f5;
+
+  --underline-color: var(--icon-stroke-color);
 }
 
 @media (prefers-color-scheme: light) {
@@ -49,6 +51,8 @@
     --shadow-color: #666;
 
     --icon-stroke-color: #10423d;
+
+    --underline-color: var(--icon-stroke-color);
   }
 }
 

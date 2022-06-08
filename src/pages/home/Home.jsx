@@ -7,6 +7,7 @@ import ProjectsContainer from "../../components/projectsContainer/ProjectsContai
 import International from "../../pages/international/International";
 import Skills from "../skills/Skills";
 import Interests from "../interests/Interests";
+import Footer from "../footer/Footer";
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
             <International/>
             <Skills/>
             <Interests/>
+            <Footer/>
         </div>
     );
 }

@@ -1,0 +1,301 @@
+@import "../../global.scss";
+
+.footer {
+  height: 100%;
+  background-color: var(--background-color-dark);
+  scroll-snap-align: start;
+
+  display: flex;
+
+  overflow: unset;
+
+  .footerContainer {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--background-color-dark), var(--background-color-light));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    position: relative;
+
+    .footerTitle {
+      position: absolute;
+      top: 3px;
+      left: 10px;
+
+      font-size: 2.5em;
+      z-index: 100;
+    }
+
+    .internalLinksContainer {
+      width: 100%;
+      height: calc(50% + 3 * var(--height-transition-triangle));
+      padding: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-evenly;
+      overflow: visible;
+
+      visibility: hidden;
+      transform: translateY(200%);
+
+      &.inView {
+        animation: moveInternalLinksUp 1700ms cubic-bezier(.39,.58,.57,1) both 2000ms;
+      }
+
+      @keyframes moveInternalLinksUp {
+        0% {
+          visibility: hidden;
+          transform: translateY(200%);
+        }
+        1% {
+          visibility: visible;
+          transform: translateY(200%);
+        }
+        100% {
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+
+      @include for-mobile {
+        height: 50%;
+        padding-top: 55px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .internalLinkContainer {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        top: 19%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        overflow: visible;
+
+        @include for-mobile {
+          top: 0;
+          margin-bottom: 0;
+        }
+
+        .internalLink {
+          width: fit-content;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          overflow: visible;
+
+          padding: 3px 19px;
+          //border-bottom: 3px solid #35574f;
+          //box-shadow: 5px 5px 15px #05281e;
+          //border-radius: 9px;
+          transition: all ease-in-out 1000ms;
+
+          &.inView {
+            animation: revealInternalLinks 1s ease-in-out both 4s;
+            //border-bottom: 3px solid #35574f;
+            //box-shadow: 5px 5px 15px #05281e;
+            //border-radius: 9px;
+          }
+
+          @keyframes revealInternalLinks {
+            0% {
+              border-bottom: 0px solid #35574f;
+              box-shadow: 0px 0px 0px #05281e;
+              border-radius: 0px;
+            }
+            100% {
+              border-bottom: 3px solid #35574f;
+              box-shadow: 5px 5px 15px #05281e;
+              border-radius: 9px;
+            }
+          }
+
+          &:hover {
+            animation: revealInternalLinks 100ms ease-in-out;
+            border-bottom: 2px solid #35574f;
+            box-shadow: 3px 3px 5px #05281e;
+            border-radius: 9px;
+          }
+
+          &:active {
+            border-bottom: 0px solid #35574f;
+            box-shadow: 0px 0px 0px #05281e;
+            border-radius: 9px;
+          }
+
+          .linkText {
+            width: fit-content;
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+
+            h1 {
+              @include for-mobile {
+                font-size: 3em;
+                margin: 0;
+                //text-decoration: 2px solid underline var(--icon-stroke-color);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .externalLinksContainer {
+      width: 100%;
+      height: calc(50% + 2 * var(--height-transition-triangle));
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      padding: 0;
+
+      overflow: hidden;
+
+      background-color: black;
+
+      transition: all 2s ease-in-out;
+      clip-path: polygon(0% calc(3 * var(--height-transition-triangle)), 50% calc(2 * var(--height-transition-triangle)), 100% calc(3 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
+
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-evenly;
+
+      &.inView {
+        animation: revealExternalLinks 2s ease-in-out both 600ms;
+
+        @include for-mobile {
+          animation: revealExternalLinksMobile 2s ease-in-out both 600ms;
+        }
+      }
+
+      @keyframes revealExternalLinks {
+        0% {
+          clip-path: polygon(0% 100%, 50% calc(100% - var(--height-transition-triangle)), 100% 100%, 100% 100%, 0% 100%);
+        }
+        40% {
+          clip-path: polygon(0% calc(3 * var(--height-transition-triangle)), 50% calc(2 * var(--height-transition-triangle)), 100% calc(3 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
+        }
+        60% {
+          clip-path: polygon(0% calc(3 * var(--height-transition-triangle)), 50% calc(2 * var(--height-transition-triangle)), 100% calc(3 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
+        }
+        100% {
+          clip-path: polygon(0% calc(4 * var(--height-transition-triangle)), 50% calc(2 * var(--height-transition-triangle)), 100% 0%, 100% 100%, 0% 100%);
+        }
+      }
+
+      @keyframes revealExternalLinksMobile {
+        0% {
+          clip-path: polygon(0% 100%, 50% calc(100% - 0.25 * var(--height-transition-triangle)), 100% 100%, 100% 100%, 0% 100%);
+        }
+        40% {
+          clip-path: polygon(0% calc(0.75 * var(--height-transition-triangle)), 50% 0%, 100% calc(0.75 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
+        }
+        60% {
+          clip-path: polygon(0% calc(0.75 * var(--height-transition-triangle)), 50% 0%, 100% calc(0.75 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
+        }
+        100% {
+          clip-path: polygon(0% calc(1 * var(--height-transition-triangle)), 50% 0%, 100% calc(1 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
+        }
+      }
+
+      @include for-mobile {
+        height: 50%;
+        padding: 40px 0 20px 0;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .externalLinkContainer {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        bottom: 18%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: visible;
+
+        @include for-mobile {
+          flex-direction: row;
+          justify-content: initial;
+          bottom: 0;
+          margin: 0;
+        }
+
+        .externalLink {
+          width: fit-content;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+
+          //border-bottom: 3px solid #0e4639;
+          //padding: 3px 19px;
+          //box-shadow: 10px 10px 15px #020f0b;
+          //border-radius: 9px;
+
+          @include for-mobile {
+            flex-direction: row;
+            align-items: flex-end;
+          }
+
+          .linkText {
+            width: fit-content;
+
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+
+            stroke: var(--text-color-top);
+
+            h1 {
+              @include for-mobile {
+                font-size: 3em;
+                margin: 0;
+                text-decoration: 3px solid underline #d9d9d9;
+              }
+            }
+
+            &:hover {
+              stroke: var(--text-color-bottom);
+            }
+
+            #externalLink {
+              height: 16px;
+              width: 16px;
+              margin-top: 19px;
+              margin-left: 3px;
+
+              @include for-mobile {
+                height: 13px;
+                width: 13px;
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
