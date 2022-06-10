@@ -21,122 +21,169 @@
     flex-direction: column;
   }
 
-  .imageContainer {
-    overflow: hidden;
+  .imageFrame {
     position: relative;
+    margin: 4% 2%;
     z-index: 1;
 
+    overflow: hidden;
+
     @include for-mobile {
-      width: 150%;
+      width: 95%;
+      height: 60%;
+      margin: 0;
     }
 
-    .dancersImage {
-      max-width: 100%;
+    .imageContainer {
       position: relative;
-      top: 0;
-      left: 0;
-    }
 
-    .upperLineCue {
-      width: 35px;
-      height: 35px;
-      position: absolute;
-      top: 22.2%;
-      left: 25.4%;
-      border-radius: 50%;
-      background-color: #8f1552;
+      overflow: hidden;
 
-      &.inView {
-        animation: cueAnimation ease-in-out;
-        animation-duration: 1s;
-        animation-iteration-count: 1;
-        animation-fill-mode: both;
-        animation-delay: 500ms;
-      }
-    }
-
-    #cueTwo {
-      top: 14.2%;
-      left: 36.4%;
-
-      &.inView {
-        animation-delay: 2200ms;
-        animation-duration: 1s;
-      }
-    }
-
-    #cueThree {
-      top: 10.8%;
-      left: 46.4%;
-
-      &.inView {
-        animation-delay: 2500ms;
-        animation-duration: 1s;
-      }
-    }
-
-    #cueFour {
-      top: 10.8%;
-      left: 46.4%;
-
-      &.inView {
-        animation-delay: 2500ms;
-        animation-duration: 1s;
-      }
-    }
-
-    .lowerLineCue {
-      display: none;
-      width: 35px;
-      height: 35px;
-      position: absolute;
-      top: 44.6%;
-      left: 29.3%;
-      border-radius: 50%;
-      background-color: #8f1552;
-      //animation: cueAnimation 1s ease-in-out infinite alternate;
-    }
-
-    @keyframes cueAnimation {
-      0% {
-        opacity: 1;
-        transform: scale(0);
-      }
-      50% {
-        opacity: 1;
-        transform: scale(0.6);
-      }
-      100% {
-        opacity: 0;
-        transform: scale(1.2);
-      }
-    }
-
-    .linesForDancersImage {
-      max-width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
-
-      &.inView {
-        animation: revealLines 9s ease-in-out;
-        animation-iteration-count: 1;
-        animation-fill-mode: both;
-        animation-delay: 500ms;
+      @include for-mobile {
+        height: 92%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
-      @keyframes revealLines {
+      .dancersImage {
+        max-width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        @include for-mobile {
+          max-width: unset;
+          height: 100%;
+        }
+      }
+
+      .upperLineCue {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 22.2%;
+        left: 25.4%;
+        border-radius: 50%;
+        background-color: #8f1552;
+
+        &.inView {
+          animation: cueAnimation ease-in-out;
+          animation-duration: 1s;
+          animation-iteration-count: 1;
+          animation-fill-mode: both;
+          animation-delay: 500ms;
+        }
+
+        @include for-mobile {
+          top: 20.7%;
+          left: 24.2%;
+        }
+      }
+
+      #cueTwo {
+        top: 14.2%;
+        left: 36.4%;
+
+        &.inView {
+          animation-delay: 2200ms;
+          animation-duration: 1s;
+        }
+
+        @include for-mobile {
+          top: 12.4%;
+          left: 35.4%;
+        }
+      }
+
+      #cueThree {
+        top: 10.8%;
+        left: 46.4%;
+
+        &.inView {
+          animation-delay: 2500ms;
+          animation-duration: 1s;
+        }
+
+        @include for-mobile {
+          top: 9.1%;
+          left: 45.2%;
+        }
+      }
+
+      #cueFour {
+        top: 10.8%;
+        left: 46.4%;
+
+        &.inView {
+          animation-delay: 2500ms;
+          animation-duration: 1s;
+        }
+
+        @include for-mobile {
+          top: 9.1%;
+          left: 45.2%;
+        }
+      }
+
+      .lowerLineCue {
+        display: none;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 44.6%;
+        left: 29.3%;
+        border-radius: 50%;
+        background-color: #8f1552;
+        //animation: cueAnimation 1s ease-in-out infinite alternate;
+      }
+
+      @keyframes cueAnimation {
         0% {
-          clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
+          opacity: 1;
+          transform: scale(0);
         }
         50% {
-          clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 10% 45%, 10% 100%, 0% 100%);
+          opacity: 1;
+          transform: scale(0.6);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(1.2);
+        }
+      }
+
+      .linesForDancersImage {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
+
+        &.inView {
+          animation: revealLines 9s ease-in-out;
+          animation-iteration-count: 1;
+          animation-fill-mode: both;
+          animation-delay: 500ms;
         }
 
-        100% {
-          clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 100% 45%, 100% 100%, 0% 100%);
+        @keyframes revealLines {
+          0% {
+            clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
+          }
+          50% {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 10% 45%, 10% 100%, 0% 100%);
+          }
+
+          100% {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 100% 45%, 100% 100%, 0% 100%);
+          }
+        }
+
+        @include for-mobile {
+          max-width: unset;
+          height: 100%;
         }
       }
     }
@@ -144,7 +191,7 @@
 
   .textContainer {
     position: relative;
-    padding-bottom: 50px;
+    padding-right: 2%;
 
     display: flex;
     flex-direction: column;
@@ -160,8 +207,8 @@
     z-index: 0;
 
     @include for-mobile {
-      width: 90%;
-      padding-bottom: 0;
+      width: 100%;
+      padding: 0 5%;
     }
 
     @keyframes slideInTextPoseGraph {

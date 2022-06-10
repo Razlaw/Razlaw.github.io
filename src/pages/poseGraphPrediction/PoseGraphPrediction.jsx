@@ -15,24 +15,26 @@ export default function PoseGraphPrediction() {
 
     return (
         <div className="poseGraphPredictionContainer">
-            <div className="imageContainer">
-                <img className="dancersImage" src={dancersImage} alt="Three dancers in one motion"/>
-                <div className={"upperLineCue " + (inView && "inView")} ref={ref} id="cueOne"/>
-                <div className={"upperLineCue " + (inView && "inView")} ref={ref} id="cueTwo"/>
-                <div className={"upperLineCue " + (inView && "inView")} ref={ref} id="cueThree"/>
-                <div className={"upperLineCue " + (inView && "inView")} ref={ref} id="cueFour"/>
-                <div className="lowerLineCue"/>
-                <img
-                    className={"linesForDancersImage " + (inView && "inView")}
-                    ref={ref}
-                    src={linesForDancersImage}
-                    alt="Lines indicating motion of dancers"
-                />
+            <div className="imageFrame" ref={ref}>
+                <div className="imageContainer">
+                    <img className="dancersImage" src={dancersImage} alt="Three dancers in one motion"/>
+                    <div className={"upperLineCue " + (inView && "inView")} id="cueOne"/>
+                    <div className={"upperLineCue " + (inView && "inView")} id="cueTwo"/>
+                    <div className={"upperLineCue " + (inView && "inView")} id="cueThree"/>
+                    <div className={"upperLineCue " + (inView && "inView")} id="cueFour"/>
+                    <div className="lowerLineCue"/>
+                    <img
+                        className={"linesForDancersImage " + (inView && "inView")}
+                        ref={ref}
+                        src={linesForDancersImage}
+                        alt="Lines indicating motion of dancers"
+                    />
+                </div>
             </div>
-            <div className={"textContainer " + (inView && "inView")} ref={ref}>
+            <div className={"textContainer " + (inView && "inView")}>
                 <h1 className="headlineBig" id="projectName">Pose Graph Prediction</h1>
                 <p className="text" id="projectDescription">
-                    Vorhersage von Bewegungen durch Graph Neuronale Netze.
+                    Vorhersage von Bewegungen<br/>durch Graph Neuronale Netze.
                 </p>
                 <a
                     href="https://github.com/AIS-Bonn/pose_graph_prediction"
