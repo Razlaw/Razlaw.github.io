@@ -29,8 +29,8 @@
   --background-color-darkmode-light: #11191a;
   --background-color-darkmode-dark: #0b0b0b;
 
-  --background-color-light: var(--background-color-darkmode-light);
-  --background-color-dark: var(--background-color-darkmode-dark);
+  --background-color-primary: var(--background-color-darkmode-dark);
+  --background-color-secondary: var(--background-color-darkmode-light);
 
   --text-color: var(--text-color-top);
 
@@ -43,8 +43,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color-light: var(--background-color-lightmode-light);
-    --background-color-dark: var(--background-color-lightmode-dark);
+    --background-color-primary: var(--background-color-lightmode-light);
+    --background-color-secondary: var(--background-color-lightmode-dark);
 
     --text-color: var(--text-color-bottom);
 

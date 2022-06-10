@@ -2,7 +2,7 @@
 
 .international {
   height: calc(100% + var(--height-transition-triangle) * 0.5);
-  background-color: var(--background-color-light);
+  background-color: var(--background-color-primary);
   scroll-snap-align: start;
 
   margin-top: 50px;
@@ -14,7 +14,7 @@
   .contentContainer {
     width: 100%;
     height: calc(100% - var(--height-transition-triangle) * 0.5);
-    background: linear-gradient(var(--background-color-dark), var(--background-color-light));
+    background: linear-gradient(var(--background-color-secondary), var(--background-color-primary));
 
     display: flex;
     flex-direction: column;
@@ -95,7 +95,7 @@
     position: relative;
     left: 0;
     bottom: calc(var(--height-transition-triangle) * 0.5);
-    background-color: var(--background-color-dark);
+    background-color: var(--background-color-secondary);
     -webkit-clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
     z-index: 99;

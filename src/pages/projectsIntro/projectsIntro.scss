@@ -3,7 +3,7 @@
 .projectsIntroContainer {
   width: 100%;
   height: calc(100% / var(--number-of-projects));
-  background: linear-gradient(var(--background-color-dark), var(--background-color-light));
+  background: linear-gradient(var(--background-color-secondary), var(--background-color-primary));
   scroll-snap-align: start;
   position: relative;
 
