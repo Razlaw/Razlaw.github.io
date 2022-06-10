@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.b053a847.chunk.css",
-    "main.js": "/static/js/main.a19a0ceb.chunk.js",
-    "main.js.map": "/static/js/main.a19a0ceb.chunk.js.map",
+    "main.css": "/static/css/main.344fce3b.chunk.css",
+    "main.js": "/static/js/main.eccfc5d2.chunk.js",
+    "main.js.map": "/static/js/main.eccfc5d2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e7c3baa1.js",
     "runtime-main.js.map": "/static/js/runtime-main.e7c3baa1.js.map",
     "static/css/2.d97c81c1.chunk.css": "/static/css/2.d97c81c1.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.7624a312.chunk.js.map": "/static/js/2.7624a312.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d97c81c1.chunk.css.map": "/static/css/2.d97c81c1.chunk.css.map",
-    "static/css/main.b053a847.chunk.css.map": "/static/css/main.b053a847.chunk.css.map",
+    "static/css/main.344fce3b.chunk.css.map": "/static/css/main.344fce3b.chunk.css.map",
     "static/js/2.7624a312.chunk.js.LICENSE.txt": "/static/js/2.7624a312.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/static/media/Emberly-Thin.ba1faf81.woff",
     "static/media/additional_line_for_tracking.d4b96f27.png": "/static/media/additional_line_for_tracking.d4b96f27.png",
@@ -45,7 +45,7 @@
     "static/js/runtime-main.e7c3baa1.js",
     "static/css/2.d97c81c1.chunk.css",
     "static/js/2.7624a312.chunk.js",
-    "static/css/main.b053a847.chunk.css",
-    "static/js/main.a19a0ceb.chunk.js"
+    "static/css/main.344fce3b.chunk.css",
+    "static/js/main.eccfc5d2.chunk.js"
   ]
 }
