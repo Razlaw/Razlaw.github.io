@@ -38,17 +38,6 @@ export default function Footer() {
                             </div>
                         </a>
                     </div>
-                    <div className="internalLinkContainer" id="publications">
-                        <a
-                            className={"internalLink " + (inView && "inView")}
-                            href="https://github.com/Razlaw"
-                            target="_blank"
-                            rel="noreferrer">
-                            <div className="linkText">
-                                <h1>Publikationen</h1>
-                            </div>
-                        </a>
-                    </div>
                     <div className="internalLinkContainer" id="timeline">
                         <a
                             className={"internalLink " + (inView && "inView")}
