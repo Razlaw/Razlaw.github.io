@@ -275,6 +275,9 @@
     justify-content: center;
     text-align: center;
 
+    opacity: 0;
+    transform: translateX(-50px);
+
     &.wasInView {
       animation: slideInTextPoseGraph 500ms ease-in-out 7000ms;
       animation-fill-mode: both;
