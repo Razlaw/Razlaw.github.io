@@ -17,7 +17,7 @@ export default function ProjectsIntro() {
                 <img className="wavesImage" src={wavesImage} alt="Waves in black and white"/>
             </div>
             <div className={"projectsIntroTextContainer " + (inView && "inView")} ref={ref}>
-                <h1 className="headlineBig" id="projectName">Ausgewählte Highlights</h1>
+                <h1>Ausgewählte Highlights</h1>
             </div>
         </div>
     );
