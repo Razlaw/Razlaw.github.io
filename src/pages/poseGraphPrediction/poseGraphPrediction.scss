@@ -21,6 +21,10 @@
     flex-direction: column;
   }
 
+  @include for-tablet {
+    flex-direction: column;
+  }
+
   .imageFrame {
     position: relative;
     margin: 4% 2%;
@@ -29,6 +33,12 @@
     overflow: hidden;
 
     @include for-mobile {
+      width: 95%;
+      height: 60%;
+      margin: 0;
+    }
+
+    @include for-tablet {
       width: 95%;
       height: 60%;
       margin: 0;
@@ -46,6 +56,13 @@
         transform: translateX(-50%);
       }
 
+      @include for-tablet {
+        height: 92%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       .dancersImage {
         max-width: 100%;
         position: relative;
@@ -53,6 +70,11 @@
         left: 0;
 
         @include for-mobile {
+          max-width: unset;
+          height: 100%;
+        }
+
+        @include for-tablet {
           max-width: unset;
           height: 100%;
         }
@@ -69,11 +91,6 @@
         &.inView {
           animation: cueAnimation 1s ease-in-out both;
         }
-
-        @include for-mobile {
-          top: 20.7%;
-          left: 24.2%;
-        }
       }
 
       #cue1 {
@@ -83,6 +100,11 @@
         @include for-mobile {
           top: 20.7%;
           left: 24.2%;
+        }
+
+        @include for-tablet {
+          top: 21.3%;
+          left: 24.7%;
         }
 
         &.inView {
@@ -99,6 +121,11 @@
           left: 35.4%;
         }
 
+        @include for-tablet {
+          top: 13.3%;
+          left: 36%;
+        }
+
         &.inView {
           animation-delay: 1100ms;
         }
@@ -111,6 +138,11 @@
         @include for-mobile {
           top: 9.1%;
           left: 45.2%;
+        }
+
+        @include for-tablet {
+          top: 9.8%;
+          left: 45.8%;
         }
 
         &.inView {
@@ -127,6 +159,11 @@
           left: 28%;
         }
 
+        @include for-tablet {
+          top: 44%;
+          left: 28.6%;
+        }
+
         &.inView {
           animation-delay: 3400ms;
         }
@@ -141,6 +178,11 @@
           left: 46.6%;
         }
 
+        @include for-tablet {
+          top: 50.7%;
+          left: 47%;
+        }
+
         &.inView {
           animation-delay: 4000ms;
         }
@@ -153,6 +195,11 @@
         @include for-mobile {
           top: 55%;
           left: 51.6%;
+        }
+
+        @include for-tablet {
+          top: 56.5%;
+          left: 52.1%;
         }
 
         &.inView {
@@ -209,6 +256,11 @@
           max-width: unset;
           height: 100%;
         }
+
+        @include for-tablet {
+          max-width: unset;
+          height: 100%;
+        }
       }
     }
   }
@@ -233,6 +285,11 @@
     @include for-mobile {
       width: 100%;
       padding: 0 5%;
+    }
+
+    @include for-tablet {
+      width: 100%;
+      padding: 0 5% 20px 5%;
     }
 
     @keyframes slideInTextPoseGraph {
