@@ -21,42 +21,129 @@
     flex-direction: column;
   }
 
-  .imageContainer {
-    max-width: 30%;
-    overflow: hidden;
+
+  @include for-tablet {
+    flex-direction: column;
+  }
+
+  .imageFrame {
     position: relative;
+    margin: 4% 2%;
     z-index: 1;
 
+    overflow: hidden;
+
     @include for-mobile {
-      max-width: 85%;
+      width: 95%;
+      height: 60%;
+      margin: 0;
     }
 
-    .trackingImage {
-      max-width: 100%;
+    @include for-tablet {
+      width: 95%;
+      height: 60%;
+      margin: 0;
+    }
+
+    .imageContainer {
       position: relative;
-      top: 0;
-      left: 0;
-    }
 
-    .linesForTrackingImage {
-      max-width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+      overflow: hidden;
 
-    .additionalLineForTrackingImage {
-      max-width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+      @include for-mobile {
+        height: 92%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @include for-tablet {
+        height: 92%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .trackingImage {
+        max-width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        @include for-mobile {
+          max-width: unset;
+          height: 100%;
+        }
+
+        @include for-tablet {
+          max-width: unset;
+          height: 100%;
+        }
+      }
+
+      .linesForTrackingImage {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
+
+        &.inView {
+          animation: revealUpperLine 3s ease-in-out both 1400ms, revealLowerLine 3s ease-in-out forwards 4400ms;
+        }
+
+        @keyframes revealUpperLine {
+          0% {
+            clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
+          }
+          100% {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 10% 45%, 10% 100%, 0% 100%);
+          }
+        }
+
+        @keyframes revealLowerLine {
+          0% {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 10% 45%, 10% 100%, 0% 100%);
+          }
+          100% {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 100% 45%, 100% 100%, 0% 100%);
+          }
+        }
+
+        @include for-mobile {
+          max-width: unset;
+          height: 100%;
+        }
+
+        @include for-tablet {
+          max-width: unset;
+          height: 100%;
+        }
+      }
+
+      .additionalLineForTrackingImage {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include for-mobile {
+          max-width: unset;
+          height: 100%;
+        }
+
+        @include for-tablet {
+          max-width: unset;
+          height: 100%;
+        }
+      }
     }
   }
 
   .textContainer {
     position: relative;
-    transform: translateY(-450px);
-    padding-bottom: 50px;
+    padding-right: 2%;
 
     display: flex;
     flex-direction: column;
@@ -64,98 +151,34 @@
     justify-content: center;
     text-align: center;
 
-    animation: slideInText 2s ease-in-out;
-    animation-fill-mode: both;
-    animation-delay: 5s;
+    opacity: 0;
+    transform: translateX(-50px);
+
+    &.wasInView {
+      animation: slideInTextPoseGraph 500ms ease-in-out 7000ms;
+      animation-fill-mode: both;
+    }
+
     z-index: 0;
 
     @include for-mobile {
-      width: 90%;
-      padding-bottom: 0;
+      width: 100%;
+      padding: 0 5%;
     }
 
-    @keyframes slideInText {
+    @include for-tablet {
+      width: 100%;
+      padding: 0 5% 20px 5%;
+    }
+
+    @keyframes slideInTextPoseGraph {
       from {
         opacity: 0;
-        transform: translateY(-450px);
+        transform: translateX(-50px);
       }
       to {
         opacity: 1;
-        transform: translateY(0px);
-      }
-    }
-
-    .headlineBig {
-      font-family: var(--font-family-big-heading);
-      font-size: var(--font-size-big-heading);
-      font-weight: var(--font-weight-big-heading);
-      background: var(--background-big-heading);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    #projectName {
-      width: 100%;
-      margin: 0;
-      overflow: hidden;
-
-      @include for-mobile {
-        font-size: 3.5em;
-      }
-    }
-
-    .text {
-      font-family: var(--font-family-paragraph);
-      font-size: var(--font-size-paragraph);
-      font-weight: var(--font-weight-paragraph);
-      background: var(--background-paragraph);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    #projectDescription {
-      @include for-mobile {
-        font-size: 1.5em;
-      }
-    }
-
-    a {
-      width: min-content;
-      height: 39px;
-      font-family: var(--font-family-paragraph);
-      font-size: var(--font-size-paragraph);
-      font-weight: var(--font-weight-paragraph);
-
-      padding: 7px;
-      border: 2px solid var(--text-color-bottom);
-
-      color: var(--text-color-bottom);
-      transition: all 500ms cubic-bezier(.18,.89,.32,1.28);
-
-      display: flex;
-      flex-direction: row;
-
-      #externalLink {
-        margin-left: 5px;
-        height: 14px;
-        margin-top: 1px;
-
-        path {
-          stroke: var(--text-color-bottom);
-          transition: all 500ms cubic-bezier(.18,.89,.32,1.28);
-        }
-      }
-
-      &:hover {
-        border: 2px solid var(--text-color-top);
-        color: var(--text-color-top);
-        #externalLink {
-          path {
-            stroke: var(--text-color-top);
-          }
-        }
+        transform: translateX(0px);
       }
     }
   }

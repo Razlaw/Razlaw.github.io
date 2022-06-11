@@ -1,32 +1,54 @@
 import "./multiObjectTracking.scss";
 
-import React from "react";
+import React, {useEffect, useState} from "react";
+
+import {useInView} from "react-intersection-observer";
 
 import trackingImage from "../../assets/tracks_downscaled.jpg";
 import linesForTrackingImage from "../../assets/lines_for_tracking.png";
 import additionalLineForTrackingImage from "../../assets/additional_line_for_tracking.png";
-import {ReactComponent as ExternalLinkIcon} from '../../assets/icons/external_link.svg';
+
+import ExternalLinkButton from "../../components/externalLinkButton/ExternalLinkButton";
 
 export default function MultiObjectTracking() {
+    const { ref, inView } = useInView({
+        triggerOnce: false
+    });
+    const [wasInView, setWasInView] = useState(false);
+
+    useEffect(() => {
+        if(inView === true) {
+            setWasInView(true);
+        }
+    }, [inView]);
+
     return (
         <div className="multiObjectTrackingContainer">
-            <div className="imageContainer">
-                <img className="trackingImage" src={trackingImage} alt="Foot prints in sand"/>
-                <img className="linesForTrackingImage" src={linesForTrackingImage} alt="Lines indicating paths of objects"/>
-                <img className="additionalLineForTrackingImage" src={additionalLineForTrackingImage} alt="Additional line indicating path of bird"/>
+            <div className="imageFrame" ref={ref}>
+                <div className="imageContainer">
+                    <img
+                        className="trackingImage"
+                        src={trackingImage}
+                        alt="Foot prints in sand"/>
+                    <img
+                        className={"linesForTrackingImage " + (inView && "inView")}
+                        src={linesForTrackingImage}
+                        alt="Lines indicating paths of objects"/>
+                    <img
+                        className={"additionalLineForTrackingImage " + (inView && "inView")}
+                        src={additionalLineForTrackingImage}
+                        alt="Additional line indicating path of bird"/>
+                </div>
             </div>
-            <div className="textContainer">
-                <h1 className="headlineBig" id="projectName">Multi Object Tracking</h1>
-                <p className="text" id="projectDescription">
+            <div className={"textContainer " + (wasInView && "wasInView")}>
+                <h1>Multi Hypothesis Tracking</h1>
+                <p className="description">
                     Effiziente Bewegungsverfolgung<br/> von unterschiedlichen Objekten.
                 </p>
-                <a
-                    href="https://github.com/AIS-Bonn/multi_hypothesis_tracking"
-                    target="_blank"
-                    rel="noreferrer">
-                    Code
-                    <ExternalLinkIcon/>
-                </a>
+                <ExternalLinkButton
+                    text={"Code"}
+                    link={"https://github.com/AIS-Bonn/multi_hypothesis_tracking"}
+                />
             </div>
         </div>
     );
