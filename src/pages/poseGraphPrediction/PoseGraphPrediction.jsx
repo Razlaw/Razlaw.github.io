@@ -6,7 +6,8 @@ import {useInView} from "react-intersection-observer";
 
 import dancersImage from "../../assets/dancers_downscaled.jpg";
 import linesForDancersImage from "../../assets/lines_for_dancers.png";
-import {ReactComponent as ExternalLinkIcon} from '../../assets/icons/external_link.svg';
+
+import ExternalLinkButton from "../../components/externalLinkButton/ExternalLinkButton";
 
 export default function PoseGraphPrediction() {
     const { ref, inView } = useInView({
@@ -36,13 +37,10 @@ export default function PoseGraphPrediction() {
                 <p className="description">
                     Vorhersage von Bewegungen<br/>durch Graph Neuronale Netze.
                 </p>
-                <a
-                    href="https://github.com/AIS-Bonn/pose_graph_prediction"
-                    target="_blank"
-                    rel="noreferrer">
-                    Code
-                    <ExternalLinkIcon/>
-                </a>
+                <ExternalLinkButton
+                    text={"Code"}
+                    link={"https://github.com/AIS-Bonn/pose_graph_prediction"}
+                />
             </div>
         </div>
     );
