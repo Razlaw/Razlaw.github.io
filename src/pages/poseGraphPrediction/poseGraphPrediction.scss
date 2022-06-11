@@ -303,42 +303,6 @@
       }
     }
 
-    .headlineBig {
-      font-family: var(--font-family-big-heading);
-      font-size: var(--font-size-big-heading);
-      font-weight: var(--font-weight-big-heading);
-      background: var(--background-big-heading);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    #projectName {
-      width: 100%;
-      margin: 0;
-      overflow: hidden;
-
-      @include for-mobile {
-        font-size: 3.5em;
-      }
-    }
-
-    .text {
-      font-family: var(--font-family-paragraph);
-      font-size: var(--font-size-paragraph);
-      font-weight: var(--font-weight-paragraph);
-      background: var(--background-paragraph);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    #projectDescription {
-      @include for-mobile {
-        font-size: 1.5em;
-      }
-    }
-
     a {
       width: min-content;
       height: 39px;

@@ -10,8 +10,10 @@
 
   --font-family-big-heading: Emberly, sans-serif;
   --font-size-big-heading: 6rem;
+  --font-size-big-heading-mobile: 3.5rem;
   --font-weight-big-heading: 800;
   --background-big-heading: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 6.7rem);
+  --background-big-heading-mobile: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 4.7rem);
 
   --font-family-medium-heading: 'Playfair Display', sans-serif;
   --font-size-medium-heading: 3rem;
@@ -20,8 +22,10 @@
 
   --font-family-paragraph: 'Roboto Slab', sans-serif;
   --font-size-paragraph: 1.8rem;
+  --font-size-paragraph-mobile: 1.5rem;
   --font-weight-paragraph: 700;
   --background-paragraph: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 2.6rem);
+  --background-paragraph-mobile: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 2.2rem);
 
   --background-color-lightmode-light: white;
   --background-color-lightmode-dark: #e1e1e1;
@@ -59,6 +63,12 @@
 @mixin for-mobile {
   @media (max-width: 599px) {
     @content;
+
+    --font-size-big-heading: var(--font-size-big-heading-mobile);
+    --background-big-heading: var(--background-big-heading-mobile);
+
+    --font-size-paragraph: var(--font-size-paragraph-mobile);
+    --background-paragraph: var(--background-paragraph-mobile)
   }
 }
 
@@ -82,6 +92,8 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  margin: 0;
+  overflow: hidden;
 }
 
 h2 {
@@ -95,7 +107,7 @@ h2 {
   overflow: hidden;
 }
 
-.text {
+.description {
   font-family: var(--font-family-paragraph);
   font-size: var(--font-size-paragraph);
   font-weight: var(--font-weight-paragraph);

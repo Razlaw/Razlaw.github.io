@@ -32,8 +32,8 @@ export default function PoseGraphPrediction() {
                 </div>
             </div>
             <div className={"textContainer " + (inView && "inView")}>
-                <h1 className="headlineBig" id="projectName">Pose Graph Prediction</h1>
-                <p className="text" id="projectDescription">
+                <h1>Pose Graph Prediction</h1>
+                <p className="description">
                     Vorhersage von Bewegungen<br/>durch Graph Neuronale Netze.
                 </p>
                 <a
