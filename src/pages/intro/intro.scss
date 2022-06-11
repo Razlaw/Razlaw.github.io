@@ -35,6 +35,8 @@
       align-items: center;
       overflow: hidden;
 
+      pointer-events: none;
+
       .logoSVG {
         width: 250%;
         position: absolute;
@@ -137,6 +139,8 @@
     .rightContainer {
       flex: 1;
       position: relative;
+
+      pointer-events: none;
 
       @include for-mobile {
         flex: initial;
