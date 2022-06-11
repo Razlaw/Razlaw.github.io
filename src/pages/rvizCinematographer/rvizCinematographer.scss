@@ -5,6 +5,8 @@
   background: linear-gradient(var(--background-color-primary), var(--background-color-secondary));
   scroll-snap-align: start;
 
+  position: relative;
+
   display: flex;
 
   width: 100%;
@@ -14,164 +16,202 @@
   align-items: center;
   justify-content: space-evenly;
   overflow: hidden;
-  position: relative;
 
   @include for-mobile {
     flex-direction: column;
   }
 
-  .imageContainer {
-    overflow: hidden;
-    position: relative;
-    opacity: 0;
-    transform: translateX(50px);
+  @include for-tablet {
+    flex-direction: column;
+  }
 
+  .imageFrame {
+    max-height: 90%;
+    position: relative;
+    margin: 4% 2%;
     z-index: 1;
 
-    &.inView {
-      animation: slideInTextRViz 500ms ease-in-out both;
-    }
-
-    @include for-desktop {
-      bottom: 10%;
-      left: 10%;
-    }
+    overflow: hidden;
 
     @include for-mobile {
-      width: 150%;
+      width: 95%;
+      height: 60%;
+      margin: 0;
     }
 
-    .cameramanImage {
-      max-width: 100%;
+    @include for-tablet {
+      width: 95%;
+      height: 60%;
+      margin: 0;
+    }
+
+    .imageContainer {
       position: relative;
-      top: 0;
-      left: 0;
-    }
 
-    .lineForCameramanImage {
-      max-width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
+      overflow: hidden;
+
+      @include for-mobile {
+        height: 82%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      @include for-tablet {
+        height: 92%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .cameramanImage {
+        max-width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        @include for-mobile {
+          max-width: unset;
+          height: 100%;
+        }
+
+        @include for-tablet {
+          max-width: unset;
+          height: 100%;
+        }
+      }
+
+      .cameraOutlineImage {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &.inView {
+          animation: blink 500ms ease-out both 500ms;
+        }
+
+        @keyframes blink {
+          0% {
+            opacity: 0;
+          }
+          5% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+
+      .lineForCameramanImage {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        clip-path: polygon(0% 89.57%, 58.33% 60.29%, 47.11% 68.32%, 41.88% 68.92%, 48.49% 99.88%, 0% 100%);
+
+        &.inView {
+          animation: revealLowerLinePart 2s linear both 1000ms;
+        }
+
+        @keyframes revealLowerLinePart {
+          0% {
+            clip-path: polygon(0% 89.57%, 58.33% 60.29%, 47.11% 68.32%, 41.88% 68.92%, 48.49% 99.88%, 0% 100%);
+
+          }
+          14% {
+            clip-path: polygon(0% 89.57%, 58.33% 60.29%, 48.41% 76.99%, 44.00% 82.10%, 48.49% 99.88%, 0% 100%);
+
+          }
+          26% {
+            clip-path: polygon(0% 89.57%, 58.33% 60.29%, 54.43% 84.19%, 53.44% 90.03%, 48.49% 99.88%, 0% 100%);
+
+          }
+          36% {
+            clip-path: polygon(0% 89.57%, 58.33% 60.29%, 62.81% 85.65%, 63.37% 91.74%, 48.49% 99.88%, 0% 100%);
+
+          }
+          45% {
+            clip-path: polygon(0% 89.57%, 58.33% 60.29%, 71.35% 84.19%, 72.97% 89.42%, 48.49% 99.88%, 0% 100%);
+
+          }
+          57% {
+            clip-path: polygon(0% 89.57%, 58.33% 60.29%, 75.26% 81.02%, 78.99% 85.15%, 99.59% 100.00%, 0% 100%);
+
+          }
+          70% {
+            clip-path: polygon(0% 89.57%, 58.33% 60.29%, 74.85% 77.36%, 79.07% 73.44%, 99.59% 100%, 0% 100%);
+
+          }
+          80% {
+            clip-path: polygon(0% 89.57%, 58.33% 60.29%, 73.39% 76.14%, 75.98% 69.17%, 99.59% 100%, 0% 100%);
+
+          }
+          90% {
+            clip-path: polygon(0% 89.57%, 58.33% 60.29%, 71.60% 74.80%, 72.73% 67.35%, 100.16% 89.63%, 0% 100%);
+
+          }
+          100% {
+            clip-path: polygon(0% 89.57%, 58.33% 60.29%, 68.91% 74.43%, 68.17% 64.30%, 100.16% 89.63%, 0% 100%);
+          }
+        }
+
+        @include for-mobile {
+          max-width: unset;
+          height: 100%;
+        }
+
+        @include for-tablet {
+          max-width: unset;
+          height: 100%;
+        }
+      }
     }
   }
 
   .textContainer {
     position: relative;
-    padding-bottom: 50px;
+    padding-right: 2%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: visible;
 
-    &.inView {
-      animation: slideInTextRViz 500ms ease-in-out;
+    opacity: 0;
+    transform: translateX(-50px);
+
+    &.wasInView {
+      animation: slideInText 500ms ease-in-out 7000ms;
       animation-fill-mode: both;
     }
 
     z-index: 0;
 
-    @include for-desktop {
-      top: 20%;
-      right: 10%;
-      z-index: 2;
-
-      background: linear-gradient(180deg, var(--background-color-darkmode-light), var(--background-color-darkmode-dark));
-      box-shadow: 5px 5px 5px var(--shadow-color);
-
-      padding: 30px 60px;
-      border-radius: 10px;
-    }
-
     @include for-mobile {
-      width: 90%;
-      padding-bottom: 0;
+      width: 100%;
+      padding: 0 5%;
     }
 
-    @keyframes slideInTextRViz {
+    @include for-tablet {
+      width: 100%;
+      padding: 0 5% 20px 5%;
+    }
+
+    @keyframes slideInText {
       from {
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(-50px);
       }
       to {
         opacity: 1;
         transform: translateX(0px);
-      }
-    }
-
-    .headlineBig {
-      font-family: var(--font-family-big-heading);
-      font-size: var(--font-size-big-heading);
-      font-weight: var(--font-weight-big-heading);
-      background: var(--background-big-heading);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    #projectName {
-      width: 100%;
-      margin: 0;
-      overflow: hidden;
-
-      @include for-mobile {
-        font-size: 3.5em;
-      }
-    }
-
-    .text {
-      font-family: var(--font-family-paragraph);
-      font-size: var(--font-size-paragraph);
-      font-weight: var(--font-weight-paragraph);
-      background: var(--background-paragraph);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    #projectDescription {
-      @include for-mobile {
-        font-size: 1.5em;
-      }
-    }
-
-    a {
-      width: min-content;
-      height: 39px;
-      font-family: var(--font-family-paragraph);
-      font-size: var(--font-size-paragraph);
-      font-weight: var(--font-weight-paragraph);
-
-      padding: 7px;
-      border: 2px solid var(--text-color-bottom);
-
-      color: var(--text-color-bottom);
-      transition: all 500ms cubic-bezier(.18,.89,.32,1.28);
-
-      display: flex;
-      flex-direction: row;
-
-      #externalLink {
-        margin-left: 5px;
-        height: 14px;
-        margin-top: 1px;
-
-        path {
-          stroke: var(--text-color-bottom);
-          transition: all 500ms cubic-bezier(.18,.89,.32,1.28);
-        }
-      }
-
-      &:hover {
-        border: 2px solid var(--text-color-top);
-        color: var(--text-color-top);
-        #externalLink {
-          path {
-            stroke: var(--text-color-top);
-          }
-        }
       }
     }
   }
