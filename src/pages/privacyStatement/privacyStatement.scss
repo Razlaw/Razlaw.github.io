@@ -7,7 +7,7 @@ body ::-webkit-scrollbar {
 
 .privacyStatementContainer {
   width: 100%;
-  background: linear-gradient(var(--background-color-light), var(--background-color-dark));
+  background: linear-gradient(var(--background-color-primary), var(--background-color-secondary));
   color: var(--text-color);
   scrollbar-width: none;
 
