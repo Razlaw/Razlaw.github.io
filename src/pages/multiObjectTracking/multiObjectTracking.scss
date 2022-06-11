@@ -157,7 +157,7 @@
     transform: translateX(-50px);
 
     &.wasInView {
-      animation: slideInTextPoseGraph 500ms ease-in-out 7000ms;
+      animation: slideInText 500ms ease-in-out 7000ms;
       animation-fill-mode: both;
     }
 
@@ -173,7 +173,7 @@
       padding: 0 5% 20px 5%;
     }
 
-    @keyframes slideInTextPoseGraph {
+    @keyframes slideInText {
       from {
         opacity: 0;
         transform: translateX(-50px);
