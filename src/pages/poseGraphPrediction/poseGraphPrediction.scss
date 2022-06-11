@@ -58,21 +58,16 @@
         }
       }
 
-      .upperLineCue {
+      .upperLineCue, .lowerLineCue {
         width: 35px;
         height: 35px;
         position: absolute;
-        top: 22.2%;
-        left: 25.4%;
         border-radius: 50%;
         background-color: #8f1552;
+        transform: scale(0);
 
         &.inView {
-          animation: cueAnimation ease-in-out;
-          animation-duration: 1s;
-          animation-iteration-count: 1;
-          animation-fill-mode: both;
-          animation-delay: 500ms;
+          animation: cueAnimation 1s ease-in-out both;
         }
 
         @include for-mobile {
@@ -81,61 +76,88 @@
         }
       }
 
-      #cueTwo {
-        top: 14.2%;
-        left: 36.4%;
+      #cue1 {
+        top: 22.5%;
+        left: 25.5%;
+
+        @include for-mobile {
+          top: 20.7%;
+          left: 24.2%;
+        }
 
         &.inView {
-          animation-delay: 2200ms;
-          animation-duration: 1s;
+          animation-delay: 500ms;
         }
+      }
+
+      #cue2 {
+        top: 14.2%;
+        left: 36.9%;
 
         @include for-mobile {
           top: 12.4%;
           left: 35.4%;
         }
-      }
-
-      #cueThree {
-        top: 10.8%;
-        left: 46.4%;
 
         &.inView {
-          animation-delay: 2500ms;
-          animation-duration: 1s;
+          animation-delay: 1100ms;
         }
+      }
+
+      #cue3 {
+        top: 11%;
+        left: 46.6%;
 
         @include for-mobile {
           top: 9.1%;
           left: 45.2%;
         }
-      }
-
-      #cueFour {
-        top: 10.8%;
-        left: 46.4%;
 
         &.inView {
-          animation-delay: 2500ms;
-          animation-duration: 1s;
-        }
-
-        @include for-mobile {
-          top: 9.1%;
-          left: 45.2%;
+          animation-delay: 1400ms;
         }
       }
 
-      .lowerLineCue {
-        display: none;
-        width: 35px;
-        height: 35px;
-        position: absolute;
-        top: 44.6%;
-        left: 29.3%;
-        border-radius: 50%;
-        background-color: #8f1552;
-        //animation: cueAnimation 1s ease-in-out infinite alternate;
+      #cue4 {
+        top: 45%;
+        left: 29.4%;
+
+        @include for-mobile {
+          top: 43%;
+          left: 28%;
+        }
+
+        &.inView {
+          animation-delay: 3400ms;
+        }
+      }
+
+      #cue5 {
+        top: 51.4%;
+        left: 48%;
+
+        @include for-mobile {
+          top: 49.4%;
+          left: 46.6%;
+        }
+
+        &.inView {
+          animation-delay: 4000ms;
+        }
+      }
+
+      #cue6 {
+        top: 57.3%;
+        left: 53%;
+
+        @include for-mobile {
+          top: 55%;
+          left: 51.6%;
+        }
+
+        &.inView {
+          animation-delay: 4300ms;
+        }
       }
 
       @keyframes cueAnimation {
@@ -162,20 +184,22 @@
         clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
 
         &.inView {
-          animation: revealLines 9s ease-in-out;
-          animation-iteration-count: 1;
-          animation-fill-mode: both;
-          animation-delay: 500ms;
+          animation: revealUpperLine 3s ease-in-out both 1400ms, revealLowerLine 3s ease-in-out forwards 4400ms;
         }
 
-        @keyframes revealLines {
+        @keyframes revealUpperLine {
           0% {
             clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
           }
-          50% {
+          100% {
             clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 10% 45%, 10% 100%, 0% 100%);
           }
+        }
 
+        @keyframes revealLowerLine {
+          0% {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 10% 45%, 10% 100%, 0% 100%);
+          }
           100% {
             clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 100% 45%, 100% 100%, 0% 100%);
           }
@@ -200,7 +224,7 @@
     text-align: center;
 
     &.inView {
-      animation: slideInTextPoseGraph 500ms ease-in-out;
+      animation: slideInTextPoseGraph 500ms ease-in-out 7000ms;
       animation-fill-mode: both;
     }
 
@@ -214,7 +238,7 @@
     @keyframes slideInTextPoseGraph {
       from {
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(-50px);
       }
       to {
         opacity: 1;

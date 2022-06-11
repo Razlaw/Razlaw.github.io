@@ -18,14 +18,14 @@ export default function PoseGraphPrediction() {
             <div className="imageFrame" ref={ref}>
                 <div className="imageContainer">
                     <img className="dancersImage" src={dancersImage} alt="Three dancers in one motion"/>
-                    <div className={"upperLineCue " + (inView && "inView")} id="cueOne"/>
-                    <div className={"upperLineCue " + (inView && "inView")} id="cueTwo"/>
-                    <div className={"upperLineCue " + (inView && "inView")} id="cueThree"/>
-                    <div className={"upperLineCue " + (inView && "inView")} id="cueFour"/>
-                    <div className="lowerLineCue"/>
+                    <div className={"upperLineCue " + (inView && "inView")} id="cue1"/>
+                    <div className={"upperLineCue " + (inView && "inView")} id="cue2"/>
+                    <div className={"upperLineCue " + (inView && "inView")} id="cue3"/>
+                    <div className={"lowerLineCue " + (inView && "inView")} id="cue4"/>
+                    <div className={"lowerLineCue " + (inView && "inView")} id="cue5"/>
+                    <div className={"lowerLineCue " + (inView && "inView")} id="cue6"/>
                     <img
                         className={"linesForDancersImage " + (inView && "inView")}
-                        ref={ref}
                         src={linesForDancersImage}
                         alt="Lines indicating motion of dancers"
                     />
