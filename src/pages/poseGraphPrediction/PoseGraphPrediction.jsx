@@ -1,6 +1,6 @@
 import "./poseGraphPrediction.scss";
 
-import React from "react";
+import React, {useEffect, useState} from "react";
 
 import {useInView} from "react-intersection-observer";
 
@@ -11,8 +11,15 @@ import ExternalLinkButton from "../../components/externalLinkButton/ExternalLink
 
 export default function PoseGraphPrediction() {
     const { ref, inView } = useInView({
-        triggerOnce: true
+        triggerOnce: false
     });
+    const [wasInView, setWasInView] = useState(false);
+
+    useEffect(() => {
+        if(inView === true) {
+            setWasInView(true);
+        }
+    }, [inView]);
 
     return (
         <div className="poseGraphPredictionContainer">
@@ -32,7 +39,7 @@ export default function PoseGraphPrediction() {
                     />
                 </div>
             </div>
-            <div className={"textContainer " + (inView && "inView")}>
+            <div className={"textContainer " + (wasInView && "wasInView")}>
                 <h1>Pose Graph Prediction</h1>
                 <p className="description">
                     Vorhersage von Bewegungen<br/>durch Graph Neuronale Netze.
