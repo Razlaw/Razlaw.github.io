@@ -35,8 +35,15 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+    opacity: 0;
+    transform: translateX(-50%) translateY(-30%);
 
+    background: linear-gradient(180deg, var(--background-color-darkmode-light), var(--background-color-darkmode-dark));
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+
+    padding: 30px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,17 +51,8 @@
     text-align: center;
 
     &.inView {
-      animation: slideInTextProjectsIntro 500ms ease-in-out;
-      animation-fill-mode: both;
+      animation: slideInTextProjectsIntro 500ms ease-in-out both;
     }
-
-    z-index: 2;
-
-    background: linear-gradient(180deg, var(--background-color-darkmode-light), var(--background-color-darkmode-dark));
-    box-shadow: 5px 5px 5px black;
-
-    padding: 30px 60px;
-    border-radius: 10px;
 
     @include for-mobile {
       top: 78%;
