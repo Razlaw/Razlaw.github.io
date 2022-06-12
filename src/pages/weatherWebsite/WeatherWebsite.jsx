@@ -41,7 +41,8 @@ export default function WeatherWebsite() {
                         src={phoneTemplateImage}
                         alt="Smartphone with part of weather website in hand"
                     />
-                    <span className={"swipeCue " + (inView && "inView")}/>
+                    <span className={"swipeCue " + (inView && "inView")} id="swipeLeft"/>
+                    <span className={"swipeCue " + (inView && "inView")} id="swipeRight"/>
                 </div>
             </div>
             <div className={"textContainer " + (wasInView && "wasInView")}>

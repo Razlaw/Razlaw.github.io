@@ -89,7 +89,8 @@
         }
 
         &.inView {
-          animation: slideWebsiteOne 500ms cubic-bezier(.86, 0, .07, 1) both 2s;
+          animation: slideWebsiteOneLeft 500ms cubic-bezier(.86, 0, .07, 1) both 2s,
+          slideWebsiteOneRight 500ms cubic-bezier(.86, 0, .07, 1) forwards 4700ms;
         }
       }
 
@@ -111,7 +112,8 @@
         }
 
         &.inView {
-          animation: slideWebsiteTwo 500ms cubic-bezier(.86, 0, .07, 1) both 2s;
+          animation: slideWebsiteTwoLeft 500ms cubic-bezier(.86, 0, .07, 1) both 2s,
+          slideWebsiteTwoRight 500ms cubic-bezier(.86, 0, .07, 1) forwards 4700ms;
         }
       }
 
@@ -142,17 +144,26 @@
         left: 51%;
         transform: scale(0);
 
-        &.inView {
-          animation: fadeInCue 700ms cubic-bezier(.215,.61,.355,1) backwards 1s,
-          swipeCue 1000ms cubic-bezier(.86, 0, .07, 1) forwards 1700ms;
-        }
-
         @include for-mobile {
           top: 57%;
         }
       }
 
-      @keyframes slideWebsiteOne {
+      #swipeLeft {
+        &.inView {
+          animation: fadeInCue 700ms cubic-bezier(.215,.61,.355,1) backwards 1s,
+          swipeLeftCue 1000ms cubic-bezier(.86, 0, .07, 1) forwards 1700ms;
+        }
+      }
+
+      #swipeRight {
+        &.inView {
+          animation: fadeInCue 700ms cubic-bezier(.215,.61,.355,1) backwards 3700ms,
+          swipeRightCue 1000ms cubic-bezier(.86, 0, .07, 1) forwards 4400ms;
+        }
+      }
+
+      @keyframes slideWebsiteOneLeft {
         from {
           transform: translate(0, -1px);
         }
@@ -161,12 +172,30 @@
         }
       }
 
-      @keyframes slideWebsiteTwo {
+      @keyframes slideWebsiteOneRight {
+        from {
+          transform: translate(-17.2%, -5.8%);
+        }
+        to {
+          transform: translate(0, -1px);
+        }
+      }
+
+      @keyframes slideWebsiteTwoLeft {
         from {
           transform: translate(17.2%, 5.8%);
         }
         to {
           transform: translate(1px, 0);
+        }
+      }
+
+      @keyframes slideWebsiteTwoRight {
+        from {
+          transform: translate(1px, 0);
+        }
+        to {
+          transform: translate(17.2%, 5.8%);
         }
       }
 
@@ -185,7 +214,7 @@
         }
       }
 
-      @keyframes swipeCue {
+      @keyframes swipeLeftCue {
         0% {
           opacity: 1;
           transform: translate(0, 0) scale(1);
@@ -193,6 +222,17 @@
         100% {
           opacity: 0;
           transform: translate(-150px, -85px) scale(0.2);
+        }
+      }
+
+      @keyframes swipeRightCue {
+        0% {
+          opacity: 1;
+          transform: translate(0, 0) scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: translate(150px, 85px) scale(0.2);
         }
       }
     }
