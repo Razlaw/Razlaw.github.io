@@ -21,141 +21,218 @@
     flex-direction: column;
   }
 
-  .imageContainer {
-    max-width: 42%;
-    max-height: 80%;
-    overflow: hidden;
+  @include for-tablet {
+    flex-direction: column;
+  }
+
+  .imageFrame {
+    max-height: 90%;
     position: relative;
+    margin: 4% 2%;
     z-index: 1;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
 
     @include for-mobile {
-      max-width: unset;
-      width: 110%;
+      width: 95%;
+      height: 64%;
+      margin: 0;
     }
 
-    .websiteImageOne {
-      width: 100%;
+    @include for-tablet {
+      width: 95%;
+      height: 60%;
+      margin: 0;
+    }
+
+    .imageContainer {
+      width: 79%;
       position: relative;
-      left: 0;
-      transform: translate(0, -1px);
 
-      &.inView {
-        animation: slideWebsiteOne 500ms cubic-bezier(.86, 0, .07, 1) both 2s;
-      }
-    }
-
-    .websiteImageTwo {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      transform: translate(1px, 0);
-
-      &.inView {
-        animation: slideWebsiteTwo 500ms cubic-bezier(.86, 0, .07, 1) both 2s;
-      }
-    }
-
-    .phoneTemplateImage {
-      width: 100%;
-      position: absolute;
-      left: 0;
-    }
-
-    .swipeCue {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      background-color: #8f1552;
-      position: absolute;
-      top: 64%;
-      left: 52%;
-      transform: scale(0);
-
-      &.inView {
-        animation: fadeInCue 700ms cubic-bezier(.215,.61,.355,1) backwards 1s,
-        swipeCue 1000ms cubic-bezier(.86, 0, .07, 1) forwards 1700ms;
-      }
+      overflow: hidden;
 
       @include for-mobile {
-        top: 57%;
+        width: unset;
+        height: 132%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
-    }
 
-    @keyframes slideWebsiteOne {
-      from {
+      @include for-tablet {
+        height: 136%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .websiteImageOne {
+        max-width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
         transform: translate(0, -1px);
-      }
-      to {
-        transform: translate(-17.2%, -5.8%);
-      }
-    }
 
-    @keyframes slideWebsiteTwo {
-      from {
-        transform: translate(17.2%, 5.8%);
+        @include for-mobile {
+          max-width: unset;
+          height: 100%;
+        }
+
+        @include for-tablet {
+          max-width: unset;
+          height: 100%;
+        }
+
+        &.inView {
+          animation: slideWebsiteOne 500ms cubic-bezier(.86, 0, .07, 1) both 2s;
+        }
       }
-      to {
+
+      .websiteImageTwo {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
         transform: translate(1px, 0);
-      }
-    }
 
-    @keyframes fadeInCue {
-      0% {
-        opacity: 0;
-        transform: scale(2.3);
-      }
-      40% {
-        opacity: 1;
-        transform: scale(.9);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
+        @include for-mobile {
+          max-width: unset;
+          height: 100%;
+        }
 
-    @keyframes swipeCue {
-      0% {
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
+        @include for-tablet {
+          max-width: unset;
+          height: 100%;
+        }
+
+        &.inView {
+          animation: slideWebsiteTwo 500ms cubic-bezier(.86, 0, .07, 1) both 2s;
+        }
       }
-      100% {
-        opacity: 0;
-        transform: translate(-150px, -85px) scale(0.2);
+
+      .phoneTemplateImage {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include for-mobile {
+          max-width: unset;
+          height: 100%;
+        }
+
+        @include for-tablet {
+          max-width: unset;
+          height: 100%;
+        }
+      }
+
+      .swipeCue {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #8f1552;
+        position: absolute;
+        top: 59%;
+        left: 51%;
+        transform: scale(0);
+
+        &.inView {
+          animation: fadeInCue 700ms cubic-bezier(.215,.61,.355,1) backwards 1s,
+          swipeCue 1000ms cubic-bezier(.86, 0, .07, 1) forwards 1700ms;
+        }
+
+        @include for-mobile {
+          top: 57%;
+        }
+      }
+
+      @keyframes slideWebsiteOne {
+        from {
+          transform: translate(0, -1px);
+        }
+        to {
+          transform: translate(-17.2%, -5.8%);
+        }
+      }
+
+      @keyframes slideWebsiteTwo {
+        from {
+          transform: translate(17.2%, 5.8%);
+        }
+        to {
+          transform: translate(1px, 0);
+        }
+      }
+
+      @keyframes fadeInCue {
+        0% {
+          opacity: 0;
+          transform: scale(2.3);
+        }
+        40% {
+          opacity: 1;
+          transform: scale(.9);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes swipeCue {
+        0% {
+          opacity: 1;
+          transform: translate(0, 0) scale(1);
+        }
+        100% {
+          opacity: 0;
+          transform: translate(-150px, -85px) scale(0.2);
+        }
       }
     }
   }
 
   .textContainer {
     position: relative;
-    padding-bottom: 50px;
+    padding-right: 2%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: visible;
 
-    &.inView {
-      animation: slideInTextWeather 500ms ease-in-out;
+    opacity: 0;
+    transform: translateX(-50px);
+
+    &.wasInView {
+      animation: slideInText 500ms ease-in-out 7000ms;
       animation-fill-mode: both;
     }
 
     z-index: 0;
 
     @include for-mobile {
-      width: 90%;
-      padding-bottom: 0;
+      width: 100%;
+      padding: 0 5%;
     }
 
-    @keyframes slideInTextWeather {
+    @include for-tablet {
+      width: 100%;
+      padding: 0 5% 20px 5%;
+    }
+
+    @keyframes slideInText {
       from {
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(-50px);
       }
       to {
         opacity: 1;
@@ -163,78 +240,12 @@
       }
     }
 
-    .headlineBig {
-      font-family: var(--font-family-big-heading);
-      font-size: var(--font-size-big-heading);
-      font-weight: var(--font-weight-big-heading);
-      background: var(--background-big-heading);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    #projectName {
-      width: 100%;
-      margin: 0;
-      overflow: hidden;
-
-      @include for-mobile {
-        font-size: 3.5em;
-      }
-    }
-
-    .text {
-      font-family: var(--font-family-paragraph);
-      font-size: var(--font-size-paragraph);
-      font-weight: var(--font-weight-paragraph);
-      background: var(--background-paragraph);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    #projectDescription {
-      @include for-mobile {
-        font-size: 1.5em;
-      }
-    }
-
-    a {
-      width: min-content;
-      height: 39px;
-      font-family: var(--font-family-paragraph);
-      font-size: var(--font-size-paragraph);
-      font-weight: var(--font-weight-paragraph);
-
-      padding: 7px;
-      border: 2px solid var(--text-color-bottom);
-
-      color: var(--text-color-bottom);
-      transition: all 500ms cubic-bezier(.18,.89,.32,1.28);
-
+    .externalLinks {
+      width: 90%;
       display: flex;
       flex-direction: row;
-
-      #externalLink {
-        margin-left: 5px;
-        height: 14px;
-        margin-top: 1px;
-
-        path {
-          stroke: var(--text-color-bottom);
-          transition: all 500ms cubic-bezier(.18,.89,.32,1.28);
-        }
-      }
-
-      &:hover {
-        border: 2px solid var(--text-color-top);
-        color: var(--text-color-top);
-        #externalLink {
-          path {
-            stroke: var(--text-color-top);
-          }
-        }
-      }
+      align-items: center;
+      justify-content: space-evenly;
     }
   }
 }
