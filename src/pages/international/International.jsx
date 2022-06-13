@@ -17,9 +17,20 @@ export default function International() {
                     </div>
                 </div>
                 <div className="textContainer">
-                    <h1>
-                        Text
-                    </h1>
+                    <ul>
+                        <li>
+                            <p className="description">2015 - DRC - Los Angeles</p>
+                        </li>
+                        <li>
+                            <p className="description">2017 - MBZIRC - Abu Dhabi</p>
+                        </li>
+                        <li>
+                            <p className="description">2019 - ICRA - Montreal</p>
+                        </li>
+                        <li>
+                            <p className="description">2020 - MBZIRC - Abu Dhabi</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
