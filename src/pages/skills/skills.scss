@@ -23,16 +23,20 @@
     .skillsTitle {
       position: absolute;
       top: 3px;
-      left: 10px;
+      left: 42px;
       z-index: 100;
-      transform: translateX(0);
 
       @include for-mobile {
-        font-size: 2.5em;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        font-size: 3.5em;
       }
 
       @include for-tablet {
-        font-size: 4em;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
       }
     }
 
@@ -50,8 +54,8 @@
         width: fit-content;
         height: calc(100% - var(--height-transition-triangle) - 70px);
         position: absolute;
-        top: 50px;
-        left: 50%;
+        top: 68px;
+        left: 54%;
         transform: translateX(-50%);
 
         display: flex;
