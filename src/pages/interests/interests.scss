@@ -41,7 +41,8 @@
     }
 
     .iconsContainer {
-      width: 80%;
+      width: 92%;
+      height: 68%;
       padding-right: 0;
       padding-top: 0;
 
@@ -53,16 +54,18 @@
         .iconContainer {
           .icon {
             * {
-              @include for-desktop {
-                animation: draw 3s ease-in both;
-              }
+              animation: drawIcons 3s ease-in both 800ms;
 
               @include for-mobile {
-                animation: drawMobile 3s ease-in-out both;
+                animation: drawIconsMobile 3s ease-in-out both 800ms;
+              }
+
+              @include for-tablet {
+                animation: drawIconsMobile 3s ease-in-out both 800ms;
               }
             }
 
-            @keyframes draw {
+            @keyframes drawIcons {
               from {
                 stroke-dashoffset: 500;
               }
@@ -71,11 +74,17 @@
               }
             }
 
-            @keyframes drawMobile {
-              from {
+            @keyframes drawIconsMobile {
+              0% {
+                opacity: 0;
                 stroke-dasharray: 0 100;
               }
-              to {
+              1% {
+                opacity: 1;
+                stroke-dasharray: 0 100;
+              }
+              100% {
+                opacity: 1;
                 stroke-dasharray: 100 0;
               }
             }
@@ -83,33 +92,18 @@
         }
       }
 
-      @include for-mobile {
-        width: 100%;
-        height: 100%;
-        padding-right: 5%;
-        padding-top: 70px;
-
-        grid-template-rows: max-content max-content max-content;
-        grid-template-columns: max-content max-content max-content;
-      }
-
       .iconContainer {
-        width: 50%;
+        width: 86%;
         height: 70%;
-        margin-left: 110px;
+
+        align-self: center;
+        justify-self: center;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-
-        @include for-mobile {
-          width: 90px;
-          height: 90px;
-          margin-left: 35px;
-          margin-top: 60px;
-        }
 
         .icon {
           position: relative;
