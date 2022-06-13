@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.c8863c30.chunk.css",
-    "main.js": "/static/js/main.5574a9e0.chunk.js",
-    "main.js.map": "/static/js/main.5574a9e0.chunk.js.map",
+    "main.css": "/static/css/main.726e6987.chunk.css",
+    "main.js": "/static/js/main.f38c57d7.chunk.js",
+    "main.js.map": "/static/js/main.f38c57d7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e7c3baa1.js",
     "runtime-main.js.map": "/static/js/runtime-main.e7c3baa1.js.map",
     "static/css/2.d97c81c1.chunk.css": "/static/css/2.d97c81c1.chunk.css",
-    "static/js/2.eeb00efd.chunk.js": "/static/js/2.eeb00efd.chunk.js",
-    "static/js/2.eeb00efd.chunk.js.map": "/static/js/2.eeb00efd.chunk.js.map",
+    "static/js/2.137efa91.chunk.js": "/static/js/2.137efa91.chunk.js",
+    "static/js/2.137efa91.chunk.js.map": "/static/js/2.137efa91.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.d97c81c1.chunk.css.map": "/static/css/2.d97c81c1.chunk.css.map",
-    "static/css/main.c8863c30.chunk.css.map": "/static/css/main.c8863c30.chunk.css.map",
-    "static/js/2.eeb00efd.chunk.js.LICENSE.txt": "/static/js/2.eeb00efd.chunk.js.LICENSE.txt",
+    "static/css/main.726e6987.chunk.css.map": "/static/css/main.726e6987.chunk.css.map",
+    "static/js/2.137efa91.chunk.js.LICENSE.txt": "/static/js/2.137efa91.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/static/media/Emberly-Thin.ba1faf81.woff",
     "static/media/additional_line_for_tracking.d4b96f27.png": "/static/media/additional_line_for_tracking.d4b96f27.png",
     "static/media/semantic.min.css": "/static/media/outline-icons.ddae9b1b.woff",
@@ -36,7 +36,7 @@
     "static/media/portrait_crop.0df9acd8.png": "/static/media/portrait_crop.0df9acd8.png",
     "static/media/psychologie.ccd1a9dc.svg": "/static/media/psychologie.ccd1a9dc.svg",
     "static/media/template_phone_for_website_downscaled.4d21dfa6.png": "/static/media/template_phone_for_website_downscaled.4d21dfa6.png",
-    "static/media/tracks_downscaled.c64ba239.jpg": "/static/media/tracks_downscaled.c64ba239.jpg",
+    "static/media/tracking_downscaled.73064292.jpg": "/static/media/tracking_downscaled.73064292.jpg",
     "static/media/travel.12af23bb.svg": "/static/media/travel.12af23bb.svg",
     "static/media/waves_downscaled.af15bce6.jpg": "/static/media/waves_downscaled.af15bce6.jpg",
     "static/media/website_part1_downscaled.a6263475.png": "/static/media/website_part1_downscaled.a6263475.png",
@@ -45,8 +45,8 @@
   "entrypoints": [
     "static/js/runtime-main.e7c3baa1.js",
     "static/css/2.d97c81c1.chunk.css",
-    "static/js/2.eeb00efd.chunk.js",
-    "static/css/main.c8863c30.chunk.css",
-    "static/js/main.5574a9e0.chunk.js"
+    "static/js/2.137efa91.chunk.js",
+    "static/css/main.726e6987.chunk.css",
+    "static/js/main.f38c57d7.chunk.js"
   ]
 }
