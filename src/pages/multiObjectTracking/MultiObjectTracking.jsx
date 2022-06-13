@@ -4,7 +4,7 @@ import React, {useEffect, useState} from "react";
 
 import {useInView} from "react-intersection-observer";
 
-import trackingImage from "../../assets/tracks_downscaled.jpg";
+import trackingImage from "../../assets/tracking_downscaled.jpg";
 import linesForTrackingImage from "../../assets/lines_for_tracking.png";
 import additionalLineForTrackingImage from "../../assets/additional_line_for_tracking.png";
 

@@ -21,12 +21,12 @@
     flex-direction: column;
   }
 
-
   @include for-tablet {
     flex-direction: column;
   }
 
   .imageFrame {
+    max-height: 90%;
     position: relative;
     margin: 4% 2%;
     z-index: 1;
@@ -51,11 +51,11 @@
       overflow: hidden;
 
       @include for-mobile {
-        height: 92%;
+        height: 119%;
         position: absolute;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: -15%;
+        transform: translateY(-50%);
       }
 
       @include for-tablet {
@@ -64,6 +64,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        display: flex;
+        justify-content: center;
       }
 
       .trackingImage {
