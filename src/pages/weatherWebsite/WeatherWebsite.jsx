@@ -53,7 +53,7 @@ export default function WeatherWebsite() {
                 <div className="externalLinks">
                     <ExternalLinkButton
                         text={"Code"}
-                        link={"https://razlaw.github.io/weather_website"}
+                        link={"https://github.com/Razlaw/weather_website/tree/src"}
                     />
                     <ExternalLinkButton
                         text={"Website"}
