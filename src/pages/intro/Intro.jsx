@@ -30,11 +30,12 @@ export default function Intro() {
                 </div>
                 <div className="rightContainer">
                     <div className="textContainer">
-                        <h2 className="headlineMedium" id="myName">Jan Razlaw</h2>
-                        <h1 className="headlineBig" id="jobDescription">Computer Scientist</h1>
+                        <h2 id="myName">Jan Razlaw</h2>
+                        <h1 id="jobDescription">Computer Scientist</h1>
                         <p className="text" id="myDescription">
-                            Von Prototypen in der Robot Vision hin zu Anwendungen mit direktem Nutzen
-                            und Feedback.<br/>Voneinander lernen mit Open Source & Clean Code.
+                            Von Prototypen in der Robot Vision<br/>
+                            hin zu Anwendungen mit direktem Nutzen und Feedback.<br/>
+                            Voneinander lernen mit Open Source & Clean Code.
                         </p>
                     </div>
                 </div>

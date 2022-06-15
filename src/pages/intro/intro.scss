@@ -15,10 +15,13 @@
     display: flex;
 
     @include for-mobile {
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      overflow: hidden;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    @include for-tablet {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
     }
 
     .logoContainer {
@@ -28,7 +31,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      z-index: 111;
+      z-index: 1111;
 
       display: flex;
       justify-content: center;
@@ -45,7 +48,7 @@
 
         animation:  rotateLogo 1400ms cubic-bezier(0.6, -0.28, 0.74, 0.05) backwards 1s,
         bounceLogo 700ms cubic-bezier(0.29, 0.85, 0.62, 1.26) 2400ms,
-        growLogo 1400ms cubic-bezier(.87,-0.02,.98,.34) forwards 3100ms;
+        growLogo 1400ms cubic-bezier(.87,0.0,.98,.34) forwards 3100ms;
 
         #textBackground {
           opacity: 1;
@@ -108,14 +111,21 @@
       overflow: hidden;
 
       @include for-mobile {
-        flex: none;
-        display: initial;
-        align-items: initial;
-        justify-content: initial;
-        overflow: visible;
+        align-self: self-start;
+        justify-self: center;
+
         position: relative;
-        top: 0;
         padding: 2% 2% 0 2%;
+        overflow: visible;
+      }
+
+      @include for-tablet {
+        align-self: self-start;
+        justify-self: center;
+
+        position: relative;
+        padding: 2% 2% 0 2%;
+        overflow: visible;
       }
 
       .imgContainer {
@@ -123,9 +133,14 @@
 
         display: flex;
         justify-content: center;
-        padding: 0 10% 10% 0;
+        padding: 0 10% 5% 0;
+        overflow: visible;
 
         @include for-mobile {
+          padding: 0;
+        }
+
+        @include for-tablet {
           padding: 0;
         }
 
@@ -143,17 +158,25 @@
       pointer-events: none;
 
       @include for-mobile {
-        flex: initial;
-        bottom: 0.5%;
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        z-index: 100;
+        overflow: visible;
+      }
+
+      @include for-tablet {
+        align-self: center;
+        justify-self: center;
         width: 100%;
         z-index: 100;
         overflow: visible;
       }
 
       .textContainer {
-        width: 80%;
         height: 100%;
         padding-left: 50px;
+        padding-bottom: 5%;
 
         display: flex;
         flex-direction: column;
@@ -164,17 +187,15 @@
           height: unset;
           align-items: center;
 
-          padding-left: 0;
+          padding: 0 5%;
         }
 
-        .headlineMedium {
-          font-family: var(--font-family-medium-heading);
-          font-size: var(--font-size-medium-heading);
-          font-weight: var(--font-weight-medium-heading);
-          background: var(--background-medium-heading);
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
+        @include for-tablet {
+          width: 100%;
+          height: unset;
+          align-items: center;
+
+          padding: 0 5%;
         }
 
         #myName {
@@ -183,16 +204,10 @@
           @include for-mobile {
             margin-bottom: 0;
           }
-        }
 
-        .headlineBig {
-          font-family: var(--font-family-big-heading);
-          font-size: var(--font-size-big-heading);
-          font-weight: var(--font-weight-big-heading);
-          background: var(--background-big-heading);
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
+          @include for-tablet {
+            margin-bottom: 0;
+          }
         }
 
         #jobDescription {
@@ -201,6 +216,7 @@
             margin-top: 0;
             margin-bottom: 0;
             z-index: 100;
+            transform: translateY(-6px);
           }
         }
 
@@ -219,6 +235,10 @@
           padding-left: 20px;
 
           @include for-mobile {
+            display: none;
+          }
+
+          @include for-tablet {
             display: none;
           }
         }
@@ -242,10 +262,11 @@
   @include for-mobile {
     .linksToPrivacy {
       position: absolute;
-      bottom: 150px;
-      right: -75px;
-      transform: rotateZ(-90deg);
-      z-index: 1;
+      left: 50%;
+      bottom: -8px;
+      right: unset;
+      transform: translateX(-50%);
+      z-index: 111;
 
       display: flex;
       flex-direction: row;
