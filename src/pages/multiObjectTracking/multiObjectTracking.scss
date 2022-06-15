@@ -86,35 +86,11 @@
         }
       }
 
-      .linesForTrackingImage {
+      .trackingLineLayer {
         max-width: 100%;
         position: absolute;
         top: 0;
         left: 0;
-
-        clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
-
-        &.inView {
-          animation: revealUpperLine 3s ease-in-out both 1400ms, revealLowerLine 3s ease-in-out forwards 4400ms;
-        }
-
-        @keyframes revealUpperLine {
-          0% {
-            clip-path: polygon(0% 0%, 10% 0%, 10% 35%, 10% 45%, 10% 100%, 0% 100%);
-          }
-          100% {
-            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 10% 45%, 10% 100%, 0% 100%);
-          }
-        }
-
-        @keyframes revealLowerLine {
-          0% {
-            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 10% 45%, 10% 100%, 0% 100%);
-          }
-          100% {
-            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 100% 45%, 100% 100%, 0% 100%);
-          }
-        }
 
         @include for-mobile {
           max-width: unset;
@@ -127,20 +103,110 @@
         }
       }
 
-      .additionalLineForTrackingImage {
-        max-width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
+      #trackingLineLayer1 {
+        clip-path: polygon(1.3% -2.96%, -1.85% -0.6%, 21.94% 67.31%, 36.5% 53.31%);;
 
-        @include for-mobile {
-          max-width: unset;
-          height: 100%;
+        &.inView {
+          animation: revealLineLayer1_1 3s ease-out both 800ms,
+          revealLineLayer1_2 2500ms ease-in-out forwards 4400ms,
+          revealLineLayer1_3 2000ms cubic-bezier(.55,.06,.68,.19) forwards 7200ms;
         }
 
-        @include for-tablet {
-          max-width: unset;
-          height: 100%;
+        @keyframes revealLineLayer1_1 {
+          0% {
+            clip-path: polygon(1.3% -2.96%, -1.85% -0.6%, -2.03% 1.40%, 2.73% -2.62%);
+          }
+          100% {
+            clip-path: polygon(1.3% -2.96%, -1.85% -0.6%, 17.68% 51.05%, 29.85% 41.61%);
+          }
+        }
+
+        @keyframes revealLineLayer1_2 {
+          0% {
+            clip-path: polygon(1.3% -2.96%, -1.85% -0.6%, 17.68% 51.05%, 29.85% 41.61%);
+          }
+          100% {
+            clip-path: polygon(1.3% -2.96%, -1.85% -0.6%, 19.89% 57.82%, 33.95% 47.76%);
+          }
+        }
+
+        @keyframes revealLineLayer1_3 {
+          0% {
+            clip-path: polygon(1.3% -2.96%, -1.85% -0.6%, 19.89% 57.82%, 33.95% 47.76%);
+          }
+          100% {
+            clip-path: polygon(1.3% -2.96%, -1.85% -0.6%, 21.94% 67.31%, 36.5% 53.31%);
+          }
+        }
+      }
+
+      #trackingLineLayer2 {
+        clip-path: polygon(30.26% 57.77%, 29.19% 53.70%, 35.16% 58.36%, 34.55% 53.8%);
+
+        &.inView {
+          animation: revealLineLayer2 200ms ease-in-out both 8800ms;
+        }
+
+        @keyframes revealLineLayer2 {
+          to {
+            clip-path: polygon(30.26% 57.77%, 29.19% 53.7%, 31.75% 46.53%, 34.55% 53.8%);
+          }
+        }
+      }
+
+      #trackingLineLayer3 {
+        clip-path: polygon(30.09% 55.55%, 28.76% 50.74%, 34.48% 53.92%, 33.01% 48.13%);
+
+        &.inView {
+          animation: revealLineLayer3 200ms ease-in-out both 9000ms;
+        }
+
+        @keyframes revealLineLayer3 {
+          to {
+            clip-path: polygon(30.09% 55.55%, 28.76% 50.74%, 30.56% 43.70%, 33.01% 48.13%);
+          }
+        }
+      }
+
+      #trackingLineLayer4 {
+        clip-path: polygon(28.64% 50.25%, 27.82% 48.52%, 33.89% 51.34%, 32.58% 45.42%);
+
+        &.inView {
+          animation: revealLineLayer4 200ms ease-in-out both 9200ms;
+        }
+
+        @keyframes revealLineLayer4 {
+          to {
+            clip-path: polygon(28.64% 50.25%, 27.82% 48.52%, 29.03% 39.88%, 32.58% 45.42%);
+          }
+        }
+      }
+
+      #trackingLineLayer5 {
+        clip-path: polygon(6.89% 0.97%, 6.75% -0.26%, 10.44% -3.36%, 11.77% -2.25%);
+
+        &.inView {
+          animation: revealLineLayer5 3s ease-in-out both 9400ms;
+        }
+
+        @keyframes revealLineLayer5 {
+          to {
+            clip-path: polygon(33.08% 42.98%, 6.75% -0.26%, 10.44% -3.36%, 37.27% 37.17%);
+          }
+        }
+      }
+
+      #trackingLineLayer6 {
+        clip-path: polygon(35.55% 48.89%, 24.74% 33.26%, 24.17% 40.49%, 39.57% 41.72%);
+
+        &.inView {
+          animation: revealLineLayer6 2s cubic-bezier(.47, 0, .74, .71) both 12300ms;
+        }
+
+        @keyframes revealLineLayer6 {
+          to {
+            clip-path: polygon(35.55% 48.89%, 24.74% 33.26%, 43.61% 19.18%, 39.57% 41.72%);
+          }
         }
       }
     }
@@ -161,7 +227,7 @@
     transform: translateX(-50px);
 
     &.wasInView {
-      animation: slideInText 500ms ease-in-out 7000ms;
+      animation: slideInText 500ms ease-in-out 14300ms;
       animation-fill-mode: both;
     }
 

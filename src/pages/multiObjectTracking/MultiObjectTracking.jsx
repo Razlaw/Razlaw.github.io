@@ -5,8 +5,12 @@ import React, {useEffect, useState} from "react";
 import {useInView} from "react-intersection-observer";
 
 import trackingImage from "../../assets/tracking_downscaled.jpg";
-import linesForTrackingImage from "../../assets/lines_for_tracking.png";
-import additionalLineForTrackingImage from "../../assets/additional_line_for_tracking.png";
+import trackingLineLayer1Image from "../../assets/tracking_line_layer_1.png";
+import trackingLineLayer2Image from "../../assets/tracking_line_layer_2.png";
+import trackingLineLayer3Image from "../../assets/tracking_line_layer_3.png";
+import trackingLineLayer4Image from "../../assets/tracking_line_layer_4.png";
+import trackingLineLayer5Image from "../../assets/tracking_line_layer_5.png";
+import trackingLineLayer6Image from "../../assets/tracking_line_layer_6.png";
 
 import ExternalLinkButton from "../../components/externalLinkButton/ExternalLinkButton";
 
@@ -29,15 +33,37 @@ export default function MultiObjectTracking() {
                     <img
                         className="trackingImage"
                         src={trackingImage}
-                        alt="Foot prints in sand"/>
+                        alt="Two persons at a beach with their foot prints in sand"/>
                     <img
-                        className={"linesForTrackingImage " + (inView && "inView")}
-                        src={linesForTrackingImage}
-                        alt="Lines indicating paths of objects"/>
+                        className={"trackingLineLayer " + (inView && "inView")}
+                        id="trackingLineLayer1"
+                        src={trackingLineLayer1Image}
+                        alt="First part of line representing path of left person"/>
                     <img
-                        className={"additionalLineForTrackingImage " + (inView && "inView")}
-                        src={additionalLineForTrackingImage}
-                        alt="Additional line indicating path of bird"/>
+                        className={"trackingLineLayer " + (inView && "inView")}
+                        id="trackingLineLayer2"
+                        src={trackingLineLayer2Image}
+                        alt="Second part of line representing path of left person"/>
+                    <img
+                        className={"trackingLineLayer " + (inView && "inView")}
+                        id="trackingLineLayer3"
+                        src={trackingLineLayer3Image}
+                        alt="Third part of line representing path of left person"/>
+                    <img
+                        className={"trackingLineLayer " + (inView && "inView")}
+                        id="trackingLineLayer4"
+                        src={trackingLineLayer4Image}
+                        alt="Fourth part of line representing path of left person"/>
+                    <img
+                        className={"trackingLineLayer " + (inView && "inView")}
+                        id="trackingLineLayer5"
+                        src={trackingLineLayer5Image}
+                        alt="First part of line representing path of right person"/>
+                    <img
+                        className={"trackingLineLayer " + (inView && "inView")}
+                        id="trackingLineLayer6"
+                        src={trackingLineLayer6Image}
+                        alt="Second part of line representing path of right person"/>
                 </div>
             </div>
             <div className={"textContainer " + (wasInView && "wasInView")}>
