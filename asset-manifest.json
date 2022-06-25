@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.799d94e3.chunk.css",
-    "main.js": "/static/js/main.b9fbe560.chunk.js",
-    "main.js.map": "/static/js/main.b9fbe560.chunk.js.map",
+    "main.js": "/static/js/main.03c8b75d.chunk.js",
+    "main.js.map": "/static/js/main.03c8b75d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e7c3baa1.js",
     "runtime-main.js.map": "/static/js/runtime-main.e7c3baa1.js.map",
     "static/css/2.d97c81c1.chunk.css": "/static/css/2.d97c81c1.chunk.css",
@@ -23,8 +23,8 @@
     "static/media/external_link.5fb6bf07.svg": "/static/media/external_link.5fb6bf07.svg",
     "static/media/food.5632a3f7.svg": "/static/media/food.5632a3f7.svg",
     "static/media/foosball.ed747478.svg": "/static/media/foosball.ed747478.svg",
-    "static/media/fourth_place_medal.8b08819b.svg": "/static/media/fourth_place_medal.8b08819b.svg",
-    "static/media/gold_medal.f3db8ce6.svg": "/static/media/gold_medal.f3db8ce6.svg",
+    "static/media/fourth_place_medal.e3b5d1f5.svg": "/static/media/fourth_place_medal.e3b5d1f5.svg",
+    "static/media/gold_medal.f8925258.svg": "/static/media/gold_medal.f8925258.svg",
     "static/media/joystick.0de38c80.svg": "/static/media/joystick.0de38c80.svg",
     "static/media/line_for_cameraman.89955fc5.png": "/static/media/line_for_cameraman.89955fc5.png",
     "static/media/lines_for_dancers.cb2f4e3e.png": "/static/media/lines_for_dancers.cb2f4e3e.png",
@@ -36,7 +36,7 @@
     "static/media/portrait_crop.0df9acd8.png": "/static/media/portrait_crop.0df9acd8.png",
     "static/media/psychologie.ccd1a9dc.svg": "/static/media/psychologie.ccd1a9dc.svg",
     "static/media/scientific_paper.94db4d61.svg": "/static/media/scientific_paper.94db4d61.svg",
-    "static/media/silver_medal.fe5efb57.svg": "/static/media/silver_medal.fe5efb57.svg",
+    "static/media/silver_medal.feeccd31.svg": "/static/media/silver_medal.feeccd31.svg",
     "static/media/template_phone_for_website_downscaled.4d21dfa6.png": "/static/media/template_phone_for_website_downscaled.4d21dfa6.png",
     "static/media/tracking_downscaled.73064292.jpg": "/static/media/tracking_downscaled.73064292.jpg",
     "static/media/tracking_line_layer_1.1d45ba3a.png": "/static/media/tracking_line_layer_1.1d45ba3a.png",
@@ -55,6 +55,6 @@
     "static/css/2.d97c81c1.chunk.css",
     "static/js/2.0218d172.chunk.js",
     "static/css/main.799d94e3.chunk.css",
-    "static/js/main.b9fbe560.chunk.js"
+    "static/js/main.03c8b75d.chunk.js"
   ]
 }

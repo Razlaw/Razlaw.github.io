@@ -2,8 +2,8 @@
   <path d="m128.29 111.22 47.941-99.68h-40.462l-41.334 88.679z" style="fill:#ff3434;stroke-width:.54892px;stroke:#ff3434"/>
   <path d="m82.138 108.59-49.368-96.864h43.354l43.069 89.836z" style="fill:#c72929"/>
   <circle cx="106.27" cy="186.78" r="73.792" style="fill:none;stroke-width:24.244;stroke:#ffc900"/>
-  <text x="79.708031" y="221.20091" style="fill:#008b99;font-family:'Liberation Serif';font-size:105.7px;font-weight:bold;line-height:1.25;stroke-width:.73403" xml:space="preserve">
-    <tspan x="79.708031" y="221.20091" style="fill:#008b99;font-family:'Liberation Serif';font-size:105.7px;font-weight:bold;stroke-width:.73403">1</tspan>
+  <text x="79.708031" y="221.20091" style="fill:#008b99;font-family:'PT Serif';font-size:95.7px;font-weight:bold;line-height:1.25;stroke-width:.73403" xml:space="preserve">
+    <tspan x="79.708031" y="221.20091" style="fill:#008b99;font-family:'PT Serif';font-size:95.7px;font-weight:bold;stroke-width:.73403">1</tspan>
   </text>
   <circle cx="106.47" cy="187.39" r="57.894" style="fill:none;stroke-width:11.726;stroke:#e99203"/>
 </svg>
