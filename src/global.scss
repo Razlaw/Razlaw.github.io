@@ -47,8 +47,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color-primary: var(--background-color-lightmode-light);
-    --background-color-secondary: var(--background-color-lightmode-dark);
+    --background-color-primary: var(--background-color-lightmode-dark);
+    --background-color-secondary: var(--background-color-lightmode-light);
 
     --text-color: var(--text-color-bottom);
 
