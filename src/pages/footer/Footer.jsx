@@ -68,7 +68,7 @@ export default function Footer() {
                         <a
                             className="externalLink"
                             id="codepenLink"
-                            href="https://github.com/Razlaw"
+                            href="https://codepen.io/razlaw"
                             target="_blank"
                             rel="noreferrer">
                             <div className="linkText">
@@ -93,8 +93,8 @@ export default function Footer() {
                     <div className="externalLinkContainer" id="scholar">
                         <a
                             className="externalLink"
-                            id="instagramLink"
-                            href="https://instagram.com/bonnusmaterial?igshid=YmMyMTA2M2Y="
+                            id="scholarLink"
+                            href="https://scholar.google.com/citations?user=bcx5-kkAAAAJ"
                             target="_blank"
                             rel="noreferrer">
                             <div className="linkText">
@@ -106,7 +106,7 @@ export default function Footer() {
                     <div className="externalLinkContainer" id="linkedin">
                         <a
                             className="externalLink"
-                            id="instagramLink"
+                            id="linkedInLink"
                             href="https://instagram.com/bonnusmaterial?igshid=YmMyMTA2M2Y="
                             target="_blank"
                             rel="noreferrer">
