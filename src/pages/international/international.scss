@@ -66,7 +66,30 @@
             fill: none;
             stroke-linecap: butt;
             stroke-linejoin: round;
-            stroke-width: 2.3;
+            stroke-width: 1.8;
+
+            @include for-mobile {
+              stroke-width: 5.3;
+            }
+
+            @include for-tablet {
+              stroke-width: 4.3;
+            }
+          }
+
+          circle {
+            opacity: 0;
+            fill: none;
+            stroke-width: 4.1;
+
+            @include for-mobile {
+              stroke-width: 35;
+            }
+
+            @include for-tablet {
+              stroke-width: 9;
+            }
+          }
           }
         }
 
@@ -80,7 +103,30 @@
             fill: none;
             stroke-linecap: butt;
             stroke-linejoin: round;
-            stroke-width: 2.3;
+            stroke-width: 1.8;
+
+            @include for-mobile {
+              stroke-width: 5.3;
+            }
+
+            @include for-tablet {
+              stroke-width: 4.3;
+            }
+          }
+
+          circle {
+            opacity: 0;
+            fill: none;
+            stroke-width: 4.1;
+
+            @include for-mobile {
+              stroke-width: 12;
+            }
+
+            @include for-tablet {
+              stroke-width: 8;
+            }
+          }
           }
         }
       }
