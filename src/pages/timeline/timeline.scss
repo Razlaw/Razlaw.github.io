@@ -1,0 +1,39 @@
+@import "./../../global.scss";
+
+.timelineContainer {
+  width: 100%;
+  min-height: 100%;
+  background: linear-gradient(var(--background-color-primary), var(--background-color-secondary));
+  color: var(--text-color);
+  scrollbar-width: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .contentContainer {
+    width: 90%;
+    max-width: 900px;
+    padding: 5% 5% 0 5%;
+    text-align: left;
+    scrollbar-width: none;
+
+    @include for-mobile {
+      padding: 40px 5% 70px 0;
+    }
+
+    h1 {
+      @include for-mobile {
+        font-size: 4.3em;
+      }
+    }
+
+    h2 {
+      @include for-mobile {
+        font-size: 2.2em;
+        background: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 2.9rem) text;
+      }
+    }
+  }
+}

@@ -6,6 +6,9 @@ import {Route, Routes, useNavigate} from "react-router-dom";
 import Home from "./pages/home/Home";
 import PrivacyStatement from "./pages/privacyStatement/PrivacyStatement";
 import SiteNotice from "./pages/siteNotice/SiteNotice";
+import Education from "./pages/education/Education";
+import ProjectsDescriptions from "./pages/projectsDescriptions/ProjectsDescriptions";
+import Timeline from "./pages/timeline/Timeline";
 import ErrorPage from "./pages/errorPage/ErrorPage";
 import React from "react";
 
@@ -28,6 +31,10 @@ export default function App() {
 
                 <Route path="/privacy_statement" element={<PrivacyStatement/>}/>
                 <Route path="/site_notice" element={<SiteNotice/>}/>
+
+                <Route path="/education" element={<Education/>}/>
+                <Route path="/projects_descriptions" element={<ProjectsDescriptions/>}/>
+                <Route path="/timeline" element={<Timeline/>}/>
 
                 <Route path="/*" element={<ErrorPage/>}/>
             </Routes>

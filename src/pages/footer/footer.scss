@@ -126,6 +126,7 @@
           //box-shadow: 5px 5px 15px #05281e;
           //border-radius: 9px;
           transition: all ease-in-out 1000ms;
+          cursor: pointer;
 
           &.inView {
             animation: revealInternalLinks 1s ease-in-out both 4s;
