@@ -44,17 +44,58 @@
     }
 
     .mapContainer {
+      width: 100%;
+      position: absolute;
+      top: 130px;
+
       overflow: hidden;
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      align-items: flex-start;
+      justify-content: center;
+
+      @include for-mobile {
+        top: 15%;
+        width: 100%;
+      }
 
       .imgContainer {
+        width: 100%;
+
         display: flex;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: space-between;
         position: relative;
         margin: 0 3%;
+
+        &.inView {
+          .mapOutline {
+            circle {
+              animation: slideInMapLocations 500ms ease-in-out both 1200ms;
+            }
+
+            @keyframes slideInMapLocations {
+              from {
+                opacity: 0;
+                transform: translateX(-50px);
+              }
+              to {
+                opacity: 1;
+                transform: translateX(0px);
+              }
+            }
+          }
+        }
+
+        @keyframes slideInMaps {
+          from {
+            opacity: 0;
+            transform: translateY(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0px);
+          }
+        }
 
         .northAmerica {
           width: 100%;
@@ -90,6 +131,15 @@
               stroke-width: 9;
             }
           }
+
+          #losAngeles {
+            stroke: var(--cue-color);
+            animation-delay: 700ms;
+          }
+
+          #montreal {
+            stroke: #158f42;
+            animation-delay: 1700ms;
           }
         }
 
@@ -127,19 +177,177 @@
               stroke-width: 8;
             }
           }
+
+          #abuDhabi1 {
+            stroke: #155e8f;
+            stroke-width: 5;
+            animation-delay: 2200ms;
+
+            @include for-mobile {
+              stroke-width: 30;
+            }
+
+            @include for-tablet {
+              stroke-width: 20;
+            }
+          }
+
+          #abuDhabi2 {
+            stroke: #e7a816;
+            animation-delay: 1200ms;
           }
         }
       }
     }
 
     .textContainer {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width: 61%;
+      position: absolute;
+      bottom: 11%;
+      left: 55%;
+      transform: translateX(-50%);
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      overflow: visible;
+
+      @include for-mobile {
+        width: 100%;
+        height: 54%;
+        left: 50%;
+        bottom: calc(var(--height-transition-triangle) * 0.65);
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include for-tablet {
+        width: 100%;
+        height: 54%;
+        left: 50%;
+        bottom: calc(var(--height-transition-triangle) * 0.65);
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .locationBox {
+        opacity: 0;
+        margin: 13px;
+        padding: 15px 5px;
+        border-radius: 28px;
+        border-style: solid;
+        border-width: 9px;
+        background: linear-gradient(0deg, var(--background-color-primary), var(--background-color-secondary));
+        box-shadow: 5px 5px 5px var(--shadow-color);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &.inView {
+          animation: slideInMapLocations 500ms ease-in-out both 1200ms;
+        }
+
+        @keyframes slideInMapLocations {
+          from {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0px);
+          }
+        }
+
+        @include for-mobile {
+          margin: 5px 9px;
+          padding: 5px;
+          border-width: 5px;
+        }
+
+        @include for-tablet {
+          margin: 8px 34px;
+          padding: 5px;
+        }
+
+        .internationalEventTitle {
+          margin-bottom: 0;
+          font-size: 3rem;
+
+          @include for-mobile {
+            font-size: 2rem;
+          }
+        }
+
+        .medal {
+          width: 70px;
+          height: 95px;
+
+          @include for-mobile {
+            height: 50px;
+          }
+
+          @include for-tablet {
+            height: 78px;
+          }
+        }
+
+        .paperIcon {
+          width: 70px;
+          height: 95px;
+
+          path, rect {
+            stroke: #158f42;
+          }
+
+          @include for-mobile {
+            height: 50px;
+          }
+
+          @include for-tablet {
+            height: 78px;
+          }
+        }
+
+        .internationalEventDescription {
+          margin: 0;
+          font-size: 1.8rem;
+          background: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 2.5rem);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+
+          @include for-mobile {
+            font-size: 1.2rem;
+            background: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 1.8rem);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+          }
+        }
+      }
     }
 
+    #losAngeles {
+      border-color: var(--cue-color);
+      animation-delay: 3700ms;
+    }
 
+    #abuDhabi1 {
+      border-color: #e7a816;
+      animation-delay: 4200ms;
+    }
+
+    #montreal {
+      border-color: #158f42;
+      animation-delay: 4700ms;
+    }
+
+    #abuDhabi2 {
+      border-color: #155e8f;
+      animation-delay: 5200ms;
+    }
   }
 
   &:after {
