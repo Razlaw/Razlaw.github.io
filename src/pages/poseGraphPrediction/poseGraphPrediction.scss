@@ -87,7 +87,7 @@
         height: 35px;
         position: absolute;
         border-radius: 50%;
-        background-color: #8f1552;
+        background-color: var(--cue-color);
         transform: scale(0);
 
         &.inView {
