@@ -16,7 +16,8 @@
 
     @include for-mobile {
       display: grid;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      overflow: hidden;
     }
 
     @include for-tablet {
@@ -116,7 +117,7 @@
 
         position: relative;
         padding: 2% 2% 0 2%;
-        overflow: visible;
+        overflow: hidden;
       }
 
       @include for-tablet {
@@ -160,7 +161,7 @@
       @include for-mobile {
         align-self: center;
         justify-self: center;
-        width: 100%;
+        white-space: nowrap;
         z-index: 100;
         overflow: visible;
       }
