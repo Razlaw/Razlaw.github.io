@@ -11,6 +11,8 @@ body ::-webkit-scrollbar {
   color: var(--text-color);
   scrollbar-width: none;
 
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
