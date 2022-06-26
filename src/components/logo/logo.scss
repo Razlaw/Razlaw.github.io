@@ -20,6 +20,12 @@
     transform: scale(0.5);
   }
 
+  @include for-tablet {
+    left: unset;
+    right: 10px;
+    top: 0px;
+  }
+
   .logoPart {
     margin: 0;
   }
