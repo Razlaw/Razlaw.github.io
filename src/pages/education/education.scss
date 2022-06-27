@@ -20,6 +20,7 @@
     padding: 30px 5% 70px 5%;
     text-align: left;
     scrollbar-width: none;
+    overflow: visible;
 
     @include for-mobile {
       padding: 40px 0 70px 0;
@@ -27,7 +28,6 @@
 
     .educationTitle {
       padding-left: 22px;
-      //font-size: 3rem;
 
       @include for-mobile {
         font-size: 4.3em;
@@ -41,6 +41,7 @@
       border-width: 3px;
       background: linear-gradient(0deg, var(--background-color-primary), var(--background-color-secondary));
       box-shadow: 5px 5px 5px var(--shadow-color);
+      overflow: visible;
 
       .educationStepTitle {
         font-size: 3rem;
