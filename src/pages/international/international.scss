@@ -238,6 +238,7 @@
         border-width: 9px;
         background: linear-gradient(0deg, var(--background-color-primary), var(--background-color-secondary));
         box-shadow: 5px 5px 5px var(--shadow-color);
+        cursor: pointer;
 
         display: flex;
         flex-direction: column;
