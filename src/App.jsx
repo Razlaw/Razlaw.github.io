@@ -33,7 +33,7 @@ export default function App() {
                 <Route path="/site_notice" element={<SiteNotice/>}/>
 
                 <Route path="/education" element={<Education/>}/>
-                <Route path="/projects_descriptions" element={<ProjectsDescriptions/>}/>
+                <Route path="/projects_descriptions/openid=:openID" element={<ProjectsDescriptions/>}/>
                 <Route path="/timeline" element={<Timeline/>}/>
 
                 <Route path="/*" element={<ErrorPage/>}/>

@@ -1,0 +1,10 @@
+@import "../../global.scss";
+
+.accordionList{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color-secondary);
+  border-radius: 0.4rem;
+  overflow: hidden;
+}

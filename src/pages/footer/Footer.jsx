@@ -33,7 +33,7 @@ export default function Footer() {
                     <div className="internalLinkContainer" id="projects">
                         <div
                             className={"internalLink " + (inView && "inView")}
-                            onClick={() => navigate("/projects_descriptions")}
+                            onClick={() => navigate("/projects_descriptions/openid=-1")}
                         >
                             <div className="linkText">
                                 <h1>Projekte</h1>
