@@ -28,6 +28,13 @@ export const projectDescriptions = [
                     title: "Techstack: ",
                     text: "C++, ROS"
                 }
+            ],
+        links:
+            [
+                {
+                    title: "Projektseite",
+                    link: "https://gepris.dfg.de/gepris/projekt/166047863?context=projekt&task=showDetail&id=166047863&"
+                }
             ]
     },
     {
@@ -53,6 +60,21 @@ export const projectDescriptions = [
                 {
                     title: "Techstack: ",
                     text: "C++, Python, ROS, LaTex, Qt Creator"
+                }
+            ],
+        links:
+            [
+                {
+                    title: "Projektseite",
+                    link: "https://gepris.dfg.de/gepris/projekt/166047863?context=projekt&task=showDetail&id=166047863&"
+                },
+                {
+                    title: "Bachelorarbeit",
+                    link: "https://www.ais.uni-bonn.de/theses/Jan_Razlaw_Bachelorarbeit_11_2014.pdf"
+                },
+                {
+                    title: "Paper",
+                    link: "https://www.researchgate.net/profile/Sven-Behnke-2/publication/280000286_Evaluation_of_Registration_Methods_for_Sparse_3D_Laser_Scans/links/55a2aa6608aea815dffd249d/Evaluation-of-Registration-Methods-for-Sparse-3D-Laser-Scans.pdf"
                 }
             ]
     },
@@ -106,6 +128,13 @@ export const projectDescriptions = [
                     title: "Techstack: ",
                     text: "C++, ROS, Point Cloud Library, OpenCV"
                 }
+            ],
+        links:
+            [
+                {
+                    title: "Projektseite",
+                    link: "https://www.bmwk.de/Redaktion/DE/Publikationen/Digitale-Welt/autonomik-fuer-industrie-4-0.pdf?__blob=publicationFile&v=9#%5B%7B%22num%22%3A120%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C42%2C770%2Cnull%5D"
+                }
             ]
     },
     {
@@ -127,6 +156,25 @@ export const projectDescriptions = [
                 {
                     title: "Techstack: ",
                     text: "C++, ..."
+                }
+            ],
+        links:
+            [
+                {
+                    title: "Wettbewerb Webseite mit finalem Ranking - Seite lädt lange",
+                    link: "http://web.archive.org/web/20150706191042/http://www.theroboticschallenge.org/"
+                },
+                {
+                    title: "Video über den Wettbewerb mit Fokus auf das zweitplatzierte Team",
+                    link: "https://www.youtube.com/watch?v=8P9geWwi9e0"
+                },
+                {
+                    title: "Video unseres Durchgangs",
+                    link: "https://www.youtube.com/watch?v=NJHSFelPsGc"
+                },
+                {
+                    title: "Paper",
+                    link: "https://scholar.google.com/citations?view_op=view_citation&hl=de&user=bcx5-kkAAAAJ&citation_for_view=bcx5-kkAAAAJ:9yKSN-GCB0IC"
                 }
             ]
     },
@@ -154,6 +202,13 @@ export const projectDescriptions = [
                     title: "Techstack: ",
                     text: "C++, ..."
                 }
+            ],
+        links:
+            [
+                {
+                    title: "Projektseite",
+                    link: "https://www.centauro-project.eu/"
+                }
             ]
     },
     {
@@ -176,6 +231,25 @@ export const projectDescriptions = [
                     title: "Techstack: ",
                     text: "C++, ..."
                 }
+            ],
+        links:
+            [
+                {
+                    title: "Wettbewerb Webseite mit finalem Ranking - Seite lädt lange",
+                    link: "http://web.archive.org/web/20180225193543/http://www.mbzirc.com:80/scoreboard/challenge4"
+                },
+                {
+                    title: "Video mit Beschreibung der Aufgaben",
+                    link: "https://www.youtube.com/watch?v=oVz2Sp3W468"
+                },
+                {
+                    title: "Video unseres Durchgangs - Aufgabe 2",
+                    link: "https://www.youtube.com/watch?v=TMiTC9wa5S8"
+                },
+                {
+                    title: "Paper",
+                    link: "https://scholar.google.com/citations?view_op=view_citation&hl=de&user=bcx5-kkAAAAJ&sortby=pubdate&citation_for_view=bcx5-kkAAAAJ:IjCSPb-OGe4C"
+                }
             ]
     },
     {
@@ -197,6 +271,25 @@ export const projectDescriptions = [
                 {
                     title: "Techstack: ",
                     text: "C++, ..."
+                }
+            ],
+        links:
+            [
+                {
+                    title: "Wettbewerb Webseite mit finalem Ranking - Seite lädt lange",
+                    link: "http://web.archive.org/web/20200806184940/https://www.mbzirc.com/news/us5-million-mbzirc-2020-winners-awarded-29"
+                },
+                {
+                    title: "Video mit Beschreibung der Aufgaben",
+                    link: "https://www.youtube.com/watch?v=u106Vy-XJ7c"
+                },
+                {
+                    title: "Video Zusammenschnitt unserer Durchgänge",
+                    link: "https://www.youtube.com/watch?v=E_VratSg6Jo"
+                },
+                {
+                    title: "Paper",
+                    link: "https://scholar.google.com/citations?view_op=view_citation&hl=de&user=bcx5-kkAAAAJ&sortby=pubdate&citation_for_view=bcx5-kkAAAAJ:2osOgNQ5qMEC"
                 }
             ]
     },
@@ -224,6 +317,13 @@ export const projectDescriptions = [
                     title: "Techstack: ",
                     text: "C++, ..."
                 }
+            ],
+        links:
+            [
+                {
+                    title: "Projektseite",
+                    link: "https://rettungsrobotik.de/home"
+                }
             ]
     },
     {
@@ -250,6 +350,13 @@ export const projectDescriptions = [
                     title: "Techstack: ",
                     text: "C++, ..."
                 }
+            ],
+        links:
+            [
+                {
+                    title: "Code",
+                    link: "https://github.com/AIS-Bonn/pose_graph_prediction"
+                }
             ]
     },
     {
@@ -268,6 +375,13 @@ export const projectDescriptions = [
                     title: "Techstack: ",
                     text: "C++, ..."
                 }
+            ],
+        links:
+            [
+                {
+                    title: "Code",
+                    link: "https://github.com/AIS-Bonn/rviz_cinematographer"
+                }
             ]
     },
     {
@@ -285,6 +399,13 @@ export const projectDescriptions = [
                 {
                     title: "Techstack: ",
                     text: "C++, ..."
+                }
+            ],
+        links:
+            [
+                {
+                    title: "Code",
+                    link: "https://github.com/Razlaw/weather_website/tree/src"
                 }
             ]
     }

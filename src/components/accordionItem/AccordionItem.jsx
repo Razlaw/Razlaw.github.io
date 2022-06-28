@@ -2,7 +2,7 @@ import "./accordionItem.scss";
 
 import React, {useState} from "react";
 
-export default function AccordionItem({ title, paragraphs, isOpened }) {
+export default function AccordionItem({ title, paragraphs, links, isOpened }) {
     const [isOpen, setIsOpen] = useState(isOpened);
 
     return (
@@ -20,13 +20,27 @@ export default function AccordionItem({ title, paragraphs, isOpened }) {
                 <div className="accordionItemContent">
                     {paragraphs.map((paragraph, key) => {
                         return (
-                            <div className="accordionItemParagraph" key={key}>
+                            <div className="accordionItemParagraph" key={"paragraph" + key}>
                                 <p className="accordionItemParagraphText">
                                     <strong>{paragraph.title}</strong> {paragraph.text}
                                 </p>
                             </div>
                         )
                     })}
+                    {links !== undefined ? links.map((link, key) => {
+                        return (
+                            <div className="accordionItemParagraph" key={"link" + key}>
+                                <p className="accordionItemParagraphText">
+                                    <a
+                                        href={link.link}
+                                        target="_blank"
+                                        rel="noreferrer">
+                                        {link.title}
+                                    </a>
+                                </p>
+                            </div>
+                        )
+                    }) : ""}
                 </div>
             </div>
         </div>

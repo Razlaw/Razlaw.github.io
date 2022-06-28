@@ -25,6 +25,7 @@ export default function Accordion({ data, openID }) {
                             <AccordionItem
                                 title={ (key + 1) + " - " + data.title}
                                 paragraphs={data.paragraphs}
+                                links={data.links}
                                 isOpened={key === openID}
                             />
                         </li>
