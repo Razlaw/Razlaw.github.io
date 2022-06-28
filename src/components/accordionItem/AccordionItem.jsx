@@ -8,9 +8,8 @@ export default function AccordionItem({ title, paragraphs, links, isOpened }) {
     return (
         <div
             className={"accordionItem " + (isOpen && "isOpen")}
-            onClick={() => {setIsOpen(!isOpen)}}
         >
-            <div className="accordionItemLine">
+            <div className="accordionItemLine" onClick={() => {setIsOpen(!isOpen)}}>
                 <h1 className="accordionItemTitle">
                     {title}
                 </h1>
