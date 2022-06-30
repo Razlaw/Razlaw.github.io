@@ -25,31 +25,58 @@ export default function Interests() {
                 </h1>
                 <div className={"iconsContainer " + (inView && "inView")} ref={ref}>
                     <div className="iconContainer">
-                        <FoosballIcon className="icon"/>
+                        <div className="hoverContainer">
+                            <MusicIcon className="icon"/>
+                            <h1 className="iconTitle">Musik</h1>
+                        </div>
                     </div>
                     <div className="iconContainer">
-                        <CameraIcon className="icon"/>
+                        <div className="hoverContainer">
+                            <CameraIcon className="icon"/>
+                            <h1 className="iconTitle">Fotographie</h1>
+                        </div>
                     </div>
                     <div className="iconContainer">
-                        <MoviesIcon className="icon"/>
+                        <div className="hoverContainer">
+                            <MoviesIcon className="icon"/>
+                            <h1 className="iconTitle">Kino</h1>
+                        </div>
                     </div>
                     <div className="iconContainer">
-                        <DrawingIcon className="icon"/>
+                        <div className="hoverContainer">
+                            <DrawingIcon className="icon"/>
+                            <h1 className="iconTitle">"Kunst"</h1>
+                        </div>
                     </div>
                     <div className="iconContainer">
-                        <PsychologyIcon className="icon middle"/>
+                        <div className="hoverContainer">
+                            <PsychologyIcon className="icon"/>
+                            <h1 className="iconTitle">Psychologie</h1>
+                        </div>
                     </div>
                     <div className="iconContainer">
-                        <JoystickIcon className="icon"/>
+                        <div className="hoverContainer">
+                            <JoystickIcon className="icon"/>
+                            <h1 className="iconTitle">Spiele</h1>
+                        </div>
                     </div>
                     <div className="iconContainer">
-                        <MusicIcon className="icon"/>
+                        <div className="hoverContainer">
+                            <FoosballIcon className="icon"/>
+                            <h1 className="iconTitle">Kickern</h1>
+                        </div>
                     </div>
                     <div className="iconContainer">
-                        <FoodIcon className="icon"/>
+                        <div className="hoverContainer">
+                            <FoodIcon className="icon"/>
+                            <h1 className="iconTitle">Schlemmen</h1>
+                        </div>
                     </div>
                     <div className="iconContainer">
-                        <TravelIcon className="icon"/>
+                        <div className="hoverContainer">
+                            <TravelIcon className="icon"/>
+                            <h1 className="iconTitle">Reisen</h1>
+                        </div>
                     </div>
                 </div>
             </div>

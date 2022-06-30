@@ -45,8 +45,7 @@
       padding-top: 0;
 
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 
       &.inView {
         .iconContainer {
@@ -103,28 +102,52 @@
         justify-content: center;
         overflow: hidden;
 
-        .icon {
+        .hoverContainer {
           position: relative;
 
-          &.middle {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+
+          .icon {
             position: relative;
-            z-index: 2;
+            opacity: 1;
+            transition: opacity 1s ease-out;
+
+            * {
+              stroke: var(--icon-stroke-color);
+              stroke-width: 2.5;
+              fill: none;
+
+              stroke-linejoin: round;
+              stroke-linecap: round;
+
+              stroke-dasharray: 500;
+              stroke-dashoffset: 500;
+
+              @include for-mobile {
+                stroke-width: 3;
+              }
+            }
           }
 
-          * {
-            stroke: var(--icon-stroke-color);
-            stroke-width: 2.5;
-            fill: none;
+          .iconTitle {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-out;
+          }
+        }
 
-            stroke-linejoin: round;
-            stroke-linecap: round;
+        &:hover {
+          .icon {
+            transition: opacity 500ms ease-out;
+            opacity: 0;
+          }
 
-            stroke-dasharray: 500;
-            stroke-dashoffset: 500;
-
-            @include for-mobile {
-              stroke-width: 3;
-            }
+          .iconTitle {
+            opacity: 1;
           }
         }
       }
