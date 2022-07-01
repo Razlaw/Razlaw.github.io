@@ -13,28 +13,261 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: visible;
+
+  .timelineTitle {
+    margin-top: 30px;
+  }
 
   .contentContainer {
     width: 90%;
     max-width: 900px;
-    padding: 5% 5% 0 5%;
+    padding: 1% 0 70px 0;
     text-align: left;
     scrollbar-width: none;
 
+    height: 100%;
+
+    margin: 0 10% 0 10%;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+
     @include for-mobile {
-      padding: 40px 5% 70px 0;
+      padding: 0 0 70px 0;
     }
 
-    h1 {
+    .timelinePartContainer {
+      display: flex;
+      flex-direction: row;
+      overflow: visible;
+
       @include for-mobile {
-        font-size: 4.3em;
+        justify-content: flex-start;
       }
     }
 
-    h2 {
+    .educationTimelineContainer {
+      width: 50px;
+      margin: 27px 20px 25px;
+      padding: 0;
+      background-color: rgb(168, 47, 67);
+
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow: clip;
+
+      cursor: pointer;
+
       @include for-mobile {
-        font-size: 2.2em;
-        background: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 2.9rem) text;
+        width: 28px;
+        margin: 27px 15px 27px 0;
+      }
+
+      .educationTimelineContent{
+        transform: rotateZ(270deg);
+        margin: 75px 0;
+        position: sticky;
+        top: 75px;
+
+        color: white;
+        font-size: xx-large;
+        overflow: clip;
+
+        @include for-mobile {
+          margin: 65px 0;
+          top: 65px;
+          font-size: 1.4rem;
+        }
+      }
+
+      #educationTitle0 {
+        margin: 105px 0;
+        top: 105px;
+
+        @include for-mobile {
+          margin: 65px 0;
+          top: 65px;
+        }
+      }
+
+      #educationTitle1 {
+        margin: 75px 0;
+        top: 75px;
+
+        @include for-mobile {
+          margin: 50px 0;
+          top: 50px;
+        }
+      }
+
+      #educationTitle2 {
+        margin: 55px 0;
+        top: 55px;
+
+        @include for-mobile {
+          margin: 35px 0;
+          top: 35px;
+        }
+      }
+
+      #educationTitle3 {
+        margin: 65px 0;
+        top: 65px;
+
+        @include for-mobile {
+          margin: 40px 0;
+          top: 40px;
+        }
+      }
+
+      #educationTitle4 {
+        margin: 65px 0;
+        top: 65px;
+
+        @include for-mobile {
+          margin: 50px 0;
+          top: 50px;
+        }
+      }
+
+      #educationTitle5 {
+        margin: 85px 0;
+        top: 85px;
+
+        @include for-mobile {
+          margin: 55px 0;
+          top: 55px;
+        }
+      }
+    }
+
+    .workContainer {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+
+      .vertical-timeline::before {
+        left: 28px;
+        width: 4px;
+        background: var(--background-color-secondary);
+        box-shadow: 3px 3px 3px var(--shadow-color);
+
+        @include for-mobile {
+          left: 18px;
+          width: 4px;
+        }
+      }
+
+      .vertical-timeline {
+        overflow: visible;
+
+        @include for-mobile {
+          width: 100%;
+          margin: 0;
+        }
+      }
+
+      .vertical-timeline-element {
+        overflow: visible;
+      }
+
+      .vertical-timeline-element-icon{
+        width: 60px;
+        height: 60px;
+        box-shadow: 0 0 0 6px var(--background-color-secondary), inset 2px 3px 0 rgba(0, 0, 0, 0.08), 3px 4px 0 6px rgba(0, 0, 0, 0.05), 7px 7px 7px var(--shadow-color);
+        text-align: center;
+
+        background-color: var(--background-color-secondary);
+        fill: var(--text-color-top);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include for-mobile {
+          width: 40px;
+          height: 40px;
+          box-shadow: 0 0 0 4px var(--background-color-secondary), inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05), 7px 7px 7px var(--shadow-color);
+        }
+
+        svg {
+          width: 24px;
+          height: 24px;
+          top: 0;
+          left: 0;
+          margin: 0;
+
+          @include for-mobile {
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        #coding {
+          width: 32px;
+          height: 32px;
+          transform: translateX(1px);
+        }
+      }
+
+      .vertical-timeline-element-content {
+        margin-left: 85px;
+        overflow: visible;
+        background-color: var(--background-color-secondary);
+        box-shadow: 3px 3px 3px var(--shadow-color);
+        border-top: 3px solid var(--text-color-top);
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        @include for-mobile {
+          margin-left: 60px;
+        }
+      }
+
+      .vertical-timeline-element-title {
+        font-size: 3rem;
+        background: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 4rem);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+
+        @include for-mobile {
+          font-size: 2.4rem;
+          background: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 3rem);
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+        }
+      }
+
+      .vertical-timeline-element-subtitle {
+        font-size: 1.3rem;
+        text-align: center;
+        overflow: hidden;
+
+        @include for-mobile {
+          margin: 5px 0;
+        }
+      }
+
+      .vertical-timeline-element-content-arrow {
+        top: 24px;
+        border-right-color: var(--background-color-secondary);
+
+        @include for-mobile {
+          top: 16px;
+        }
+      }
+
+      .vertical-timeline-element-date {
+        padding: 0.8em 0 0 0;
+        font-size: 1.1rem;
+        text-align: left;
+        width: 80%;
       }
     }
   }
