@@ -5,8 +5,6 @@ import React, {useEffect} from "react";
 import AccordionItem from "../accordionItem/AccordionItem";
 
 export default function Accordion({ data, openID }) {
-    console.log("openID in accordion ", openID);
-    console.log("data.length ", data.length);
 
     useEffect(() => {
         if(openID >= 0 && openID < data.length) {
@@ -19,13 +17,13 @@ export default function Accordion({ data, openID }) {
     return (
         <div className="wrapper">
             <ul className="accordionList">
-                {data.map((data, key) => {
+                {data.slice(0).reverse().map((data_element, key) => {
                     return (
                         <li className="accordionListItem" id={"accordionItem" + key} key={key}>
                             <AccordionItem
-                                title={ (key + 1) + " - " + data.title}
-                                paragraphs={data.paragraphs}
-                                links={data.links}
+                                title={ (data.length - key) + " - " + data_element.title}
+                                paragraphs={data_element.paragraphs}
+                                links={data_element.links}
                                 isOpened={key === openID}
                             />
                         </li>
