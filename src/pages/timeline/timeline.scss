@@ -245,6 +245,17 @@
       }
 
       .vertical-timeline-element-subtitle {
+        margin: 0;
+        font-size: 1.3rem;
+        text-align: center;
+        overflow: hidden;
+
+        @include for-mobile {
+          margin: 5px 0;
+        }
+      }
+
+      .vertical-timeline-element-link {
         font-size: 1.3rem;
         text-align: center;
         overflow: hidden;

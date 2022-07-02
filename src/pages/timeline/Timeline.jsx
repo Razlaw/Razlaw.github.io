@@ -56,8 +56,9 @@ export default function Timeline() {
                                                 key={element_key}
                                             >
                                                 <h1 className="vertical-timeline-element-title">{element_data.title}</h1>
+                                                <p className="vertical-timeline-element-subtitle">{element_data.subtitle}</p>
                                                 <a
-                                                    className="vertical-timeline-element-subtitle"
+                                                    className="vertical-timeline-element-link"
                                                     href={element_data.link_destination}
                                                     target="_blank"
                                                     rel="noreferrer"
