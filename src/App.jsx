@@ -1,4 +1,4 @@
-import './fonts/Emberly-Thin.woff';
+import './fonts/Emberly-ExtraBold.woff';
 import "./app.scss"
 
 import {Route, Routes, useNavigate} from "react-router-dom";
