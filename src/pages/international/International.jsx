@@ -35,7 +35,7 @@ export default function International() {
                     <div
                         className={"locationBox " + (inView && "inView")}
                         id="losAngeles"
-                        onClick={() => {navigate("/projects_descriptions/openid=4")}}
+                        onClick={() => {navigate("/projects_descriptions/openid=5")}}
                     >
                         <h1 className="internationalEventTitle">2015</h1>
                         <h1 className="internationalEventTitle">Los Angeles</h1>
@@ -46,7 +46,7 @@ export default function International() {
                     <div
                         className={"locationBox " + (inView && "inView")}
                         id="abuDhabi1"
-                        onClick={() => {navigate("/projects_descriptions/openid=6")}}
+                        onClick={() => {navigate("/projects_descriptions/openid=7")}}
                     >
                         <h1 className="internationalEventTitle">2017</h1>
                         <h1 className="internationalEventTitle">Abu Dhabi</h1>
@@ -68,7 +68,7 @@ export default function International() {
                     <div
                         className={"locationBox " + (inView && "inView")}
                         id="abuDhabi2"
-                        onClick={() => {navigate("/projects_descriptions/openid=7")}}
+                        onClick={() => {navigate("/projects_descriptions/openid=8")}}
                     >
                         <h1 className="internationalEventTitle">2020</h1>
                         <h1 className="internationalEventTitle">Abu Dhabi</h1>

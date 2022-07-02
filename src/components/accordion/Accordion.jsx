@@ -19,12 +19,12 @@ export default function Accordion({ data, openID }) {
             <ul className="accordionList">
                 {data.slice(0).reverse().map((data_element, key) => {
                     return (
-                        <li className="accordionListItem" id={"accordionItem" + key} key={key}>
+                        <li className="accordionListItem" id={"accordionItem" + (data.length - key)} key={key}>
                             <AccordionItem
                                 title={ (data.length - key) + " - " + data_element.title}
                                 paragraphs={data_element.paragraphs}
                                 links={data_element.links}
-                                isOpened={key === openID}
+                                isOpened={(data.length - key) === openID}
                             />
                         </li>
                     )
