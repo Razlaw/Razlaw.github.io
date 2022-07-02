@@ -42,7 +42,9 @@ body ::-webkit-scrollbar {
     h2 {
       @include for-mobile {
         font-size: 2.05em;
-        background: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 2.9rem) text;
+        background: repeating-linear-gradient(180deg, var(--text-color-top) 0px, var(--text-color-bottom) 2.9rem);
+        background-clip: text;
+        -webkit-background-clip: text;
       }
     }
 
