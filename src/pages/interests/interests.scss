@@ -111,7 +111,7 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          overflow: hidden;
+          overflow: visible;
 
           .icon {
             position: relative;
@@ -139,6 +139,15 @@
             position: absolute;
             opacity: 0;
             transition: opacity 1s ease-out;
+            overflow: visible;
+
+            @include for-mobile {
+              font-size: 2rem;
+            }
+
+            @include for-tablet {
+              font-size: 3rem;
+            }
           }
         }
 
