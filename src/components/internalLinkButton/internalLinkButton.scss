@@ -1,0 +1,25 @@
+@import "../../global.scss";
+
+.internalLinkButton {
+  width: min-content;
+  height: 39px;
+  font-family: var(--font-family-paragraph);
+  font-size: var(--font-size-paragraph);
+  font-weight: var(--font-weight-paragraph);
+
+  padding: 7px;
+  border: 2px solid var(--text-color-bottom);
+
+  color: var(--text-color-top);
+  transition: all 500ms cubic-bezier(.18,.89,.32,1.28);
+
+  display: flex;
+  flex-direction: row;
+
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid var(--text-color-top);
+    color: var(--text-color-top);
+  }
+}

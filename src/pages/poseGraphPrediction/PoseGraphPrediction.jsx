@@ -8,6 +8,7 @@ import dancersImage from "../../assets/dancers_downscaled.jpg";
 import linesForDancersImage from "../../assets/lines_for_dancers.png";
 
 import ExternalLinkButton from "../../components/externalLinkButton/ExternalLinkButton";
+import InternalLinkButton from "../../components/internalLinkButton/InternalLinkButton";
 
 export default function PoseGraphPrediction() {
     const { ref, inView } = useInView({
@@ -44,10 +45,16 @@ export default function PoseGraphPrediction() {
                 <p className="description">
                     Vorhersage von Bewegungen<br/>durch Graph Neuronale Netze.
                 </p>
-                <ExternalLinkButton
-                    text={"Code"}
-                    link={"https://github.com/AIS-Bonn/pose_graph_prediction"}
-                />
+                <div className="links">
+                    <ExternalLinkButton
+                        text={"Code"}
+                        link={"https://github.com/AIS-Bonn/pose_graph_prediction"}
+                    />
+                    <InternalLinkButton
+                        text={"Details"}
+                        link={"/projects_descriptions/openid=10"}
+                    />
+                </div>
             </div>
         </div>
     );

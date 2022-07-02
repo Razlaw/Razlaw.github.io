@@ -13,6 +13,7 @@ import trackingLineLayer5Image from "../../assets/tracking_line_layer_5.png";
 import trackingLineLayer6Image from "../../assets/tracking_line_layer_6.png";
 
 import ExternalLinkButton from "../../components/externalLinkButton/ExternalLinkButton";
+import InternalLinkButton from "../../components/internalLinkButton/InternalLinkButton";
 
 export default function MultiObjectTracking() {
     const { ref, inView } = useInView({
@@ -71,10 +72,16 @@ export default function MultiObjectTracking() {
                 <p className="description">
                     Effiziente Bewegungsverfolgung<br/> von unterschiedlichen Objekten.
                 </p>
-                <ExternalLinkButton
-                    text={"Code"}
-                    link={"https://github.com/AIS-Bonn/multi_hypothesis_tracking"}
-                />
+                <div className="links">
+                    <ExternalLinkButton
+                        text={"Code"}
+                        link={"https://github.com/AIS-Bonn/multi_hypothesis_tracking"}
+                    />
+                    <InternalLinkButton
+                        text={"Details"}
+                        link={"/projects_descriptions/openid=9"}
+                    />
+                </div>
             </div>
         </div>
     );

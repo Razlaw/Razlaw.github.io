@@ -9,6 +9,7 @@ import lineForCameramanImage from "../../assets/line_for_cameraman.png";
 import cameraOutlineImage from "../../assets/camera_outline_for_cameraman.png";
 
 import ExternalLinkButton from "../../components/externalLinkButton/ExternalLinkButton";
+import InternalLinkButton from "../../components/internalLinkButton/InternalLinkButton";
 
 export default function RvizCinematographer() {
     const { ref, inView } = useInView({
@@ -48,10 +49,16 @@ export default function RvizCinematographer() {
                 <p className="description">
                     Komplexe Kamerafahrten<br/> benutzerfreundlich in RViz erstellen.
                 </p>
-                <ExternalLinkButton
-                    text={"Code"}
-                    link={"https://github.com/AIS-Bonn/rviz_cinematographer"}
-                />
+                <div className="links">
+                    <ExternalLinkButton
+                        text={"Code"}
+                        link={"https://github.com/AIS-Bonn/rviz_cinematographer"}
+                    />
+                    <InternalLinkButton
+                        text={"Details"}
+                        link={"/projects_descriptions/openid=11"}
+                    />
+                </div>
             </div>
         </div>
     );

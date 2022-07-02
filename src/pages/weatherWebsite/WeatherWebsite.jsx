@@ -9,6 +9,7 @@ import websiteImageOne from "../../assets/website_part1_downscaled.png";
 import websiteImageTwo from "../../assets/website_part2_downscaled.png";
 
 import ExternalLinkButton from "../../components/externalLinkButton/ExternalLinkButton";
+import InternalLinkButton from "../../components/internalLinkButton/InternalLinkButton";
 
 export default function WeatherWebsite() {
     const { ref, inView } = useInView({
@@ -50,14 +51,18 @@ export default function WeatherWebsite() {
                 <p className="description">
                     Die Wettervorhersage.<br/>Auf meine Art.
                 </p>
-                <div className="externalLinks">
+                <div className="links">
                     <ExternalLinkButton
                         text={"Code"}
                         link={"https://github.com/Razlaw/weather_website/tree/src"}
                     />
                     <ExternalLinkButton
-                        text={"Website"}
+                        text={"Webseite"}
                         link={"https://razlaw.github.io/weather_website"}
+                    />
+                    <InternalLinkButton
+                        text={"Details"}
+                        link={"/projects_descriptions/openid=12"}
                     />
                 </div>
             </div>
