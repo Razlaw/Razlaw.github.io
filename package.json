@@ -3,7 +3,14 @@
   "homepage": "https://razlaw.github.io",
   "version": "0.1.0",
   "private": true,
+  "description": "Portfolio",
+  "keywords": [
+    "react",
+    "portfolio"
+  ],
+  "main": "src/index.js",
   "dependencies": {
+    "@fontsource/lato": "^4.5.8",
     "@fontsource/playfair-display": "^4.5.10",
     "@fontsource/pt-serif": "^4.5.9",
     "@fontsource/roboto-slab": "^4.5.8",
@@ -14,9 +21,7 @@
     "react-router-dom": "^6.3.0",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "4.0.3",
-    "react-vertical-timeline-component": "^3.5.2",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.1.2"
+    "react-vertical-timeline-component": "^3.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
