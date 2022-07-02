@@ -214,6 +214,7 @@
 
       .vertical-timeline-element-content {
         margin-left: 85px;
+        padding-top: 0.5em;
         overflow: visible;
         background-color: var(--background-color-secondary);
         box-shadow: 3px 3px 3px var(--shadow-color);
@@ -226,6 +227,12 @@
         @include for-mobile {
           margin-left: 60px;
         }
+      }
+
+      .vertical-timeline-element-tag {
+        margin: 0 0 0.5em 0;
+        text-align: left;
+        font-size: 1.1rem;
       }
 
       .vertical-timeline-element-title {

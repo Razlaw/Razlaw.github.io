@@ -6,6 +6,7 @@ export const timeline_data = [
                 {
                     icon_id: "coding",
                     date: "Mai. 22 - Jul. 22",
+                    tag: "Projekt",
                     title: "Portfolio Webseite",
                     link_text: "",
                     link_destination: ""
@@ -13,6 +14,7 @@ export const timeline_data = [
                 {
                     icon_id: "coding",
                     date: "Dez. 21 - Mär. 22",
+                    tag: "Projekt",
                     title: "Wetter Webseite",
                     link_text: "Beschreibung",
                     link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=11"
@@ -127,6 +129,7 @@ export const timeline_data = [
                 {
                     icon_id: "work",
                     date: "2005 - 2007",
+                    tag: "Anstellung",
                     title: "Zeitungsausträger",
                     link_text: "",
                     link_destination: ""

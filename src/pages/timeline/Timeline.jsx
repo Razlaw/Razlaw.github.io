@@ -55,6 +55,7 @@ export default function Timeline() {
                                                 icon={getIcon(element_data.icon_id)}
                                                 key={element_key}
                                             >
+                                                <p className="vertical-timeline-element-tag">{element_data.tag}</p>
                                                 <h1 className="vertical-timeline-element-title">{element_data.title}</h1>
                                                 <p className="vertical-timeline-element-subtitle">{element_data.subtitle}</p>
                                                 <a
