@@ -1,0 +1,16 @@
+<svg class="keyboard" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <rect id="keyboardBackground" x="1" y="8" width="23" height="13" style="fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.63"/>
+  <path id="keyboardKey" d="m3 9c-1 0-1 0-1 1v1c0 1 0 1 1 1h1c1 0 1 0 1-1v-1c9.776e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m7 9c-1 0-1 0-1 1v1 0c0 1 0 1 1 1h1c1 0 1 0 1-1v-1c9.776e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m8 13c-1 0-1 0-1 1v1 0c0 1 0 1 1 1h1c1 0 1 0 1-1v-1c9.78e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m11 9c-1 0-1 0-1 1v1 0c0 1 0 1 1 1h1c1 0 1 0 1-1v-1c9.78e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m12 13c-1 0-1 0-1 1v1 0c0 1 0 1 1 1h1c1 0 1 0 1-1v-1c9.78e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m16 13c-1 0-1 0-1 1v1 0c0 1 0 1 1 1h1c1 0 1 0 1-1v-1c9.78e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m15 9c-1 0-1 0-1 1v1 0c0 1 0 1 1 1h1c1 0 1 0 1-1v-1c9.78e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m19 9c-1 0-1 0-1 1v1c0 1 0 1 0.49177 1 0.50823 0 0.50823 0 0.50823 0.99872v2.0013 0c0 1 0 1 1 1h2c1 0 1 0 1-1v-5c9.78e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m3 13c-1 0-1 0-1 1v1c0 1 0 1 1 1h2c1 0 1 0 1-1v-1c9.776e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m3 17c-1 0-1 0-1 1v1c0 1 0 1 1 1h3c1 0 1 0 1-1v-1c9.776e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m9 17c-1 0-1 0-1 1v1c0 1 0 1 1 1h8c1 0 1 0 1-1v-1c9.78e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path id="keyboardKey" d="m20 17c-1 0-1 0-1 1v1c0 1 0 1 1 1h2c1 0 1 0 1-1v-1c9.78e-4 -1 0-1-1-1z" style="color:#000000;stroke-linecap:round"/>
+  <path d="m15 0.18555c-0.44968 3.0171e-4 -0.81415 0.36477-0.81445 0.81445v2c0-0.012502-0.10044 0.18555-0.18555 0.18555h-5c-0.4387 0-0.85962 0.15202-1.209 0.45898-0.34936 0.30696-0.60547 0.80473-0.60547 1.3555v1c0.81445 0 0.36477-3.017e-4 0.81445 0 0.45045 7.774e-4 0 0 0.81641 0v-1c0-0.095711 0.015012-0.099432 0.050781-0.13086 0.035769-0.031428 0.11375-0.054688 0.13281-0.054688h5c1.0752 0 1.8164-0.85914 1.8164-1.8145v-2c-3.02e-4 -0.45045-0.36596-0.81523-0.81641-0.81445z" style="color:#000000;stroke-linecap:round;stroke-linejoin:round"/>
+</svg>

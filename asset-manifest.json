@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.1c5ba8d7.chunk.css",
-    "main.js": "/static/js/main.8ada6b15.chunk.js",
-    "main.js.map": "/static/js/main.8ada6b15.chunk.js.map",
+    "main.css": "/static/css/main.e0d57dd5.chunk.css",
+    "main.js": "/static/js/main.6e563359.chunk.js",
+    "main.js.map": "/static/js/main.6e563359.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e7c3baa1.js",
     "runtime-main.js.map": "/static/js/runtime-main.e7c3baa1.js.map",
     "static/css/2.111b1468.chunk.css": "/static/css/2.111b1468.chunk.css",
@@ -10,13 +10,14 @@
     "static/js/2.9b6567c3.chunk.js.map": "/static/js/2.9b6567c3.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.111b1468.chunk.css.map": "/static/css/2.111b1468.chunk.css.map",
-    "static/css/main.1c5ba8d7.chunk.css.map": "/static/css/main.1c5ba8d7.chunk.css.map",
+    "static/css/main.e0d57dd5.chunk.css.map": "/static/css/main.e0d57dd5.chunk.css.map",
     "static/js/2.9b6567c3.chunk.js.LICENSE.txt": "/static/js/2.9b6567c3.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/static/media/Emberly-ExtraBold.dae1a5ae.woff",
     "static/media/camera.eed23bd5.svg": "/static/media/camera.eed23bd5.svg",
     "static/media/camera_outline_for_cameraman.81641c53.png": "/static/media/camera_outline_for_cameraman.81641c53.png",
     "static/media/cameraman_downscaled.a919b409.jpg": "/static/media/cameraman_downscaled.a919b409.jpg",
-    "static/media/coding.4a0234b3.svg": "/static/media/coding.4a0234b3.svg",
+    "static/media/coding.24671928.svg": "/static/media/coding.24671928.svg",
+    "static/media/contract.3b3ba4f4.svg": "/static/media/contract.3b3ba4f4.svg",
     "static/media/dancers_downscaled.cdb4cc7b.jpg": "/static/media/dancers_downscaled.cdb4cc7b.jpg",
     "static/media/drawing.caab433d.svg": "/static/media/drawing.caab433d.svg",
     "static/media/eurasia_wo_borders.aff2a1ac.svg": "/static/media/eurasia_wo_borders.aff2a1ac.svg",
@@ -26,6 +27,7 @@
     "static/media/fourth_place_medal.e3b5d1f5.svg": "/static/media/fourth_place_medal.e3b5d1f5.svg",
     "static/media/gold_medal.f8925258.svg": "/static/media/gold_medal.f8925258.svg",
     "static/media/joystick.0de38c80.svg": "/static/media/joystick.0de38c80.svg",
+    "static/media/keyboard.7d0436ea.svg": "/static/media/keyboard.7d0436ea.svg",
     "static/media/400.css": "/static/media/roboto-slab-vietnamese-400-normal.47ed22d1.woff2",
     "static/media/700.css": "/static/media/roboto-slab-vietnamese-700-normal.b5a1bbc0.woff2",
     "static/media/line_for_cameraman.89955fc5.png": "/static/media/line_for_cameraman.89955fc5.png",
@@ -35,9 +37,11 @@
     "static/media/movies.83668d7f.svg": "/static/media/movies.83668d7f.svg",
     "static/media/north_america_wo_borders.b9321d78.svg": "/static/media/north_america_wo_borders.b9321d78.svg",
     "static/media/note.687e1b54.svg": "/static/media/note.687e1b54.svg",
+    "static/media/paper.57e46983.svg": "/static/media/paper.57e46983.svg",
     "static/media/portrait_crop.0df9acd8.png": "/static/media/portrait_crop.0df9acd8.png",
     "static/media/psychologie.ccd1a9dc.svg": "/static/media/psychologie.ccd1a9dc.svg",
     "static/media/index.css": "/static/media/pt-serif-latin-ext-400-normal.6a358560.woff2",
+    "static/media/review.03ba87bd.svg": "/static/media/review.03ba87bd.svg",
     "static/media/scientific_paper.94db4d61.svg": "/static/media/scientific_paper.94db4d61.svg",
     "static/media/silver_medal.feeccd31.svg": "/static/media/silver_medal.feeccd31.svg",
     "static/media/template_phone_for_website_downscaled.4d21dfa6.png": "/static/media/template_phone_for_website_downscaled.4d21dfa6.png",
@@ -49,16 +53,16 @@
     "static/media/tracking_line_layer_5.574021eb.png": "/static/media/tracking_line_layer_5.574021eb.png",
     "static/media/tracking_line_layer_6.7c34e86f.png": "/static/media/tracking_line_layer_6.7c34e86f.png",
     "static/media/travel.12af23bb.svg": "/static/media/travel.12af23bb.svg",
+    "static/media/trophy.8a02f513.svg": "/static/media/trophy.8a02f513.svg",
     "static/media/waves_downscaled.af15bce6.jpg": "/static/media/waves_downscaled.af15bce6.jpg",
     "static/media/website_part1_downscaled.a6263475.png": "/static/media/website_part1_downscaled.a6263475.png",
-    "static/media/website_part2_downscaled.6fa680db.png": "/static/media/website_part2_downscaled.6fa680db.png",
-    "static/media/work.ec90ff5d.svg": "/static/media/work.ec90ff5d.svg"
+    "static/media/website_part2_downscaled.6fa680db.png": "/static/media/website_part2_downscaled.6fa680db.png"
   },
   "entrypoints": [
     "static/js/runtime-main.e7c3baa1.js",
     "static/css/2.111b1468.chunk.css",
     "static/js/2.9b6567c3.chunk.js",
-    "static/css/main.1c5ba8d7.chunk.css",
-    "static/js/main.8ada6b15.chunk.js"
+    "static/css/main.e0d57dd5.chunk.css",
+    "static/js/main.6e563359.chunk.js"
   ]
 }
