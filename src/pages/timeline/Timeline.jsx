@@ -9,19 +9,31 @@ import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline
 
 import Logo from "../../components/logo/Logo";
 
-import {ReactComponent as WorkIcon} from '../../assets/icons/work.svg';
 import {ReactComponent as CodingIcon} from '../../assets/icons/coding.svg';
+import {ReactComponent as ContractIcon} from '../../assets/icons/contract.svg';
+import {ReactComponent as KeyboardIcon} from '../../assets/icons/keyboard.svg';
+import {ReactComponent as PaperIcon} from '../../assets/icons/paper.svg';
+import {ReactComponent as ReviewIcon} from '../../assets/icons/review.svg';
+import {ReactComponent as TrophyIcon} from '../../assets/icons/trophy.svg';
 
 import {timeline_data} from "../../data/timelineElements";
 
 function getIcon(icon_id) {
     switch (icon_id) {
+        case "challenge":
+            return <TrophyIcon/>;
         case "coding":
             return <CodingIcon/>;
+        case "contract":
+            return <ContractIcon/>;
+        case "publication":
+            return <PaperIcon/>;
+        case "review":
+            return <ReviewIcon/>;
         case "work":
-            return <WorkIcon/>;
+            return <KeyboardIcon/>;
         default:
-            return <WorkIcon/>;
+            return <KeyboardIcon/>;
     }
 }
 

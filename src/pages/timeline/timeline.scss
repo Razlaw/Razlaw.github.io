@@ -198,6 +198,7 @@
           top: 0;
           left: 0;
           margin: 0;
+          stroke: var(--text-color-top);
 
           @include for-mobile {
             width: 24px;
@@ -205,10 +206,42 @@
           }
         }
 
-        #coding {
+        .coding {
           width: 32px;
           height: 32px;
           transform: translateX(1px);
+          fill: #ffbf25;
+          stroke: #ffbf25;
+        }
+
+        .contract {
+          stroke: #5992ff;
+        }
+
+        .keyboard {
+          stroke: none;
+          overflow: visible;
+          fill: #7aa61a;
+
+          #keyboardBackground {
+            stroke: #7aa61a;
+          }
+
+          #keyboardKey {
+            fill: var(--background-color-secondary);
+          }
+        }
+
+        .paper {
+          stroke: #ff9a73;
+        }
+
+        .review {
+          stroke: #5fbd9d;
+        }
+
+        .trophy {
+          stroke: #ff5f5f;
         }
       }
 
