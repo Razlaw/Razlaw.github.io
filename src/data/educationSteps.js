@@ -15,7 +15,7 @@ export const education_steps = [
         date: "Apr. 2015 - Okt. 2018"
     },
     {
-        title: "Bachelor of Science - Informatik - 1,7",
+        title: "Bachelor of Science - Informatik - 1,5",
         subtitle: "Abschlussarbeit: \"Evaluation von 3D-Registrierverfahren auf spärlichen 3D-Laserscans\" - 1,0",
         date: "Okt. 2011 - Jan. 2015"
     },
