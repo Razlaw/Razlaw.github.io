@@ -1,0 +1,57 @@
+@import "./../../global.scss";
+
+.sourcesContainer {
+  width: 100%;
+  min-height: 100%;
+  background: linear-gradient(var(--background-color-primary), var(--background-color-secondary));
+  color: var(--text-color);
+  scrollbar-width: none;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .contentContainer {
+    width: 90%;
+    max-width: 900px;
+    padding: 5% 5% 0 5%;
+    text-align: left;
+    scrollbar-width: none;
+
+    @include for-mobile {
+      padding: 40px 5% 70px 0;
+    }
+
+    h1 {
+      @include for-mobile {
+        font-size: 4.3em;
+      }
+    }
+
+    p, a {
+      font-size: 1.3rem;
+      margin: 0;
+      line-height: 2rem;
+      white-space: pre-wrap;
+      overflow: visible;
+    }
+
+    #thanks {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      display: list-item;
+      list-style: disc;
+      margin-bottom: 1rem;
+
+      li {
+        margin-bottom: 5px;
+        overflow: visible;
+      }
+    }
+  }
+}
