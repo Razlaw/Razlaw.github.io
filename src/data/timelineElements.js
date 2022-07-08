@@ -67,7 +67,7 @@ export const timeline_data = [
                     icon_id: "review",
                     tag: "Aufgabe",
                     date: "Mär. 21",
-                    title: "Review einer Publikation",
+                    title: "Inhalt für Review einer Einreichung",
                     subtitle: "International Joint Conference on Artificial Intelligence",
                 },
                 {
@@ -90,7 +90,7 @@ export const timeline_data = [
                     icon_id: "review",
                     tag: "Aufgabe",
                     date: "Mär. 20",
-                    title: "Review einer Publikation",
+                    title: "Reviewer einer Einreichung",
                     subtitle: "Transactions on Robotics",
                 },
                 {
