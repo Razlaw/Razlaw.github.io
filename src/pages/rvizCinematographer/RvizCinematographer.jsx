@@ -25,7 +25,7 @@ export default function RvizCinematographer() {
 
     return (
         <div className="cinematographerContainer">
-            <div className="imageFrame" ref={ref}>
+            <div className={"imageFrame " + (wasInView && "wasInView")} ref={ref}>
                 <div className="imageContainer">
                     <img
                         className="cameramanImage"
@@ -44,7 +44,7 @@ export default function RvizCinematographer() {
                     />
                 </div>
             </div>
-            <div className={"textContainer " + (wasInView && "wasInView")}>
+            <div className="textContainer">
                 <h1>RViz Cinematographer</h1>
                 <p className="description">
                     Komplexe Kamerafahrten<br/> benutzerfreundlich in RViz erstellen.

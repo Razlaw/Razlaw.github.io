@@ -25,7 +25,7 @@ export default function WeatherWebsite() {
 
     return (
         <div className="weatherWebsiteContainer">
-            <div className="imageFrame" ref={ref}>
+            <div className={"imageFrame " + (wasInView && "wasInView")} ref={ref}>
                 <div className="imageContainer">
                     <img
                         className={"websiteImageOne " + (inView && "inView")}
@@ -46,7 +46,7 @@ export default function WeatherWebsite() {
                     <span className={"swipeCue " + (inView && "inView")} id="swipeRight"/>
                 </div>
             </div>
-            <div className={"textContainer " + (wasInView && "wasInView")}>
+            <div className="textContainer">
                 <h1>Weather Website</h1>
                 <p className="description">
                     Die Wettervorhersage.<br/>Auf meine Art.

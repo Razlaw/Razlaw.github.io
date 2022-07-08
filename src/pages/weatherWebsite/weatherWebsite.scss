@@ -29,12 +29,25 @@
     max-height: 90%;
     position: relative;
     margin: 4% 2%;
+    opacity: 0;
+    transform: translateX(-50px);
     z-index: 1;
 
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
+    &.wasInView {
+      animation: slideInImageFrame 500ms ease-in-out both;
+    }
+
+    @keyframes slideInImageFrame {
+      to {
+        opacity: 1;
+        transform: translateX(0px);
+      }
+    }
 
     @include for-mobile {
       width: 95%;
@@ -249,14 +262,6 @@
     text-align: center;
     overflow: visible;
 
-    opacity: 0;
-    transform: translateX(-50px);
-
-    &.wasInView {
-      animation: slideInText 500ms ease-in-out 7000ms;
-      animation-fill-mode: both;
-    }
-
     z-index: 0;
 
     @include for-mobile {
@@ -267,17 +272,6 @@
     @include for-tablet {
       width: 100%;
       padding: 0 5% 20px 5%;
-    }
-
-    @keyframes slideInText {
-      from {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0px);
-      }
     }
 
     .links {

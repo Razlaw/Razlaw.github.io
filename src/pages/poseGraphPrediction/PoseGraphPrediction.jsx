@@ -24,7 +24,7 @@ export default function PoseGraphPrediction() {
 
     return (
         <div className="poseGraphPredictionContainer">
-            <div className="imageFrame" ref={ref}>
+            <div className={"imageFrame " + (wasInView && "wasInView")} ref={ref}>
                 <div className="imageContainer">
                     <img className="dancersImage" src={dancersImage} alt="Three dancers in one motion"/>
                     <div className={"upperLineCue " + (inView && "inView")} id="cue1"/>
@@ -40,7 +40,7 @@ export default function PoseGraphPrediction() {
                     />
                 </div>
             </div>
-            <div className={"textContainer " + (wasInView && "wasInView")}>
+            <div className="textContainer">
                 <h1>Pose Graph Prediction</h1>
                 <p className="description">
                     Vorhersage von Bewegungen<br/>durch Graph Neuronale Netze.
