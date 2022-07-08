@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.e0d57dd5.chunk.css",
-    "main.js": "/static/js/main.ff4d5772.chunk.js",
-    "main.js.map": "/static/js/main.ff4d5772.chunk.js.map",
+    "main.css": "/static/css/main.9cf8b368.chunk.css",
+    "main.js": "/static/js/main.f7a068b6.chunk.js",
+    "main.js.map": "/static/js/main.f7a068b6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.e7c3baa1.js",
     "runtime-main.js.map": "/static/js/runtime-main.e7c3baa1.js.map",
     "static/css/2.111b1468.chunk.css": "/static/css/2.111b1468.chunk.css",
-    "static/js/2.9b6567c3.chunk.js": "/static/js/2.9b6567c3.chunk.js",
-    "static/js/2.9b6567c3.chunk.js.map": "/static/js/2.9b6567c3.chunk.js.map",
+    "static/js/2.69435537.chunk.js": "/static/js/2.69435537.chunk.js",
+    "static/js/2.69435537.chunk.js.map": "/static/js/2.69435537.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.111b1468.chunk.css.map": "/static/css/2.111b1468.chunk.css.map",
-    "static/css/main.e0d57dd5.chunk.css.map": "/static/css/main.e0d57dd5.chunk.css.map",
-    "static/js/2.9b6567c3.chunk.js.LICENSE.txt": "/static/js/2.9b6567c3.chunk.js.LICENSE.txt",
+    "static/css/main.9cf8b368.chunk.css.map": "/static/css/main.9cf8b368.chunk.css.map",
+    "static/js/2.69435537.chunk.js.LICENSE.txt": "/static/js/2.69435537.chunk.js.LICENSE.txt",
     "static/media/app.scss": "/static/media/Emberly-ExtraBold.dae1a5ae.woff",
     "static/media/camera.eed23bd5.svg": "/static/media/camera.eed23bd5.svg",
     "static/media/camera_outline_for_cameraman.81641c53.png": "/static/media/camera_outline_for_cameraman.81641c53.png",
@@ -32,8 +32,8 @@
     "static/media/700.css": "/static/media/roboto-slab-vietnamese-700-normal.b5a1bbc0.woff2",
     "static/media/line_for_cameraman.89955fc5.png": "/static/media/line_for_cameraman.89955fc5.png",
     "static/media/lines_for_dancers.cb2f4e3e.png": "/static/media/lines_for_dancers.cb2f4e3e.png",
-    "static/media/logo_scaled_1000.db6454bf.svg": "/static/media/logo_scaled_1000.db6454bf.svg",
-    "static/media/logo_scaled_4400.49a137ba.svg": "/static/media/logo_scaled_4400.49a137ba.svg",
+    "static/media/logo_scaled_1000.4db36d77.svg": "/static/media/logo_scaled_1000.4db36d77.svg",
+    "static/media/logo_scaled_4400.4f8d3860.svg": "/static/media/logo_scaled_4400.4f8d3860.svg",
     "static/media/movies.83668d7f.svg": "/static/media/movies.83668d7f.svg",
     "static/media/north_america_wo_borders.b9321d78.svg": "/static/media/north_america_wo_borders.b9321d78.svg",
     "static/media/note.687e1b54.svg": "/static/media/note.687e1b54.svg",
@@ -61,8 +61,8 @@
   "entrypoints": [
     "static/js/runtime-main.e7c3baa1.js",
     "static/css/2.111b1468.chunk.css",
-    "static/js/2.9b6567c3.chunk.js",
-    "static/css/main.e0d57dd5.chunk.css",
-    "static/js/main.ff4d5772.chunk.js"
+    "static/js/2.69435537.chunk.js",
+    "static/css/main.9cf8b368.chunk.css",
+    "static/js/main.f7a068b6.chunk.js"
   ]
 }
