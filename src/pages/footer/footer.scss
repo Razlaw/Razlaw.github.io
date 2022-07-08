@@ -59,7 +59,15 @@
       transform: translateY(200%);
 
       &.inView {
-        animation: moveInternalLinksUp 1700ms cubic-bezier(.39,.58,.57,1) both 2000ms;
+        animation: moveInternalLinksUp 1700ms cubic-bezier(.39,.58,.57,1) both 1200ms;
+
+        @include for-mobile {
+          animation-delay: 800ms;
+        }
+
+        @include for-tablet {
+          animation-delay: 800ms;
+        }
       }
 
       @keyframes moveInternalLinksUp {
@@ -129,7 +137,7 @@
           cursor: pointer;
 
           &.inView {
-            animation: revealInternalLinks 1s ease-in-out both 4s;
+            animation: revealInternalLinks 1s ease-in-out both 3000ms;
             //border-bottom: 3px solid #35574f;
             //box-shadow: 5px 5px 15px #05281e;
             //border-radius: 9px;
@@ -208,14 +216,14 @@
       justify-content: space-evenly;
 
       &.inView {
-        animation: revealExternalLinks 2s ease-in-out both 600ms;
+        animation: revealExternalLinks 1200ms ease-in-out both 500ms;
 
         @include for-mobile {
-          animation: revealExternalLinksMobile 2s ease-in-out both 600ms;
+          animation: revealExternalLinksMobile 1200ms ease-in-out both 500ms;
         }
 
         @include for-tablet {
-          animation: revealExternalLinksMobile 2s ease-in-out both 600ms;
+          animation: revealExternalLinksMobile 1200ms ease-in-out both 500ms;
         }
       }
 
