@@ -1,15 +1,13 @@
 import "./internalLinkButton.scss";
 
-import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export default function InternalLinkButton({text, link}) {
-    const navigate = useNavigate();
-
     return (
-        <div
+        <Link
             className="internalLinkButton"
-            onClick={() => {navigate(link)}}>
+            to={link}>
             {text}
-        </div>
+        </Link>
     );
 }

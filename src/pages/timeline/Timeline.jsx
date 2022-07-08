@@ -3,7 +3,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import React from "react";
 
-import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
 
@@ -38,8 +38,6 @@ function getIcon(icon_id) {
 }
 
 export default function Timeline() {
-    const navigate = useNavigate();
-
     return (
         <div className="timelineContainer">
             <Logo/>
@@ -48,16 +46,16 @@ export default function Timeline() {
                 {timeline_data.map((data, key) => {
                     return (
                         <div className="timelinePartContainer" key={key}>
-                            <div
+                            <Link
                                 className="educationTimelineContainer"
-                                onClick={() => {navigate("/education")}}
+                                to="/education"
                             >
                                 <div className="educationTimelineContent" id={"educationTitle" + key}>
                                     <p>
                                         {data.education_title}
                                     </p>
                                 </div>
-                            </div>
+                            </Link>
                             <div className="workContainer">
                                 <VerticalTimeline layout='1-column-left'>
                                     {data.timeline_elements.map((element_data, element_key) => {

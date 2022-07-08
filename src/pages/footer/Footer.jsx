@@ -2,7 +2,7 @@ import "./footer.scss";
 
 import {useInView} from "react-intersection-observer";
 
-import {useNavigate} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 import {ReactComponent as ExternalLinkIcon} from "../../assets/icons/external_link.svg";
 
@@ -10,8 +10,6 @@ export default function Footer() {
     const { ref, inView } = useInView({
         triggerOnce: true
     });
-
-    const navigate = useNavigate();
 
     return (
         <div className="footer">
@@ -21,33 +19,34 @@ export default function Footer() {
                 </h1>
                 <div className={"internalLinksContainer " + (inView && "inView")} ref={ref}>
                     <div className="internalLinkContainer" id="education">
-                        <div
+                        <Link
                             className={"internalLink " + (inView && "inView")}
-                            onClick={() => navigate("/education")}
+                            to="/education"
                         >
                             <div className="linkText">
                                 <h1>Bildungsweg</h1>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                     <div className="internalLinkContainer" id="projects">
-                        <div
+                        <Link
                             className={"internalLink " + (inView && "inView")}
-                            onClick={() => navigate("/projects_descriptions/openid=-1")}
+                            to="/projects_descriptions/openid=-1"
                         >
                             <div className="linkText">
                                 <h1>Projekte</h1>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                     <div className="internalLinkContainer" id="timeline">
-                        <div
+                        <Link
                             className={"internalLink " + (inView && "inView")}
-                            onClick={() => navigate("/timeline")}>
+                            to="/timeline"
+                        >
                             <div className="linkText">
                                 <h1>Zeitstrahl</h1>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <div className={"externalLinksContainer " + (inView && "inView")} ref={ref}>

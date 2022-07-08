@@ -229,9 +229,27 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .locationBox {
-        opacity: 0;
+      .locationBoxContainer {
         margin: 13px;
+        overflow: visible;
+        transition: transform 300ms ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        @include for-mobile {
+          margin: 5px 9px;
+        }
+
+        @include for-tablet {
+          margin: 8px 34px;
+        }
+      }
+
+      .locationBox {
+        height: 100%;
+        opacity: 0;
         padding: 15px 5px;
         border-radius: 28px;
         border-style: solid;
@@ -262,13 +280,11 @@
         }
 
         @include for-mobile {
-          margin: 5px 9px;
           padding: 5px;
           border-width: 5px;
         }
 
         @include for-tablet {
-          margin: 8px 34px;
           padding: 5px;
         }
 
