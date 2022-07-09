@@ -10,7 +10,6 @@ import portraitImage from "../../assets/portrait_crop.png";
 export default function Intro() {
     const viewportDiagonal = Math.sqrt(window.innerHeight * window.innerHeight + window.innerWidth * window.innerWidth);
 
-    console.log("viewportDiagonal ", viewportDiagonal);
     return (
         <div className="intro">
             <div className="contentContainer">

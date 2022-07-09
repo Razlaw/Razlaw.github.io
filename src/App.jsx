@@ -1,6 +1,8 @@
 import './fonts/Emberly-ExtraBold.woff';
 import "./app.scss"
 
+import React from "react";
+
 import {Route, Routes} from "react-router-dom";
 
 import Home from "./pages/home/Home";
@@ -11,7 +13,6 @@ import Education from "./pages/education/Education";
 import ProjectsDescriptions from "./pages/projectsDescriptions/ProjectsDescriptions";
 import Timeline from "./pages/timeline/Timeline";
 import ErrorPage from "./pages/errorPage/ErrorPage";
-import React from "react";
 
 export default function App() {
 
@@ -30,7 +31,6 @@ export default function App() {
 
                 <Route path="/*" element={<ErrorPage/>}/>
             </Routes>
-
         </div>
     );
 }

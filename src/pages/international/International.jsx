@@ -17,8 +17,6 @@ export default function International() {
         triggerOnce: true
     });
 
-    const navigate = useNavigate();
-
     return (
         <div className="international">
             <div className="contentContainer">
