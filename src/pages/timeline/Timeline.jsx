@@ -72,14 +72,22 @@ export default function Timeline() {
                                                 <p className="vertical-timeline-element-tag">{element_data.tag}</p>
                                                 <h1 className="vertical-timeline-element-title">{element_data.title}</h1>
                                                 <p className="vertical-timeline-element-subtitle">{element_data.subtitle}</p>
-                                                <a
-                                                    className="vertical-timeline-element-link"
-                                                    href={element_data.link_destination}
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                >
-                                                    {element_data.link_text}
-                                                </a>
+                                                {("is_internal_link" in element_data && element_data.is_internal_link === true) ?
+                                                    <Link
+                                                        className="vertical-timeline-element-link"
+                                                        to={element_data.link_destination}
+                                                    >
+                                                        {element_data.link_text}
+                                                    </Link> :
+                                                    <a
+                                                        className="vertical-timeline-element-link"
+                                                        href={element_data.link_destination}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                    >
+                                                        {element_data.link_text}
+                                                    </a>
+                                                }
                                             </VerticalTimelineElement>
                                         )
                                     })}

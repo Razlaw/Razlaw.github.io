@@ -16,8 +16,9 @@ export const timeline_data = [
                     date: "Dez. 21 - Mär. 22",
                     tag: "Projekt",
                     title: "Wetter Webseite",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=12"
+                    link_destination: "../projects_descriptions/openid=12"
                 },
                 {
                     icon_id: "publication",
@@ -46,8 +47,9 @@ export const timeline_data = [
                     icon_id: "work",
                     tag: "Aufgabe",
                     title: "Vorhersage von Personenposen mittels Graph Neuronaler Netze",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=10"
+                    link_destination: "../projects_descriptions/openid=10"
                 },
                 {
                     icon_id: "work",
@@ -60,8 +62,9 @@ export const timeline_data = [
                     icon_id: "work",
                     tag: "Aufgabe",
                     title: "Detektion und Tracking von Personen in Lasermessungen",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=9"
+                    link_destination: "../projects_descriptions/openid=9"
                 },
                 {
                     icon_id: "review",
@@ -98,15 +101,17 @@ export const timeline_data = [
                     date: "Feb. 20",
                     tag: "Wettbewerb",
                     title: "Mohamed Bin Zayed International Robotics Challenge",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=8"
+                    link_destination: "../projects_descriptions/openid=8"
                 },
                 {
                     icon_id: "work",
                     tag: "Aufgabe",
                     title: "RViz Cinematographer",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=11"
+                    link_destination: "../projects_descriptions/openid=11"
                 },
                 {
                     icon_id: "publication",
@@ -145,8 +150,9 @@ export const timeline_data = [
                     date: "Mär. 17",
                     tag: "Wettbewerb",
                     title: "Mohamed Bin Zayed International Robotics Challenge",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=7"
+                    link_destination: "../projects_descriptions/openid=7"
                 },
                 {
                     icon_id: "publication",
@@ -161,30 +167,34 @@ export const timeline_data = [
                     icon_id: "work",
                     tag: "Aufgabe",
                     title: "Fusionierung von Kamerabildern und Lasermessungen zur Ansicht in einer HTC Vive VR-Brille",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=6"
+                    link_destination: "../projects_descriptions/openid=6"
                 },
                 {
                     icon_id: "challenge",
                     date: "Jun. 15",
                     tag: "Wettbewerb",
                     title: "DARPA Robotics Challenge",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=5"
+                    link_destination: "../projects_descriptions/openid=5"
                 },
                 {
                     icon_id: "work",
                     tag: "Aufgabe",
                     title: "Auswahl und Visualisierung relevanter Lasermessungen bei geringen Datenraten",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=5"
+                    link_destination: "../projects_descriptions/openid=5"
                 },
                 {
                     icon_id: "work",
                     tag: "Aufgabe",
                     title: "Extrinsische Kalibrierung von Kameras zu einem Laserscanner",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=4"
+                    link_destination: "../projects_descriptions/openid=4"
                 },
                 {
                     icon_id: "publication",
@@ -213,22 +223,25 @@ export const timeline_data = [
                     icon_id: "work",
                     tag: "Aufgabe",
                     title: "Evaluierung von Verfahren zur simultanen Lokalisierung und Kartierung von 3D-Lasermessungen",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=2"
+                    link_destination: "../projects_descriptions/openid=3"
                 },
                 {
                     icon_id: "work",
                     tag: "Aufgabe",
                     title: "Inbetriebnahme einer Motion Capture Anlage und Softwareupdate",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=3"
+                    link_destination: "../projects_descriptions/openid=2"
                 },
                 {
                     icon_id: "work",
                     tag: "Aufgabe",
                     title: "Intrinsische Kalibrierung eines rotierenden Laserscanners",
+                    is_internal_link: true,
                     link_text: "Details",
-                    link_destination: "https://razlaw.github.io/#/projects_descriptions/openid=1"
+                    link_destination: "../projects_descriptions/openid=1"
                 },
                 {
                     icon_id: "work",
