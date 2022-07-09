@@ -7,6 +7,8 @@ import {Link} from "react-router-dom";
 
 import {VerticalTimeline, VerticalTimelineElement} from "react-vertical-timeline-component";
 
+import {ScrollRestoration} from "../../utils/utils";
+
 import Logo from "../../components/logo/Logo";
 
 import {ReactComponent as CodingIcon} from '../../assets/icons/coding.svg';
@@ -38,8 +40,10 @@ function getIcon(icon_id) {
 }
 
 export default function Timeline() {
+    const onScrollFunction = ScrollRestoration("timelineContainerID");
+
     return (
-        <div className="timelineContainer">
+        <div className="timelineContainer" id="timelineContainerID" onScroll={onScrollFunction}>
             <Logo/>
             <h1 className="timelineTitle">Zeitstrahl</h1>
             <div className="contentContainer">

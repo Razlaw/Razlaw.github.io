@@ -18,7 +18,9 @@ export default function PrivacyStatement() {
                 <h2 id="m1870">Einleitung</h2>
                 <p>
                     <strong>Zusammenfassung für Laien</strong><br/>
-                    Diese Webseite selbst verarbeitet keine deiner Daten.
+                    Diese Webseite speichert lokal auf deinem Gerät wie weit du gescrollt hast.
+                    Dadurch kehrst du beim Navigieren auf der Seite zu dem Punkt zurück bei dem du gestartet bist.<br/>
+                    Eine weitere Verarbeitung deiner Daten findet auf dieser Website selbst nicht statt.
                 </p>
                 <p>
                     Trotzdem solltest du dir die gesamte Datenschutzerklärung durchlesen, da auch beispielsweise deine

@@ -9,15 +9,18 @@ import "@fontsource/lato/400.css"
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {CookiesProvider} from 'react-cookie';
 import {HashRouter} from "react-router-dom";
 
 import App from './App';
 
 ReactDOM.render(
-    <HashRouter>
-        <React.StrictMode>
-            <App/>
-        </React.StrictMode>
-    </HashRouter>,
+    <CookiesProvider>
+        <HashRouter>
+            <React.StrictMode>
+                <App/>
+            </React.StrictMode>
+        </HashRouter>
+    </CookiesProvider>,
     document.getElementById('root')
 );
