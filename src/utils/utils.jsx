@@ -1,23 +1,20 @@
 import {useEffect} from "react";
-import {useCookies} from "react-cookie";
 
 export function ScrollRestoration(elementID) {
-    const [cookies, setCookie] = useCookies([]);
-
-    const cookieName = elementID + "ScrollPositionY";
+    const scrollPositionKey = elementID + "ScrollPositionY";
 
     const onScrollFunction = (e) => {
-        setCookie(cookieName, e.target.scrollTop, {
-            path: "/",
-            secure: true,
-            sameSite: "strict"
-        });
+        sessionStorage.setItem(scrollPositionKey, e.target.scrollTop);
     }
 
     useEffect(() => {
-        if(cookieName in cookies) {
+        if(scrollPositionKey in sessionStorage) {
             const element = document.querySelector("#" + elementID);
-            element.scrollTo(0, Number(cookies[cookieName]));
+            element.scrollTo({
+                top: Number(sessionStorage.getItem(scrollPositionKey)),
+                left: 0,
+                behavior: 'smooth'
+            });
         }
     }, []);
 
