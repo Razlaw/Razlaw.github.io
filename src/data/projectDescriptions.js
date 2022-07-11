@@ -361,30 +361,26 @@ export const projectDescriptions = [
         paragraphs:
             [
                 {
-                    title: "Auftraggeber: ",
-                    text: "Fraunhofer IAIS"
+                    title: "Motivation: ",
+                    text: "Nachdem ich bereits im Bachelor- und Masterstudium fast jede Vorlesung zum Maschinellen Lernen besucht hatte, konnte ich während meines Promotionsstipendiums endlich umfangreiche praktische Erfahrungen in der Anwendung von Graph Neural Networks (GNNs) sammeln. GNNs waren zu diesem Zeitpunkt eine verhältnismäßig wenig erforschte Untergruppe künstlicher neuronaler Netzwerke. Ihr Vorteil besteht darin, dass sie unterschiedliche viele Eingaben und Eingabearten parallel verarbeiten können."
                 },
                 {
-                    title: "Projekt: ",
-                    text: "Collaborative Perception and Prediction with Smart Edge Sensors"
-                },
-                {
-                    title: "Projektbeschreibung: ",
-                    text: "In diesem Projekt ..."
-                },
-                {
-                    title: "Meine Aufgabe: ",
-                    text: "Meine Aufgabe bestand darin ..."
+                    title: "Eine Aufgabe",
+                    text: "war es diese GNNs zu trainieren menschliche Bewegungen vorherzusagen. Hierfür müssen zunächst Trainingsdaten generiert werden mit denen das Neuronale Netz lernen kann, welche Aufgabe es erfüllen soll.\n" +
+                        "  Zur Generierung dieser Daten haben wir Videos benutzt in denen jeweils ein Mensch unterschiedliche Bewegungen durchführt. Pro Video wird in jedem Bild die Pose des Menschen als Posengraph bestimmt. In diesem Graphen bilden die größeren Gelenke des Menschen die Knoten welche durch die Knochen verbunden sind. Das Schultergelenk ist beispielsweise mit dem Ellenbogengelenk verbunden, welches wiederum mit dem Handgelenk verbunden ist.\n" +
+                        "  Um das Netz zu trainieren habe ich ihm eine Reihe dieser Posen als Eingabe bereitgestellt. Die Aufgabe des Netzwerks war es aus diesen Informationen die nächste Pose des Menschen vorherzusagen. Da uns das nächste Kamerabild und damit die nächste Pose bekannt sind, können wir bewerten wie gut die Vorhersage ist und dem Netz zurückmelden welche Fehler es gemacht hat.\n" +
+                        "  Sobald das Netz gelernt hat den nächsten Schritt der Bewegung sinnvoll vorherzusagen, können wir die Reihe der Posen um diese Vorhersage ergänzen und auf dieser Basis die darauffolgende Pose abschätzen.\n" +
+                        "  Eine tiefergehende Beschreibung der Methoden, den dazugehörigen Code und eine erste Evaluation der Ergebnisse sind hinter dem nachfolgenden Link zu finden."
                 },
                 {
                     title: "Techstack: ",
-                    text: "C++, ..."
+                    text: "Python, PyTorch, PyTorch Geometric"
                 }
             ],
         links:
             [
                 {
-                    title: "Code",
+                    title: "Code und tiefergehende Beschreibung",
                     link: "https://github.com/AIS-Bonn/pose_graph_prediction"
                 }
             ]
