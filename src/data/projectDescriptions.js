@@ -420,16 +420,19 @@ export const projectDescriptions = [
         paragraphs:
             [
                 {
-                    title: "Projektbeschreibung: ",
-                    text: "In diesem Projekt ..."
+                    title: "Motivation: ",
+                    text: "Während meiner Zeit an der Uni hat es mich gestört, dass ein Großteil der Informationen mittels statischer Medien wie PDFs vermittelt wurde oder werden musste. Webseiten wie distill.pub bieten hier eine interaktive und intuitive Alternative.\n" +
+                        "  Als sich mir die Gelegenheit geboten hat, habe ich deshalb meine ersten Schritte im Bereich der Front-End Webentwicklung gemacht."
                 },
                 {
-                    title: "Meine Aufgabe: ",
-                    text: "Meine Aufgabe bestand darin ..."
+                    title: "Für mein erstes Projekt",
+                    text: "habe ich mich entschieden eine Webseite zu entwickeln, die die Wettervorhersage für den aktuellen Tag übersichtlich auf einen Blick darstellt. Zusätzliche Informationen und Tage sollten beispielsweise über Swipes erreichbar sein. Da ich selbst die Vorhersage täglich auf dem Smartphone ansehe, entschied ich mich bei dem Design den Fokus auf die mobile Ansicht zu setzen.\n" +
+                        "  Nachdem ich den ersten Entwurf entwickelt hatte, folgten einige Iterationen des Userfeedbacks von Freunden und der Umsetzung der erhaltenen  Kritik.\n" +
+                        "  Die Resultate sind eine Wetterwebseite, die sich optional als Progressive Web App auf unterschiedlichen Betriebssystemen installieren lässt und eine Menge Erfahrungen, die mir anschließend bei der Entwicklung dieser Portfolio-Webseite geholfen haben."
                 },
                 {
                     title: "Techstack: ",
-                    text: "C++, ..."
+                    text: "JavaScript, React, HTML, Sass, Inkscape"
                 }
             ],
         links:
@@ -437,6 +440,10 @@ export const projectDescriptions = [
                 {
                     title: "Code",
                     link: "https://github.com/Razlaw/weather_website/tree/src"
+                },
+                {
+                    title: "Webseite",
+                    link: "https://razlaw.github.io/weather_website"
                 }
             ]
     }
