@@ -123,17 +123,17 @@ export const projectDescriptions = [
                 },
                 {
                     title: "Projektbeschreibung: ",
-                    text: "Im Projekt InvertAIRy sollte ein Copter entwickelt werden, der in einem hohen Lager eine Inventur autonom durchführen kann. Für diese Aufgabe wurde der Copter mit mehreren Kameras und einen 3D-Laserscanner ausgerüstet.\n" +
+                    text: "Im Projekt InvertAIRy sollte ein Copter entwickelt werden, der eine Inventur autonom in einem hohen Lager durchführen kann. Für diese Aufgabe wurde der Copter mit mehreren Kameras und einen 3D-Laserscanner ausgerüstet.\n" +
                         "  Im Allgemeinen messen Laserscanner die Distanz zu ihrer Umgebung. 3D-Scanner messen in viele verschiedene Richtungen, um ein vollständigeres 3D \"Bild\" der Umgebung zu erhalten. Zusätzlich zur Distanz lässt sich die Intensität des zurückkehrenden Laserstrahls messen. Diese kann vage mit einem schwarz-weiß Foto verglichen werden.\n" +
                         "  Kameras auf der anderen Seite messen die Farbwerte der Umgebung aber erfassen keine Distanz. Weiß man wie Kamera und Laserscanner zueinander im Raum positioniert sind, können die Farbwerte der Kamerabilds in den Laserscan projiziert werden. Genauso lässt sich aber auch zu einem Objekt im Kamerabild, eine Distanz vom Laserscanner messen."
                 },
                 {
                     title: "Meine Aufgabe",
                     text: "bestand darin ein Verfahren zu entwickeln mit dem man herausfinden kann wie Kamera und Laserscanner zueinander im Raum stehen - eine extrinsische Kalibrierung. Dieses Verfahren sollte möglichst wenig Interaktionen durch einen Nutzer erfordern.\n" +
-                        "  Mein Lösungsansatz war es ein Optimierungsverfahren systematisch eine 3D-Transformation zwischen Kamera und Laser suchen zu lassen, sodass die Intensitätswerte des Laserscanners möglichst gut mit einem schwarz-weiß Bild aus der Kamera überlappen.\n" +
-                        "  Die Schwierigkeit bestand darin, dass dunkle Werte im Kamerabild nicht unbedingt niedrigen Werten in den Intensitäten entsprechen. Zusätzlich hängt die gemessene Intensität vom Winkel ab mit dem ein Laserstrahl auf ein Objekt trifft. So haben runde Objekte an der dem Laser zugewandten Seite eine höhere Intensität als an den anderen Seiten. In Kamerabildern hängt die Helligkeit jedoch stark von den vorhandenen Lichtquellen im Raum ab.\n" +
-                        "  Als Lösung habe ich die Kullback-Leibler-Divergenz eingesetzt, welche aussagt wie gut Farbwerte konsistent zueinander passen. Sie ist beispielsweise niedrig, wenn helle Bereiche im Foto immer über dunklen Bereichen im Scan liegen, aber höher wenn helle Bereiche Mal über hellen und Mal über dunklen Bereichen liegen.\n" +
-                        "  Mit der Hilfe dieses Wertes konnte das Optimierungsverfahren die 3D-Transformation schrittweise in die Richtung verändern, in der die Daten am besten zueinander passen."
+                        "  Nachdem ich ein solches Verfahren entwickelt hatte, stieß ich auf ein damals kürzlich veröffentlichtes Paper, das eine sehr ähnliche Methode beschrieb. Der Lösungsansatz aus dem Paper ist es ein Optimierungs\u00ADverfahren systematisch eine 3D-Transformation zwischen Kamera und Laser suchen zu lassen, sodass die Intensitätswerte des Laserscanners möglichst gut mit einem schwarz-weiß Bild aus der Kamera überlappen.\n" +
+                        "  Die Schwierigkeit besteht darin, dass dunkle Werte im Kamerabild nicht unbedingt niedrigen Werten in den Intensitäten entsprechen. Zusätzlich hängt die gemessene Intensität vom Winkel ab mit dem ein Laserstrahl auf ein Objekt trifft. So haben runde Objekte an der dem Laser zugewandten Seite eine höhere Intensität als an den anderen Seiten. In Kamerabildern hängt die Helligkeit jedoch stark von den vorhandenen Lichtquellen im Raum ab.\n" +
+                        "  Als Lösung wurde das Mutual Information Maß eingesetzt, welches in diesem Kontext aussagt wie gut Farbwerte konsistent zueinander passen. Es ist beispielsweise hoch, wenn helle Bereiche im Foto immer über dunklen Bereichen im Scan liegen, aber niedriger wenn helle Bereiche Mal über hellen und Mal über dunklen Bereichen liegen.\n" +
+                        "  Mithilfe dieses Wertes kann das Optimierungsverfahren die 3D-Transformation schrittweise in die Richtung verändern, in der die Daten am besten zueinander passen."
                 },
                 {
                     title: "Techstack: ",
@@ -145,6 +145,10 @@ export const projectDescriptions = [
                 {
                     title: "Projektseite",
                     link: "https://www.bmwk.de/Redaktion/DE/Publikationen/Digitale-Welt/autonomik-fuer-industrie-4-0.pdf?__blob=publicationFile&v=9#%5B%7B%22num%22%3A120%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C42%2C770%2Cnull%5D"
+                },
+                {
+                    title: "Beschriebenes Paper",
+                    link: "https://deepblue.lib.umich.edu/bitstream/handle/2027.42/112212/rob21542.pdf?sequence=1"
                 }
             ]
     },
@@ -410,7 +414,7 @@ export const projectDescriptions = [
         links:
             [
                 {
-                    title: "Code",
+                    title: "Code und weitere Details",
                     link: "https://github.com/AIS-Bonn/rviz_cinematographer"
                 }
             ]
