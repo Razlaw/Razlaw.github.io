@@ -1,5 +1,7 @@
 import "./intro.scss";
 
+import {useEffect} from "react";
+
 import LinksToPrivacy from "../../components/linksToPrivacy/LinksToPrivacy";
 
 import { ReactComponent as Logo1000SVG } from "../../assets/icons/logo_scaled_1000.svg";
@@ -10,14 +12,21 @@ import portraitImage from "../../assets/portrait_crop.png";
 export default function Intro() {
     const viewportDiagonal = Math.sqrt(window.innerHeight * window.innerHeight + window.innerWidth * window.innerWidth);
 
+    // Prepare variable in session storage for next render
+    useEffect(() => {
+        if(window.sessionStorage.getItem("playedIntroAnimation") === null) {
+            window.sessionStorage.setItem("playedIntroAnimation", "true");
+        }
+    }, []);
+
     return (
         <div className="intro">
             <div className="contentContainer">
                 <div className="logoContainer">
                     {(
                         viewportDiagonal < 1000 ?
-                        <Logo1000SVG className="logoSVG"/> :
-                        <Logo4400SVG className="logoSVG"/>
+                        <Logo1000SVG className={"logoSVG " + (window.sessionStorage.getItem("playedIntroAnimation") === "true" ? "playedAnimation" : "playAnimation")}/> :
+                        <Logo4400SVG className={"logoSVG " + (window.sessionStorage.getItem("playedIntroAnimation") === "true" ? "playedAnimation" : "playAnimation")}/>
                     )}
                 </div>
                 <div className="leftContainer">

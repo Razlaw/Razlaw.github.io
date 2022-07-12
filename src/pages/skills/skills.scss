@@ -88,7 +88,6 @@
         }
 
         .listTitle {
-          opacity: 0;
           overflow: hidden;
 
           @include for-mobile {
@@ -99,8 +98,18 @@
             font-size: 3.5rem;
           }
 
-          &.inView {
+          &.preAnimation {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+
+          &.doAnimation {
             animation: slideInListItems 1000ms ease both 1500ms;
+          }
+
+          &.postAnimation {
+            opacity: 1;
+            transform: translateX(0);
           }
         }
 
@@ -120,10 +129,24 @@
           padding: 0;
           overflow: visible;
 
-          &.inView {
+          &.preAnimation {
+            li {
+              opacity: 0;
+              transform: translateX(-50px);
+            }
+          }
+
+          &.doAnimation {
             li {
               animation: slideInListItems 1000ms ease both;
               animation-iteration-count: 1;
+            }
+          }
+
+          &.postAnimation {
+            li {
+              opacity: 1;
+              transform: translateX(0);
             }
           }
 
@@ -152,7 +175,6 @@
           }
 
           li {
-            opacity: 0;
             will-change: transform, opacity;
 
             @keyframes slideInListItems {

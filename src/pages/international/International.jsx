@@ -1,5 +1,7 @@
 import "./international.scss";
 
+import {useEffect} from "react";
+
 import {useInView} from "react-intersection-observer";
 
 import {Link} from "react-router-dom";
@@ -12,10 +14,20 @@ import {ReactComponent as GoldMedal} from '../../assets/icons/gold_medal.svg';
 import {ReactComponent as ScientificPaper} from '../../assets/icons/scientific_paper.svg';
 import {ReactComponent as SilverMedal} from '../../assets/icons/silver_medal.svg';
 
+import {getAnimationState} from "../../utils/utils";
+
 export default function International() {
     const { ref, inView } = useInView({
         triggerOnce: true
     });
+
+    useEffect(() => {
+        if(inView === true) {
+            window.sessionStorage.setItem("internationalAnimationPlayed", "true");
+        }
+    }, [inView]);
+
+    const animationState = getAnimationState(inView, window.sessionStorage.getItem("internationalAnimationPlayed"));
 
     return (
         <div className="international">
@@ -24,7 +36,7 @@ export default function International() {
                     International
                 </h1>
                 <div className="mapContainer">
-                    <div className={"imgContainer " + (inView && "inView")}>
+                    <div className={"imgContainer " + animationState}>
                         <NorthAmerica className="northAmerica mapOutline"/>
                         <Eurasia className="eurasia mapOutline"/>
                     </div>
@@ -35,7 +47,7 @@ export default function International() {
                         to="/projects_descriptions/openid=5"
                     >
                         <div
-                            className={"locationBox " + (inView && "inView")}
+                            className={"locationBox " + animationState}
                             id="losAngeles"
                         >
                             <h1 className="internationalEventTitle">2015</h1>
@@ -50,7 +62,7 @@ export default function International() {
                         to="/projects_descriptions/openid=7"
                     >
                         <div
-                            className={"locationBox " + (inView && "inView")}
+                            className={"locationBox " + animationState}
                             id="abuDhabi1"
                         >
                             <h1 className="internationalEventTitle">2017</h1>
@@ -67,7 +79,7 @@ export default function International() {
                         rel="noreferrer"
                     >
                         <div
-                            className={"locationBox " + (inView && "inView")}
+                            className={"locationBox " + animationState}
                             id="montreal"
                         >
                                 <h1 className="internationalEventTitle">2019</h1>
@@ -82,7 +94,7 @@ export default function International() {
                         to="/projects_descriptions/openid=8"
                     >
                         <div
-                            className={"locationBox " + (inView && "inView")}
+                            className={"locationBox " + animationState}
                             id="abuDhabi2"
                         >
                             <h1 className="internationalEventTitle">2020</h1>

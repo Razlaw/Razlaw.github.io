@@ -67,12 +67,21 @@
         position: relative;
         margin: 0 3%;
 
-        opacity: 0;
-        transform: translateY(50px);
-
         overflow: visible;
 
-        &.inView {
+        &.preAnimation {
+          opacity: 0;
+          transform: translateY(50px);
+
+          .mapOutline {
+            circle {
+              opacity: 1;
+              transform: translateX(0px);
+            }
+          }
+        }
+
+        &.doAnimation {
           animation: slideInMaps 500ms ease-in-out both 100ms;
 
           .mapOutline {
@@ -89,6 +98,18 @@
                 opacity: 1;
                 transform: translateX(0px);
               }
+            }
+          }
+        }
+
+        &.postAnimation {
+          opacity: 1;
+          transform: translateX(0px);
+
+          .mapOutline {
+            circle {
+              opacity: 1;
+              transform: translateX(0px);
             }
           }
         }
@@ -252,7 +273,6 @@
 
       .locationBox {
         height: 100%;
-        opacity: 0;
         padding: 15px 5px;
         border-radius: 28px;
         border-style: solid;
@@ -267,7 +287,12 @@
         justify-content: center;
         text-align: center;
 
-        &.inView {
+        &.preAnimation {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+
+        &.doAnimation {
           animation: slideInMapLocations 500ms ease-in-out both 1200ms;
         }
 
@@ -280,6 +305,11 @@
             opacity: 1;
             transform: translateX(0px);
           }
+        }
+
+        &.postAnimation {
+          opacity: 1;
+          transform: translateX(0px);
         }
 
         @include for-mobile {

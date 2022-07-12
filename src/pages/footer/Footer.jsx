@@ -1,15 +1,27 @@
 import "./footer.scss";
 
+import {useEffect} from "react";
+
 import {useInView} from "react-intersection-observer";
 
 import {Link} from "react-router-dom";
 
 import {ReactComponent as ExternalLinkIcon} from "../../assets/icons/external_link.svg";
 
+import {getAnimationState} from "../../utils/utils";
+
 export default function Footer() {
     const { ref, inView } = useInView({
         triggerOnce: true
     });
+
+    useEffect(() => {
+        if(inView === true) {
+            window.sessionStorage.setItem("footerAnimationPlayed", "true");
+        }
+    }, [inView]);
+
+    const animationState = getAnimationState(inView, window.sessionStorage.getItem("footerAnimationPlayed"));
 
     return (
         <div className="footer">
@@ -17,10 +29,10 @@ export default function Footer() {
                 <h1 className="footerTitle">
                     Weiterführendes
                 </h1>
-                <div className={"internalLinksContainer " + (inView && "inView")} ref={ref}>
+                <div className={"internalLinksContainer " + animationState} ref={ref}>
                     <div className="internalLinkContainer" id="education">
                         <Link
-                            className={"internalLink " + (inView && "inView")}
+                            className={"internalLink " + animationState}
                             to="/education"
                         >
                             <div className="linkText">
@@ -30,7 +42,7 @@ export default function Footer() {
                     </div>
                     <div className="internalLinkContainer" id="projects">
                         <Link
-                            className={"internalLink " + (inView && "inView")}
+                            className={"internalLink " + animationState}
                             to="/projects_descriptions/openid=-1"
                         >
                             <div className="linkText">
@@ -40,7 +52,7 @@ export default function Footer() {
                     </div>
                     <div className="internalLinkContainer" id="timeline">
                         <Link
-                            className={"internalLink " + (inView && "inView")}
+                            className={"internalLink " + animationState}
                             to="/timeline"
                         >
                             <div className="linkText">
@@ -49,7 +61,7 @@ export default function Footer() {
                         </Link>
                     </div>
                 </div>
-                <div className={"externalLinksContainer " + (inView && "inView")} ref={ref}>
+                <div className={"externalLinksContainer " + animationState} ref={ref}>
                     <div className="externalLinkContainer" id="github">
                         <a
                             className="externalLink"

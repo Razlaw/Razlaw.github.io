@@ -55,10 +55,12 @@
       justify-content: space-evenly;
       overflow: visible;
 
-      visibility: hidden;
-      transform: translateY(200%);
+      &.preAnimation {
+        visibility: hidden;
+        transform: translateY(200%);
+      }
 
-      &.inView {
+      &.doAnimation {
         animation: moveInternalLinksUp 1700ms cubic-bezier(.39,.58,.57,1) both 1200ms;
 
         @include for-mobile {
@@ -83,6 +85,11 @@
           visibility: visible;
           transform: translateY(0);
         }
+      }
+
+      &.postAnimation {
+        visibility: visible;
+        transform: translateY(0);
       }
 
       @include for-mobile {
@@ -136,7 +143,13 @@
           transition: all ease-in-out 1000ms;
           cursor: pointer;
 
-          &.inView {
+          &.preAnimation {
+            border-bottom: 0px solid #35574f;
+            box-shadow: 0px 0px 0px #05281e;
+            border-radius: 0px;
+          }
+
+          &.doAnimation {
             animation: revealInternalLinks 1s ease-in-out both 3000ms;
             //border-bottom: 3px solid #35574f;
             //box-shadow: 5px 5px 15px #05281e;
@@ -154,6 +167,12 @@
               box-shadow: 5px 5px 15px #05281e;
               border-radius: 9px;
             }
+          }
+
+          &.postAnimation {
+            border-bottom: 3px solid #35574f;
+            box-shadow: 5px 5px 15px #05281e;
+            border-radius: 9px;
           }
 
           &:hover {
@@ -215,7 +234,15 @@
       align-items: flex-end;
       justify-content: space-evenly;
 
-      &.inView {
+      &.preAnimation {
+        clip-path: polygon(0% 100%, 50% calc(100% - var(--height-transition-triangle)), 100% 100%, 100% 100%, 0% 100%);
+
+        @include for-mobile {
+          clip-path: polygon(0% 100%, 50% calc(100% - 0.25 * var(--height-transition-triangle)), 100% 100%, 100% 100%, 0% 100%);
+        }
+      }
+
+      &.doAnimation {
         animation: revealExternalLinks 1200ms ease-in-out both 500ms;
 
         @include for-mobile {
@@ -253,6 +280,14 @@
           clip-path: polygon(0% calc(0.75 * var(--height-transition-triangle)), 50% 0%, 100% calc(0.75 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
         }
         100% {
+          clip-path: polygon(0% calc(1 * var(--height-transition-triangle)), 50% 0%, 100% calc(1 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
+        }
+      }
+
+      &.postAnimation {
+        clip-path: polygon(0% calc(4 * var(--height-transition-triangle)), 50% calc(2 * var(--height-transition-triangle)), 100% 0%, 100% 100%, 0% 100%);
+
+        @include for-mobile {
           clip-path: polygon(0% calc(1 * var(--height-transition-triangle)), 50% 0%, 100% calc(1 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
         }
       }

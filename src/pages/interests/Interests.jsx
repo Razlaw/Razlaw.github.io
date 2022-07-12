@@ -1,5 +1,7 @@
 import "./interests.scss";
 
+import {useEffect} from "react";
+
 import {useInView} from "react-intersection-observer";
 
 import {ReactComponent as FoosballIcon} from '../../assets/icons/foosball.svg';
@@ -12,10 +14,20 @@ import {ReactComponent as DrawingIcon} from '../../assets/icons/drawing.svg';
 import {ReactComponent as FoodIcon} from '../../assets/icons/food.svg';
 import {ReactComponent as TravelIcon} from '../../assets/icons/travel.svg';
 
+import {getAnimationState} from "../../utils/utils";
+
 export default function Interests() {
     const { ref, inView } = useInView({
         triggerOnce: true
     });
+
+    useEffect(() => {
+        if(inView === true) {
+            window.sessionStorage.setItem("interestsAnimationPlayed", "true");
+        }
+    }, [inView]);
+
+    const animationState = getAnimationState(inView, window.sessionStorage.getItem("interestsAnimationPlayed"));
 
     return (
         <div className="interests">
@@ -23,7 +35,7 @@ export default function Interests() {
                 <h1 className="interestsTitle">
                     Interessen
                 </h1>
-                <div className={"iconsContainer " + (inView && "inView")} ref={ref}>
+                <div className={"iconsContainer " + animationState} ref={ref}>
                     <div className="iconContainer">
                         <div className="hoverContainer">
                             <MusicIcon className="icon"/>

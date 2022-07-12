@@ -47,7 +47,27 @@
       display: grid;
       grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 
-      &.inView {
+      &.preAnimation {
+        .iconContainer {
+          .icon {
+            * {
+              stroke-dashoffset: 500;
+
+              @include for-mobile {
+                opacity: 0;
+                stroke-dasharray: 0 100;
+              }
+
+              @include for-tablet {
+                opacity: 0;
+                stroke-dasharray: 0 100;
+              }
+            }
+          }
+        }
+      }
+
+      &.doAnimation {
         .iconContainer {
           .icon {
             * {
@@ -81,6 +101,26 @@
                 stroke-dasharray: 0 100;
               }
               100% {
+                opacity: 1;
+                stroke-dasharray: 100 0;
+              }
+            }
+          }
+        }
+      }
+
+      &.postAnimation {
+        .iconContainer {
+          .icon {
+            * {
+              stroke-dashoffset: 0;
+
+              @include for-mobile {
+                opacity: 1;
+                stroke-dasharray: 100 0;
+              }
+
+              @include for-tablet {
                 opacity: 1;
                 stroke-dasharray: 100 0;
               }
@@ -127,7 +167,6 @@
               stroke-linecap: round;
 
               stroke-dasharray: 500;
-              stroke-dashoffset: 500;
 
               @include for-mobile {
                 stroke-width: 3;

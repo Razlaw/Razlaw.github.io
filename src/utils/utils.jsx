@@ -20,3 +20,15 @@ export function ScrollRestoration(elementID) {
 
     return onScrollFunction;
 }
+
+export function getAnimationState(inView, wasAnimationPlayed) {
+    switch (wasAnimationPlayed) {
+        case "true":
+            return "postAnimation";
+        case null:
+            if (!inView) return "preAnimation";
+            else return "doAnimation";
+        default:
+            return "postAnimation";
+    }
+}
