@@ -104,15 +104,15 @@
           }
         }
 
-        #listTitleOne {
+        #skillListTitle0 {
           animation-delay: 500ms;
         }
 
-        #listTitleTwo {
+        #skillListTitle1 {
           animation-delay: 1000ms;
         }
 
-        #listTitleThree {
+        #skillListTitle2 {
           animation-delay: 1500ms;
         }
 
@@ -127,7 +127,7 @@
             }
           }
 
-          &#listOne {
+          &#skillList0 {
             @for $i from 1 through 5 {
               li:nth-child(#{$i}n) {
                 animation-delay: #{$i * 0.2 + 2.0}s;
@@ -135,7 +135,7 @@
             }
           }
 
-          &#listTwo {
+          &#skillList1 {
             @for $i from 1 through 5 {
               li:nth-child(#{$i}n) {
                 animation-delay: #{$i * 0.2 + 0.2 * 5 + 2.0}s;
@@ -143,7 +143,7 @@
             }
           }
 
-          &#listThree {
+          &#skillList2 {
             @for $i from 1 through 6 {
               li:nth-child(#{$i}n) {
                 animation-delay: #{$i * 0.2 + 0.2 * 10 + 2.0}s;
