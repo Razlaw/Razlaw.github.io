@@ -391,7 +391,7 @@ export const projectDescriptions = [
             [
                 {
                     title: "Das Problem: ",
-                    text: "Während meiner Arbeit mit 3D-Laserscans hat es mich immer wieder gestört, dass es keine zufriedenstellende Methode gab Visualisierungen von 3D-Informationen anderen übersichtlich darzustellen.\n" +
+                    text: "Während meiner Arbeit mit 3D-Laserscans war es immer umständlich Visualisierungen von 3D-Informationen anderen übersichtlich darzustellen.\n" +
                         "  Ein 2D-Bild kann immer nur eine Perspektive zu einem Zeitpunkt der Aufnahme abbilden.\n" +
                         "  Ein Video aus einer festen Perspektive hat den Nachteil, dass sich dynamische Prozesse schnell aus dem Fokus der Perspektive bewegen können.\n" +
                         "  Ein Video mit einer dynamischen Kamera, die Bewegungen verfolgt oder den Fokus wechselt war zu diesem Zeitpunkt mit viel Arbeit und Zeitaufwand verbunden, den sich viele Wissenschaftlicher nicht leisten konnten oder wollten."
