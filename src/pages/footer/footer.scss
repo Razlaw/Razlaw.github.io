@@ -240,6 +240,10 @@
         @include for-mobile {
           clip-path: polygon(0% 100%, 50% calc(100% - 0.25 * var(--height-transition-triangle)), 100% 100%, 100% 100%, 0% 100%);
         }
+
+        @include for-tablet {
+          clip-path: polygon(0% 100%, 50% calc(100% - 0.25 * var(--height-transition-triangle)), 100% 100%, 100% 100%, 0% 100%);
+        }
       }
 
       &.doAnimation {
@@ -288,6 +292,10 @@
         clip-path: polygon(0% calc(4 * var(--height-transition-triangle)), 50% calc(2 * var(--height-transition-triangle)), 100% 0%, 100% 100%, 0% 100%);
 
         @include for-mobile {
+          clip-path: polygon(0% calc(1 * var(--height-transition-triangle)), 50% 0%, 100% calc(1 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
+        }
+
+        @include for-tablet {
           clip-path: polygon(0% calc(1 * var(--height-transition-triangle)), 50% 0%, 100% calc(1 * var(--height-transition-triangle)), 100% 100%, 0% 100%);
         }
       }
