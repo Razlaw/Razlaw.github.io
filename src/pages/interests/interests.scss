@@ -187,6 +187,7 @@
             opacity: 0;
             transition: opacity 1s ease-out;
             overflow: visible;
+            user-select: none;
 
             @include for-mobile {
               font-size: 2rem;
