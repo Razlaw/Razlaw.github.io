@@ -140,7 +140,15 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        overflow: visible;
+        overflow: hidden;
+
+        @include for-mobile {
+          overflow: visible;
+        }
+
+        @include for-tablet {
+          overflow: visible;
+        }
 
         .hoverContainer {
           width: 100%;
