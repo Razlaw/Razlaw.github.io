@@ -25,13 +25,13 @@ export default function Sources() {
                                 href="https://www.behance.net/gallery/87667103/Emberly-Free-Typeface-54-Styles/modules/513862577"
                                 target="_blank"
                                 rel="noreferrer"
-                            ><i> Emberly </i></a>
+                            ><i> Emberly v1.3 </i></a>
                             -
                             <a
-                                href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.de"
+                                href="http://scripts.sil.org/OFL"
                                 target="_blank"
                                 rel="noreferrer"
-                            > CC BY-NC-ND 4.0 Lizenz</a>
+                            > SIL Open Font License Version 1.1</a>
                         </p>
                     </li>
                     <li>
