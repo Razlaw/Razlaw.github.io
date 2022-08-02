@@ -19,7 +19,7 @@ export const projectDescriptions = [
                 },
                 {
                     title: "Meine Aufgabe",
-                    text: " bestand darin, eine möglichst automatische Methode zu entwerfen, die Parameter des Modells einzustellen. Meine Lösung bestand daraus, die Parameter durch ein Optimierungsverfahren in kleinen Schritten verändern zu lassen. Nach jedem Schritt wird die „Schärfe“ der 3D-Scans rechnerisch bestimmt. Dadurch kann das Optimierungs\u00ADverfahren die Parameter nach und nach in die Richtung verändern, die die Qualität der Scans verbessert.\n" +
+                    text: "bestand darin, eine möglichst automatische Methode zu entwerfen, die Parameter des Modells einzustellen. Meine Lösung bestand darin, die Parameter durch ein Optimierungsverfahren in kleinen Schritten verändern zu lassen. Nach jedem Schritt wird die „Schärfe“ der 3D-Scans rechnerisch bestimmt. Dadurch kann das Optimierungs\u00ADverfahren die Parameter nach und nach in die Richtung verändern, die die Qualität der Scans verbessert.\n" +
                         "  Zur Messung der Qualität habe ich sowohl ein bestehendes Verfahren verwendet als auch ein Neues entwickelt. Beide Verfahren arbeiten unter der Annahme, dass ein Scan präziser ist, wenn sich Messpunkten, die nahe beieinander liegen, auf einer Ebene befinden. Diese Bedingung ist erfüllt, wenn der Scanner beispielsweise die Wände oder den Boden eines Raums misst und die Parameter des Modells gut eingestellt sind. Sind die Parameter nicht optimal, ergeben sich im Scan gebogene Wände und ein erhöhtes Rauschen der Messpunkte.\n" +
                         "  Nach dem Einstellen der Parameter konnten die Scans dafür verwendet werden, eine Karte der Umgebung zu erstellen."
                 },
@@ -51,7 +51,7 @@ export const projectDescriptions = [
                 {
                     title: "Projektbeschreibung: ",
                     text: "Eine Motion Capture Anlage besteht üblicherweise aus mehreren Kameras mit einer hohen Bildrate. Die Kameras werden so ausgerichtet, dass sie einen Bereich aus mehreren Richtungen aufnehmen. Zusätzlich wird dieser Bereich aus den Perspektiven der Kameras mit Infrarotlicht ausgeleuchtet.\n " +
-                        "  Befindet sich ein spezieller Marker, der das Infrarotlicht besonders gut reflektiert, in diesem Feld, so lässt sich seine 3D-Position im Raum mit der Anlange präzisere bestimmen. Montiert man mehrere Marker - beispielsweise an einen Copter - so lässt sich dessen 3D-Pose im Raum präzise ermitteln.\n " +
+                        "  Befindet sich ein spezieller Marker, der das Infrarotlicht besonders gut reflektiert, in diesem Feld, so lässt sich seine 3D-Position im Raum mit der Anlage präzise bestimmen. Montiert man mehrere Marker - beispielsweise an einen Copter - so lässt sich dessen 3D-Pose im Raum präzise ermitteln.\n " +
                         "  Eine solche Anlage habe ich benötigt, um verschiedene Verfahren zur Lokalisierung von Coptern zu evaluieren. Diese Verfahren nutzten nur die Sensoren des Copters und waren weniger präzise in der Bestimmung der Pose. Im Gegensatz zu einer Motion Capture Anlage, die an einen Ort gebunden ist, können diese Verfahren allerdings überall eingesetzt werden."
                 },
                 {
@@ -83,7 +83,7 @@ export const projectDescriptions = [
                 },
                 {
                     title: "Meine Aufgabe",
-                    text: " bestand darin, diese Verfahren zu vergleichen und herauszufinden, welches sich für das Projekt und den verwendeten Sensor am besten eignet.\n" +
+                    text: "bestand darin, diese Verfahren zu vergleichen und herauszufinden, welches sich für das Projekt und den verwendeten Sensor am besten eignet.\n" +
                         "  Hier habe ich den Laserscanner zunächst wie in Projekt 1 beschrieben kalibriert. Anschließend haben wir Laserscans innerhalb der Motion Capture Anlage aus Projekt 2 aufgenommen. Der Sensor war dafür an einem Copter montiert, der während der Aufnahme durch den Raum gesteuert wurde. Die Motion Capture Anlage hat für jeden Laserscan die präzise Pose des Sensors bestimmt. Ziel der getesteten Verfahren sollte es sein, ausschließlich die Laserscans zu benutzen, um möglichst ähnliche Posen zu bestimmen.\n" +
                         "  Um die Verfahren in einem weniger strukturierten Setting bewerten zu können, habe ich zusätzlich Aufnahmen eines Fluges außerhalb eines Gebäude zur Evaluation benutzt. Hier konnte keine Motion Capture Anlage eingesetzt werden, um optimale Posen zu bestimmen. Stattdessen ließ ich zunächst jedes Verfahren eine Karte aus den aufgenommenen Laserscans erstellen. Anschließend bewertete ich jede dieser Karten mit den Methoden zur Qualitätsmessung von Laserscans aus Projekt 1.\n" +
                         "  Die Ergebnisse der Evaluation sind daraufhin in meine Bachelorarbeit und eine wissenschaftliche Publikation eingeflossen."
@@ -125,7 +125,7 @@ export const projectDescriptions = [
                     title: "Projektbeschreibung: ",
                     text: "Im Projekt InventAIRy sollte ein Copter entwickelt werden, der eine Inventur autonom in einem hohen Lager durchführen kann. Für diese Aufgabe wurde der Copter mit mehreren Kameras und einem 3D-Laserscanner ausgerüstet.\n" +
                         "  Im Allgemeinen messen Laserscanner die Distanz zu ihrer Umgebung. 3D-Scanner messen in viele verschiedene Richtungen, um ein vollständigeres 3D „Bild“ der Umgebung zu erhalten. Zusätzlich zur Distanz lässt sich die Intensität des zurückkehrenden Laserstrahls messen. Diese kann vage mit einem schwarz-weiß Foto verglichen werden.\n" +
-                        "  Kameras auf der anderen Seite messen die Farbwerte der Umgebung, aber erfassen keine Distanz. Weiß man, wie Kamera und Laserscanner zueinander im Raum positioniert sind, können die Farbwerte des Kamerabilds in den Laserscan projiziert werden. Genauso lässt sich aber auch zu einem Objekt im Kamerabild, eine Distanz vom Laserscanner messen."
+                        "  Kameras wiederum messen die Farbwerte der Umgebung, aber erfassen keine Distanz. Weiß man, wie Kamera und Laserscanner zueinander im Raum positioniert sind, können die Farbwerte des Kamerabilds in den Laserscan projiziert werden. Genauso lässt sich auch zu einem Objekt im Kamerabild eine Distanz vom Laserscanner messen."
                 },
                 {
                     title: "Meine Aufgabe",
@@ -166,8 +166,8 @@ export const projectDescriptions = [
                         "  In der Challenge wurde den teilnehmenden Teams die Aufgabe gestellt, einen solchen Roboter zu entwickeln. Zusätzlich zum Schließen eines Ventils sollte dieser Roboter weitere Aufgaben erfüllen, die ihm in einem ähnlichen Szenario begegnen könnten. Hierzu gehörte das Öffnen einer Tür, das Passieren von unwegsamen Gelände, die Benutzung von Werkzeugen und das Erklimmen von Treppen. Eine zusätzliche Schwierigkeit bestand in einer sehr eingeschränkten Datenrate bei der Kommunikation zwischen der Steuerzentrale und dem Roboter."
                 },
                 {
-                    title: "Meine Aufgabe,",
-                    text: "als Neuling im Team NimbRo, bestand darin zu helfen, wo auch immer Hilfe gebraucht wurde. Eine der Aufgaben war es, möglichst hilfreiche Informationen aus den 3D-Laserscans des Roboters zu kreieren. Vollständige Scans konnten aufgrund der geringen Datenrate nicht übertragen werden. Die Verarbeitung musste dabei möglichst effizient auf der limitierten Hardware des Roboters geschehen, die zusätzlich mit anderen Aufgaben belastet war.\n" +
+                    title: "Meine Aufgabe",
+                    text: "als Neuling im Team NimbRo bestand darin, zu helfen, wo auch immer Hilfe gebraucht wurde. Eine der Aufgaben war es, möglichst hilfreiche Informationen aus den 3D-Laserscans des Roboters zu kreieren. Vollständige Scans konnten aufgrund der geringen Datenrate nicht übertragen werden. Die Verarbeitung musste dabei möglichst effizient auf der limitierten Hardware des Roboters geschehen, die zusätzlich mit anderen Aufgaben belastet war.\n" +
                         "  Die Idee war es, mittels effizienten Kantenfiltern aus der 2D-Computergraphik Messpunkte auf ebenen Flächen herauszufiltern. So konnte der Steuerende weiterhin erkennen, wo die Kanten eines Türgriffs, eines Ventilrads oder eines Werkzeugs sind, um nach diesen zu greifen."
                 },
                 {
@@ -212,8 +212,8 @@ export const projectDescriptions = [
                     text: "Im Centauro-Projekt sollte ein Roboter entwickelt werden, der auf vier Beinen steht und einen menschenähnlichen Oberkörper mit zwei Armen besitzt. Dieser Roboter sollte in Katastrophenszenarien eingesetzt werden, in denen es zu gefährlich für Menschen ist. Zu seinen Aufgaben sollte es zählen, Menschen akute Ersthilfe zu leisten und die Bedingungen so weit zu verbessern, dass die Umgebung ungefährlich für Menschen wird. Gesteuert werden sollte der Roboter, indem er die Bewegungen eines Menschen in einem Exoskelett nachahmt. Da der Mensch keinen Sichtkontakt zum Roboter hat, sollte er durch eine VR-Brille sehen, was der Roboter sieht."
                 },
                 {
-                    title: "Meine Aufgabe ",
-                    text: "bestand darin, eine Ansicht in der VR-Brille bereitzustellen. Zunächst habe ich, wie in Projekt 2 entwickelt, den Laserscanner zu den Kameras kalibriert. Das diente dazu, den 3D-Scan der Umgebung, um die Farbwerte der Kameras zu ergänzen. So konnte sich der Steuerende durch Bewegungen mit der VR-Brille in der Umgebung des Roboters umsehen.\n" +
+                    title: "Meine Aufgabe",
+                    text: "bestand darin, eine Ansicht in der VR-Brille bereitzustellen. Zunächst habe ich, wie in Projekt 2 entwickelt, den Laserscanner zu den Kameras kalibriert. Das diente dazu, den 3D-Scan der Umgebung um die Farbwerte der Kameras zu ergänzen. So konnte sich der Steuerende durch Bewegungen mit der VR-Brille in der Umgebung des Roboters umsehen.\n" +
                         "  Dabei musste ich die Ansicht möglichst effizient aktualisieren, damit der Steuerende schnell auf Veränderungen der Umwelt reagieren konnte. Hierbei waren die großen Datenmengen, die benutzte Hardware und die parallel laufende Visualisierung in der Brille die limitierenden Faktoren.\n" +
                         "  Ich habe aufgrund dieser Einschränkungen zunächst mit einem einfachen Ansatz begonnen, der alte Messpunkte löscht, sobald sich neue Messungen hinter diesen befinden. Diese Situation tritt vor allem dann auf, wenn sich Objekte bewegen. Aufgrund der hohen Anzahl an Messpunkten stellte sich auch dieser einfache Ansatz als rechenintensiv heraus. Im darauffolgenden Projekt habe ich einen anderen Ansatz gewählt, der es zusätzlich erlaubte, die bewegten Objekte zu modellieren. Diese Modelle erlauben es autonomen Robotern, ihre Aktionen besser planen zu können."
                 },
@@ -241,16 +241,16 @@ export const projectDescriptions = [
                 {
                     title: "Projektbeschreibung: ",
                     text: "In diesem Wettbewerb sollten insgesamt drei Aufgaben gelöst werden. Eine der Aufgaben bestand darin, einen Flugroboter zu entwickeln, der autonom unterschiedliche Objekte auf einem weiten, ebenen Feld findet und in einen Zielbereich bringt. Die Objekte konnten dabei sowohl statisch als auch dynamisch sein und hatten eine Höhe von etwa 20-30 cm.\n" +
-                        "  Für die Suche der Objekte haben wir zwei Ansätze verfolgt. Der Erste bestand daraus, die Objekte mittels einer Kamera zu finden, da sich diese farblich gut von der Umgebung unterscheiden sollten. Die Nachteile dieser Methode waren der eingeschränkte Sichtbereich von Kameras und die Abhängigkeit von der Umgebungsbeleuchtung.\n" +
-                        "  Der zweite Ansatz bestand daraus, einen Laserscanner einzusetzen und die Objekte daran zu erkennen, dass diese aus dem Boden herausragen. Der Laserscanner hat dabei die Vorteile eines sehr breiten Blickfelds und funktioniert unabhängig von der Beleuchtung. Ein Nachteil war jedoch, dass die Messpunkte des eingesetzten Laserscanners bei hohen Distanzen weit auseinander liegen und man die Objekte so übersehen kann."
+                        "  Für die Suche der Objekte haben wir zwei Ansätze verfolgt. Der Erste bestand darin, die Objekte mittels einer Kamera zu finden, da sich diese farblich gut von der Umgebung unterscheiden sollten. Die Nachteile dieser Methode waren der eingeschränkte Sichtbereich von Kameras und die Abhängigkeit von der Umgebungsbeleuchtung.\n" +
+                        "  Der zweite Ansatz bestand darin, einen Laserscanner einzusetzen und die Objekte daran zu erkennen, dass diese aus dem Boden herausragen. Der Laserscanner hat dabei die Vorteile eines sehr breiten Blickfelds und funktioniert unabhängig von der Beleuchtung. Ein Nachteil war jedoch, dass die Messpunkte des eingesetzten Laserscanners bei hohen Distanzen weit auseinander liegen und man die Objekte so übersehen kann."
                 },
                 {
                     title: "Eine meiner Aufgaben",
-                    text: " bestand darin, eine Methode zu entwickeln, die Objekte auf hohe Distanzen in den Laserscans zu finden und die Positionen der dynamischen Objekte zu verfolgen. So sollte es dem Roboter ermöglicht werden, die Positionen nach und nach anzufliegen und die Objekte einzusammeln.\n" +
-                        "  Meine Lösung bestand darin, eine Kombination von Filtern aus der Computer Vision auf die Lasermessungen anzuwenden, um Objekte einer vorgegebenen Größe von ihrem Hintergrund zu trennen. Die Positionen der erkannten Objekte habe ich anschließend mit einem Kalman-Filter pro Objekt verfolgt. Dieser Ansatz ist auch bei einer hohen Anzahl von Objekten effizient und lässt dem Roboter möglichst viele Rechen\u00ADkapazitäten für weitere zwingend nötige Aufgaben.\n" +
+                    text: "bestand darin, eine Methode zu entwickeln, die Objekte auf hohe Distanzen in den Laserscans zu finden und die Positionen der dynamischen Objekte zu verfolgen. So sollte es dem Roboter ermöglicht werden, die Positionen nach und nach anzufliegen und die Objekte einzusammeln.\n" +
+                        "  Meine Lösung bestand darin, eine Kombination von Filtern aus der Computer Vision auf die Lasermessungen anzuwenden, um Objekte einer vorgegebenen Größe von ihrem Hintergrund zu trennen. Die Positionen der erkannten Objekte habe ich anschließend mit einem Kalman-Filter pro Objekt verfolgt. Dieser Ansatz ist auch bei einer hohen Anzahl von Objekten effizient und lässt dem Roboter möglichst viele Rechen\u00ADkapazitäten für weitere, zwingend nötige Aufgaben.\n" +
                         "  Während des eigentlichen Wettbewerbs wurde meine Methode bei dieser Aufgabe nicht angewendet, da eine Gruppe kleinerer Flugroboter ohne Laserscanner zum Einsatz kam.\n" +
                         "  Aufgrund der Flexibilität meiner Methode konnte diese jedoch bei einer anderen Aufgabe im Wettbewerb eingesetzt werden. Die zweite Aufgabe bestand daraus, den Roboter einen etwa 2 m hohen Block in einer weitläufigen Arena finden zu lassen. An diesem Block war eine Reihe unterschiedlicher Werkzeuge befestigt. Aus diesen sollte das Richtige ausgewählt werden, um damit ein Ventil zu schließen.\n" +
-                        "  Hier wurde der Laserscanner einsetzt, um schnell ein umfassendes Bild der Arena zu erhalten.  Ich habe die Parameter meiner Methode angepasst, um den großen Block statt der kleinen Objekte zu finden. Dadurch konnte das Ziel direkt von der Startlinie ausfindig gemacht werden und eine lange Suche entfiel."
+                        "  Hier wurde der Laserscanner einsetzt, um schnell ein umfassendes Bild der Arena zu erhalten. Ich habe die Parameter meiner Methode angepasst, um den großen Block statt der kleinen Objekte zu finden. Dadurch konnte das Ziel direkt von der Startlinie ausfindig gemacht werden und eine lange Suche entfiel."
                 },
                 {
                     title: "Tech Stack: ",
@@ -287,12 +287,12 @@ export const projectDescriptions = [
                 },
                 {
                     title: "Projektbeschreibung: ",
-                    text: "Dieser Wettbewerb war unterteilt in drei Aufgaben - Feuer löschen, Mauern bauen und Luftballons zerplatzen. Zur Lösung sollten dabei autonome Robotern eingesetzt werden."
+                    text: "Dieser Wettbewerb war unterteilt in drei Aufgaben - Feuer löschen, Mauern bauen und Luftballons zerplatzen. Zur Lösung sollten dabei autonome Roboter eingesetzt werden."
                 },
                 {
                     title: "Eine meiner Aufgaben",
-                    text: " war es den Roboter Bob erkennen zu lassen, wo er eine Mauer bauen soll. Die Mauer sollte dabei auf einem Marker entstehen, der zufällig in der Arena platziert wurde. Dieser Marker war gelb und magenta kariert und hatte die Form eines liegenden L.\n" +
-                        "  Meine Lösung bestand darin in den Kamerabildern zunächst nach diesen und ähnlichen Farben suchen zu lassen. Traten die Farben dabei in der Nähe voneinander auf, sollte der Roboter mittels eines Eckenfilters kontrollieren, ob es sich dabei um ein Karomuster handelte. Traf auch das zu, wurde dieser Bereich des 2D-Kamerabilds ausgewählt und in 3D auf den Boden projiziert. Hierfür habe ich den Roboter in den Daten eines 3D-Laserscanners eine Bodenebene ermitteln lassen.\n" +
+                    text: "war es, den Roboter Bob erkennen zu lassen, wo er eine Mauer bauen soll. Die Mauer sollte dabei auf einem Marker entstehen, der zufällig in der Arena platziert wurde. Dieser Marker war gelb und magenta kariert und hatte die Form eines liegenden L.\n" +
+                        "  Meine Lösung bestand darin, in den Kamerabildern zunächst nach diesen und ähnlichen Farben suchen zu lassen. Traten die Farben dabei in der Nähe voneinander auf, sollte der Roboter mittels eines Eckenfilters kontrollieren, ob es sich dabei um ein Karomuster handelte. Traf auch das zu, wurde dieser Bereich des 2D-Kamerabilds ausgewählt und in 3D auf den Boden projiziert. Hierfür habe ich den Roboter in den Daten eines 3D-Laserscanners eine Bodenebene ermitteln lassen.\n" +
                         "  Jedes Mal, wenn ein Stück des Markers im Kamerabild zu sehen war, wurde die Projektion gespeichert und mit den anderen Projektionen zu einem größeren Bild zusammengesetzt. Der Marker wurde dort vermutet, wo die meisten Projektionen zusammenkamen.\n" +
                         "  Da der Roboter zum Bauen der Mauer eine feste Bewegungsabfolge durchführen sollte, musste er, zusätzlich zur Position, die Orientierung des Markers kennen. Zu diesem Zweck habe ich ein Verfahren entwickelt, das beide Schenkel des L-förmigen Markers durch eine Linie approximiert. Dort, wo die Distanz der Linien am geringsten ist, muss sich die Ecke befinden.\n" +
                         "  Mit diesen Informationen war es dem Roboter möglich, die Mauer zielgerichtet zu platzieren. Zusätzlich konnte mein Tracker aus dem vorherigen Wettbewerb für eine andere Aufgabe erfolgreich eingesetzt werden."
@@ -340,7 +340,7 @@ export const projectDescriptions = [
                 },
                 {
                     title: "Meine Aufgabe",
-                    text: " bestand darin, ein Verfahren zu entwickeln, um Menschen in den Laserscans des Copters zu finden und ihre Bewegungen nachzuvollziehen. Diese Informationen sollten es dem Copter ermöglichen, seine Flugrouten kollisionsfrei zu planen und damit die Sicherheit für Mensch und Maschine zu erhöhen.\n" +
+                    text: "bestand darin, ein Verfahren zu entwickeln, um Menschen in den Laserscans des Copters zu finden und ihre Bewegungen nachzuvollziehen. Diese Informationen sollten es dem Copter ermöglichen, seine Flugrouten kollisionsfrei zu planen und damit die Sicherheit für Mensch und Maschine zu erhöhen.\n" +
                         "  Da die Ergebnisse meiner Arbeit an diesem Projekt nicht öffentlich zugänglich sind, verzichte ich auf eine tiefergehende Beschreibung meines Lösungsweges."
                 },
                 {
@@ -369,7 +369,7 @@ export const projectDescriptions = [
                     text: "war es, diese GNNs zu trainieren, menschliche Bewegungen vorherzusagen. Hierfür mussten zunächst Daten generiert werden, mit denen das Neuronale Netz üben kann.\n" +
                         "  Zur Generierung dieser Daten haben wir Videos benutzt, in denen jeweils ein Mensch unterschiedliche Bewegungen durchführt. Pro Video wird in jedem Bild die Pose des Menschen als Posengraph bestimmt. In diesem Graphen entspricht jedes größere Gelenk des Menschen einem Knotenpunkt. Die Knotenpunkte sind entlang der Knochen verbunden. Das Schultergelenk ist beispielsweise mit dem Ellenbogengelenk verbunden, welches wiederum mit dem Handgelenk verbunden ist.\n" +
                         "  Um das Netz zu trainieren, habe ich ihm eine Reihe dieser Posen als Eingabe bereitgestellt. Die Aufgabe des Netzwerks war es, aus diesen Informationen die nächste Pose des Menschen vorherzusagen. Da uns das nächste Kamerabild und damit die nächste Pose bekannt sind, können wir die Vorhersage bewerten und dem Netz zurückmelden, welche Fehler es gemacht hat.\n" +
-                        "  Das Netz lernt also eine Bewegungssequenz, um ein Schritt zu erweitern. Ergänzen wir diese Sequenz um diesen Schritt, kann das gleiche Netz eine Vorhersage über den darauffolgenden Schritt machen.\n" +
+                        "  Das Netz lernt also, eine Bewegungssequenz um ein Schritt zu erweitern. Ergänzen wir diese Sequenz um diesen Schritt, kann das gleiche Netz eine Vorhersage über den darauffolgenden Schritt machen.\n" +
                         "  Eine tiefergehende Beschreibung der Methoden, den dazugehörigen Code und eine erste Evaluation der Ergebnisse sind hinter dem nachfolgenden Link zu finden."
                 },
                 {
@@ -400,7 +400,7 @@ export const projectDescriptions = [
                     title: "Die Lösung: ",
                     text: "Ich habe daraufhin ein nutzerfreundliches Tool entwickelt, mit dem man schnell und einfach Kamerafahrten durch 3D-Darstellungen erzeugen kann. Die Nutzer können bequem unterschiedliche Punkte im Raum auswählen, die die Kamera nacheinander abfahren soll. Zusätzlich können sie entscheiden, wie lange die Kamera zwischen diesen Punkten unterwegs sein wird und wie lange sie an ihnen verbleiben soll. Die Aufnahme wird anschließend in der gewählten Qualität und Bildfrequenz aufgenommen – selbst dann, wenn der eingesetzte Computer die Visualisierung nicht in der gewünschten Frequenz bereitstellen kann.\n" +
                         "  Dieses Tool wird aktiv von der Robotik-Community genutzt und erfreut sich wachsender Beliebtheit. Zusätzlich wurde ich darum gebeten, den Hauptteil der Funktionen in die offiziellen Pakete des Robot Operating Systems einzubauen.\n" +
-                        "  Ich habe mich sehr über das Interesse und Feedback der Community gefreut. Dieses Projekt hat mir nochmals deutlich gezeigt, dass mich die Arbeit an Code und Tools, die von anderen genutzt werden, sehr motiviert und einen Kernpunkt meiner weiteren Arbeit bilden soll."
+                        "  Ich habe mich sehr über das Interesse und Feedback der Community gefreut. Dieses Projekt hat mir nochmals deutlich gezeigt, dass mich die Arbeit an Code und Tools, die von Anderen genutzt werden, sehr motiviert und einen Kernpunkt meiner weiteren Arbeit bilden soll."
                 },
                 {
                     title: "Tech Stack: ",
@@ -422,11 +422,11 @@ export const projectDescriptions = [
                 {
                     title: "Motivation: ",
                     text: "Viele Methoden in der Wissenschaft beschreiben dynamische Vorgänge. Publiziert werden diese jedoch häufig mittels statischer Medien wie PDFs. Webseiten wie distill.pub bieten hier eine interaktive und dadurch oft intuitive Alternative.\n" +
-                        "  Diese Webseiten haben mir komplexe Inhalte auf eine durchdachte und motivierende Art verständlich gemacht. Um anderen eine ähnliche Erfahrung bieten zu können, habe ich mich in der Front-End Webentwicklung weitergebildet."
+                        "  Diese Webseiten haben mir komplexe Inhalte auf eine durchdachte und motivierende Art verständlich gemacht. Um Anderen eine ähnliche Erfahrung bieten zu können, habe ich mich in der Front-End-Webentwicklung weitergebildet."
                 },
                 {
                     title: "Als erstes Lernprojekt",
-                    text: "habe ich eine Webseite entwickelt, die die Wettervorhersage für den aktuellen Tag übersichtlich auf einen Blick darstellt. Zusätzliche Informationen und Tage sollten beispielsweise über Swipes erreichbar sein. Da ich die Vorhersage selbst täglich auf dem Smartphone ansehe, entschied ich mich bei dem Design den Fokus auf die mobile Ansicht zu setzen.\n" +
+                    text: "habe ich eine Webseite entwickelt, die die Wettervorhersage für den aktuellen Tag übersichtlich auf einen Blick darstellt. Zusätzliche Informationen und Tage sollten beispielsweise über Swipes erreichbar sein. Da ich die Vorhersage selbst täglich auf dem Smartphone ansehe, entschied ich mich, beim Design den Fokus auf die mobile Ansicht zu setzen.\n" +
                         "  Nachdem ich den ersten Entwurf entwickelt hatte, folgten einige Iterationen des Userfeedbacks von Freunden und der Umsetzung der erhaltenen  Kritik.\n" +
                         "  Die Resultate sind eine Wetterwebseite, die sich optional als Progressive Web App auf unterschiedlichen Betriebssystemen installieren lässt und eine Menge Erfahrungen, die mir anschließend bei der Entwicklung dieser Portfolio-Webseite geholfen haben."
                 },
