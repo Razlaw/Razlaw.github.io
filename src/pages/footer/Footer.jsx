@@ -118,7 +118,7 @@ export default function Footer() {
                         <a
                             className="externalLink"
                             id="linkedInLink"
-                            href="https://instagram.com/bonnusmaterial?igshid=YmMyMTA2M2Y="
+                            href="https://www.linkedin.com/in/jan-razlaw/"
                             target="_blank"
                             rel="noreferrer">
                             <div className="linkText">
