@@ -67,13 +67,6 @@ export const timeline_data = [
                     link_destination: "../projects_descriptions/openid=9"
                 },
                 {
-                    icon_id: "review",
-                    tag: "Aufgabe",
-                    date: "Mär. 21",
-                    title: "Inhalt für Review einer Einreichung",
-                    subtitle: "International Joint Conference on Artificial Intelligence",
-                },
-                {
                     icon_id: "work",
                     tag: "Aufgabe",
                     title: "Betreuung eines Studierenden bei der erfolgreichen Ausarbeitung einer Projektarbeit",
